@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="cron_nexora_inventory_analysis" model="ir.cron">
+        <field name="name">Nexora: Weekly inventory analysis &amp; replenishment plan</field>
+        <field name="model_id" ref="model_nexora_inventory_analysis"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_run_analysis()</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">weeks</field>
+    </record>
+</odoo>

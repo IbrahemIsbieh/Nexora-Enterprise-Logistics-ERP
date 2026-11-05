@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_nexora_accounting" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.nexora.accounting</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="nexora_core.res_config_settings_view_form_nexora"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='nexora_core']" position="inside">
+                <block title="Trip Costing" name="nexora_accounting_block">
+                    <setting string="Driver Cost per Hour"
+                             help="Applied to the longer of the planned and the actual trip duration.">
+                        <field name="nexora_acc_driver_cost_per_hour"/>
+                    </setting>
+                    <setting string="Maintenance Cost per km"
+                             help="Flat maintenance cost charged to each trip kilometer.">
+                        <field name="nexora_acc_maintenance_per_km"/>
+                    </setting>
+                    <setting string="Fallback Fuel Cost per km"
+                             help="Used when the vehicle has no confirmed fuel logs yet. Otherwise the vehicle's own average cost per km is used.">
+                        <field name="nexora_acc_fuel_fallback_per_km"/>
+                    </setting>
+                    <setting string="Overhead (%)"
+                             help="Added on top of the direct trip costs.">
+                        <field name="nexora_acc_overhead_pct"/>
+                    </setting>
+                    <setting string="Cost Allocation Basis"
+                             help="How the trip cost is split among its delivered or failed shipments.">
+                        <field name="nexora_acc_allocation_basis"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_nexora_inventory" name="Inventory Planning"
+              parent="nexora_core.menu_nexora_root" sequence="40"
+              groups="nexora_warehouse.group_nexora_warehouse_operator"/>
+
+    <menuitem id="menu_nexora_inventory_analysis" name="Inventory Analysis"
+              parent="menu_nexora_inventory" action="action_nexora_inventory_analysis" sequence="10"/>
+    <menuitem id="menu_nexora_replenishment_plans" name="Replenishment Plans"
+              parent="menu_nexora_inventory" action="action_nexora_replenishment_plan" sequence="20"/>
+    <menuitem id="menu_nexora_run_analysis" name="Run Analysis"
+              parent="menu_nexora_inventory" action="action_nexora_analysis_wizard" sequence="30"
+              groups="nexora_inventory.group_nexora_inventory_planner"/>
+</odoo>

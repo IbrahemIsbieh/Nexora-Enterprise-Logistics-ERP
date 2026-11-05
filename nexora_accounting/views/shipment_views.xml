@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_shipment_form_accounting" model="ir.ui.view">
+        <field name="name">nexora.shipment.form.accounting</field>
+        <field name="model">nexora.shipment</field>
+        <field name="inherit_id" ref="nexora_transport.view_nexora_shipment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_compute_freight" type="object" string="Compute Freight"
+                        invisible="state in ('draft', 'cancelled') or invoice_status == 'invoiced'"
+                        groups="nexora_accounting.group_nexora_accounting_user"/>
+                <button name="action_create_invoice" type="object" string="Create Invoice"
+                        class="btn-primary" invisible="invoice_status != 'to_invoice'"
+                        groups="nexora_accounting.group_nexora_accounting_user"/>
+                <button name="action_view_invoice" type="object" string="View Invoice"
+                        invisible="not invoice_id"
+                        groups="nexora_accounting.group_nexora_accounting_user"/>
+            </xpath>
+            <xpath expr="//page[@name='pod']" position="after">
+                <page string="Financial" name="financial"
+                      groups="nexora_accounting.group_nexora_accounting_user">
+                    <group>
+                        <group string="Revenue">
+                            <field name="currency_id" invisible="1"/>
+                            <field name="distance_km" readonly="invoice_status == 'invoiced'"/>
+                            <field name="freight_rate_id"/>
+                            <field name="freight_base"/>
+                            <field name="freight_surcharge"/>
+                            <field name="freight_amount" readonly="invoice_status == 'invoiced'"/>
+                        </group>
+                        <group string="Profitability">
+                            <field name="allocated_cost"/>
+                            <field name="profit" decoration-success="profit &gt; 0"
+                                   decoration-danger="profit &lt; 0"/>
+                            <field name="margin_pct"/>
+                        </group>
+                    </group>
+                    <group string="Invoicing">
+                        <group>
+                            <field name="invoice_status" widget="badge"
+                                   decoration-success="invoice_status == 'invoiced'"
+                                   decoration-warning="invoice_status == 'to_invoice'"/>
+                            <field name="invoice_id"/>
+                            <field name="payment_state" invisible="not invoice_id"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_nexora_shipment_list_accounting" model="ir.ui.view">
+        <field name="name">nexora.shipment.list.accounting</field>
+        <field name="model">nexora.shipment</field>
+        <field name="inherit_id" ref="nexora_transport.view_nexora_shipment_list"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='total_weight']" position="after">
+                <field name="freight_amount" optional="hide"
+                       groups="nexora_accounting.group_nexora_accounting_user"/>
+                <field name="allocated_cost" optional="hide"
+                       groups="nexora_accounting.group_nexora_accounting_user"/>
+                <field name="profit" optional="hide"
+                       groups="nexora_accounting.group_nexora_accounting_user"/>
+                <field name="invoice_status" optional="hide" widget="badge"
+                       groups="nexora_accounting.group_nexora_accounting_user"/>
+                <field name="currency_id" column_invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_nexora_shipment_search_accounting" model="ir.ui.view">
+        <field name="name">nexora.shipment.search.accounting</field>
+        <field name="model">nexora.shipment</field>
+        <field name="inherit_id" ref="nexora_transport.view_nexora_shipment_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='failed']" position="after">
+                <separator/>
+                <filter name="to_invoice" string="To Invoice"
+                        domain="[('invoice_status', '=', 'to_invoice')]"/>
+                <filter name="invoiced" string="Invoiced"
+                        domain="[('invoice_status', '=', 'invoiced')]"/>
+                <filter name="loss" string="Loss-making"
+                        domain="[('state', 'in', ('delivered', 'failed')), ('profit', '&lt;', 0)]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Profitability dashboard -->
+    <record id="view_nexora_shipment_profit_pivot" model="ir.ui.view">
+        <field name="name">nexora.shipment.pivot.profit</field>
+        <field name="model">nexora.shipment</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="partner_id" type="row"/>
+                <field name="planned_delivery_date" interval="month" type="col"/>
+                <field name="freight_amount" type="measure"/>
+                <field name="allocated_cost" type="measure"/>
+                <field name="profit" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_nexora_shipment_profit_graph" model="ir.ui.view">
+        <field name="name">nexora.shipment.graph.profit</field>
+        <field name="model">nexora.shipment</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="partner_id"/>
+                <field name="profit" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_nexora_shipment_profitability" model="ir.actions.act_window">
+        <field name="name">Shipment Profitability</field>
+        <field name="res_model">nexora.shipment</field>
+        <field name="view_mode">pivot,graph,list,form</field>
+        <field name="domain">[('state', 'in', ('delivered', 'failed'))]</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'pivot', 'view_id': ref('view_nexora_shipment_profit_pivot')}),
+            (0, 0, {'view_mode': 'graph', 'view_id': ref('view_nexora_shipment_profit_graph')}),
+            (0, 0, {'view_mode': 'list', 'view_id': ref('nexora_transport.view_nexora_shipment_list')})]"/>
+    </record>
+
+    <!-- Bulk invoicing from the shipment list -->
+    <record id="action_server_nexora_create_invoices" model="ir.actions.server">
+        <field name="name">Create Customer Invoice</field>
+        <field name="model_id" ref="nexora_transport.model_nexora_shipment"/>
+        <field name="binding_model_id" ref="nexora_transport.model_nexora_shipment"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">action = records.action_create_invoice()</field>
+    </record>
+</odoo>

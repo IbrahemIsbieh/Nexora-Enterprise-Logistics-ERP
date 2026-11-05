@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_nexora_fuel_card_user,nexora.fuel.card user,model_nexora_fuel_card,nexora_fuel.group_nexora_fuel_user,1,0,0,0
+access_nexora_fuel_card_manager,nexora.fuel.card manager,model_nexora_fuel_card,nexora_fuel.group_nexora_fuel_manager,1,1,1,1
+access_nexora_fuel_log_user,nexora.fuel.log user,model_nexora_fuel_log,nexora_fuel.group_nexora_fuel_user,1,1,1,0
+access_nexora_fuel_log_manager,nexora.fuel.log manager,model_nexora_fuel_log,nexora_fuel.group_nexora_fuel_manager,1,1,1,1
+access_nexora_vehicle_expense_user,nexora.vehicle.expense user,model_nexora_vehicle_expense,nexora_fuel.group_nexora_fuel_user,1,1,1,0
+access_nexora_vehicle_expense_manager,nexora.vehicle.expense manager,model_nexora_vehicle_expense,nexora_fuel.group_nexora_fuel_manager,1,1,1,1

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_employee_form_nexora" model="ir.ui.view">
+        <field name="name">hr.employee.form.nexora</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Driver" name="nexora_driver">
+                    <group>
+                        <group string="Driver Information">
+                            <field name="is_driver"/>
+                            <field name="driver_license_no" invisible="not is_driver"/>
+                            <field name="license_class" invisible="not is_driver"/>
+                            <field name="license_expiry" invisible="not is_driver"/>
+                            <field name="license_state" invisible="not is_driver"
+                                   widget="badge"
+                                   decoration-success="license_state == 'valid'"
+                                   decoration-warning="license_state == 'expiring'"
+                                   decoration-danger="license_state == 'expired'"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_driver_list_nexora" model="ir.ui.view">
+        <field name="name">hr.employee.list.nexora.driver</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="driver_license_no"/>
+                <field name="license_class"/>
+                <field name="license_expiry"/>
+                <field name="license_state" widget="badge"
+                       decoration-success="license_state == 'valid'"
+                       decoration-warning="license_state == 'expiring'"
+                       decoration-danger="license_state == 'expired'"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_driver_search_nexora" model="ir.ui.view">
+        <field name="name">hr.employee.search.nexora.driver</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="driver_license_no"/>
+                <filter name="license_expired" string="License Expired"
+                        domain="[('license_expiry', '&lt;', context_today().strftime('%Y-%m-%d'))]"/>
+                <group>
+                    <filter name="group_class" string="License Class"
+                            context="{'group_by': 'license_class'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_drivers" model="ir.actions.act_window">
+        <field name="name">Drivers</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('is_driver', '=', True)]</field>
+        <field name="context">{'default_is_driver': True}</field>
+        <field name="search_view_id" ref="view_driver_search_nexora"/>
+    </record>
+
+    <record id="action_nexora_drivers_list" model="ir.actions.act_window.view">
+        <field name="sequence">1</field>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="view_driver_list_nexora"/>
+        <field name="act_window_id" ref="action_nexora_drivers"/>
+    </record>
+</odoo>

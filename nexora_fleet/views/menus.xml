@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_nexora_fleet" name="Fleet"
+              parent="nexora_core.menu_nexora_root" sequence="50"
+              groups="nexora_fleet.group_nexora_fleet_dispatcher"/>
+
+    <menuitem id="menu_nexora_vehicles" name="Vehicles"
+              parent="menu_nexora_fleet" action="fleet.fleet_vehicle_action" sequence="10"/>
+    <menuitem id="menu_nexora_vehicle_availability" name="Availability"
+              parent="menu_nexora_fleet" action="action_nexora_vehicle_availability" sequence="20"/>
+    <menuitem id="menu_nexora_vehicle_assignments" name="Assignments"
+              parent="menu_nexora_fleet" action="action_nexora_vehicle_assignment" sequence="30"/>
+    <menuitem id="menu_nexora_vehicle_incidents" name="Incidents"
+              parent="menu_nexora_fleet" action="action_nexora_vehicle_incident" sequence="40"/>
+</odoo>

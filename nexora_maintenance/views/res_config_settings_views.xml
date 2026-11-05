@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_nexora_maintenance" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.nexora.maintenance</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="nexora_core.res_config_settings_view_form_nexora"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='nexora_core']" position="inside">
+                <block title="Maintenance" name="nexora_maintenance_block">
+                    <setting string="Due Soon Warning (km)"
+                             help="A plan becomes 'Due Soon' when fewer kilometers than this remain.">
+                        <field name="nexora_maintenance_warn_km"/>
+                    </setting>
+                    <setting string="Due Soon Warning (days)"
+                             help="A plan becomes 'Due Soon' when fewer days than this remain.">
+                        <field name="nexora_maintenance_warn_days"/>
+                    </setting>
+                    <setting string="Auto-create Orders"
+                             help="The daily job creates a draft maintenance order for each due plan.">
+                        <field name="nexora_maintenance_auto_create"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

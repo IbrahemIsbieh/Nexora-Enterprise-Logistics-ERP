@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="seq_nexora_fuel_log" model="ir.sequence">
+        <field name="name">Nexora Fuel Log</field>
+        <field name="code">nexora.fuel.log</field>
+        <field name="prefix">NXF/%(year)s/</field>
+        <field name="padding">5</field>
+    </record>
+
+    <record id="seq_nexora_vehicle_expense" model="ir.sequence">
+        <field name="name">Nexora Vehicle Expense</field>
+        <field name="code">nexora.vehicle.expense</field>
+        <field name="prefix">NXE/%(year)s/</field>
+        <field name="padding">5</field>
+    </record>
+</odoo>

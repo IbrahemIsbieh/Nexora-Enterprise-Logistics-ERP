@@ -1,0 +1,15 @@
+.o_nexora_dashboard {
+    background-color: var(--o-view-background-color, #fff);
+
+    .o_nexora_clickable {
+        cursor: pointer;
+    }
+
+    .o_nexora_tile {
+        transition: box-shadow 0.15s ease-in-out;
+
+        &.o_nexora_clickable:hover {
+            box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+        }
+    }
+}

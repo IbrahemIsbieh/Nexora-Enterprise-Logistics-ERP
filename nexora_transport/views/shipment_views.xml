@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_shipment_list" model="ir.ui.view">
+        <field name="name">nexora.shipment.list</field>
+        <field name="model">nexora.shipment</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state == 'cancelled'"
+                  decoration-danger="state == 'failed'"
+                  decoration-info="state == 'in_transit'">
+                <field name="name"/>
+                <field name="order_id"/>
+                <field name="partner_id"/>
+                <field name="delivery_partner_id" optional="show"/>
+                <field name="trip_id" optional="show"/>
+                <field name="vehicle_id" optional="hide"/>
+                <field name="driver_id" optional="hide"/>
+                <field name="planned_pickup_date" optional="hide"/>
+                <field name="planned_delivery_date"/>
+                <field name="actual_delivery_date" optional="hide"/>
+                <field name="total_weight" optional="show"/>
+                <field name="delay_hours" optional="hide"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'delivered'"
+                       decoration-danger="state == 'failed'"
+                       decoration-info="state in ('planned', 'in_transit')"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_shipment_form" model="ir.ui.view">
+        <field name="name">nexora.shipment.form</field>
+        <field name="model">nexora.shipment</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_deliver" type="object" string="Deliver"
+                            class="btn-primary" invisible="state != 'in_transit'"/>
+                    <button name="action_fail" type="object" string="Mark as Failed"
+                            invisible="state != 'in_transit'"/>
+                    <button name="action_retry" type="object" string="Reschedule"
+                            class="btn-primary" invisible="state != 'failed'"/>
+                    <button name="action_cancel" type="object" string="Cancel"
+                            invisible="state not in ('draft', 'planned')"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,planned,in_transit,delivered"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Delivered" bg_color="text-bg-success"
+                            invisible="state != 'delivered'"/>
+                    <widget name="web_ribbon" title="Failed" bg_color="text-bg-danger"
+                            invisible="state != 'failed'"/>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="order_id" readonly="state != 'draft' or id"/>
+                            <field name="partner_id"/>
+                            <field name="trip_id" readonly="state not in ('draft', 'planned')"/>
+                            <field name="vehicle_id"/>
+                            <field name="driver_id"/>
+                        </group>
+                        <group>
+                            <field name="pickup_partner_id" readonly="state not in ('draft', 'planned')"/>
+                            <field name="delivery_partner_id" readonly="state not in ('draft', 'planned')"/>
+                            <field name="planned_pickup_date" readonly="state not in ('draft', 'planned')"/>
+                            <field name="planned_delivery_date" readonly="state not in ('draft', 'planned')"/>
+                            <field name="actual_pickup_date" invisible="not actual_pickup_date"/>
+                            <field name="actual_delivery_date" invisible="not actual_delivery_date"/>
+                            <field name="on_time" invisible="state != 'delivered'"/>
+                            <field name="delay_hours" invisible="state != 'delivered'"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Cargo" name="cargo">
+                            <field name="line_ids" readonly="1">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="quantity"/>
+                                    <field name="uom_id"/>
+                                    <field name="weight" sum="Weight"/>
+                                    <field name="volume" sum="Volume"/>
+                                    <field name="temperature_class"/>
+                                    <field name="hazardous"/>
+                                </list>
+                            </field>
+                            <group>
+                                <group>
+                                    <field name="total_weight"/>
+                                    <field name="total_volume"/>
+                                </group>
+                                <group>
+                                    <field name="temperature_class"/>
+                                    <field name="has_hazardous"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Tracking" name="tracking">
+                            <field name="event_ids" readonly="state in ('draft', 'delivered', 'cancelled')">
+                                <list editable="top">
+                                    <field name="date"/>
+                                    <field name="event_type"/>
+                                    <field name="location"/>
+                                    <field name="note"/>
+                                    <field name="user_id" readonly="1"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Proof of Delivery" name="pod">
+                            <group>
+                                <group>
+                                    <field name="pod_receiver_name" readonly="state != 'in_transit'"/>
+                                    <field name="pod_note" readonly="state != 'in_transit'"/>
+                                </group>
+                                <group>
+                                    <field name="pod_signature" widget="signature"
+                                           options="{'full_name': 'pod_receiver_name', 'size': [400, 150]}"
+                                           readonly="state != 'in_transit'"/>
+                                    <field name="pod_photo" widget="image"
+                                           options="{'size': [200, 150]}"
+                                           readonly="state != 'in_transit'"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Failure" name="failure" invisible="state not in ('in_transit', 'failed')">
+                            <field name="failure_reason" readonly="state != 'in_transit'"
+                                   placeholder="Why could the shipment not be delivered?"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_shipment_search" model="ir.ui.view">
+        <field name="name">nexora.shipment.search</field>
+        <field name="model">nexora.shipment</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="order_id"/>
+                <field name="partner_id"/>
+                <field name="trip_id"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <filter name="to_plan" string="To Plan"
+                        domain="[('state', '=', 'draft'), ('trip_id', '=', False)]"/>
+                <filter name="in_transit" string="In Transit" domain="[('state', '=', 'in_transit')]"/>
+                <filter name="delivered" string="Delivered" domain="[('state', '=', 'delivered')]"/>
+                <filter name="failed" string="Failed" domain="[('state', '=', 'failed')]"/>
+                <separator/>
+                <group>
+                    <filter name="group_partner" string="Customer" context="{'group_by': 'partner_id'}"/>
+                    <filter name="group_trip" string="Trip" context="{'group_by': 'trip_id'}"/>
+                    <filter name="group_driver" string="Driver" context="{'group_by': 'driver_id'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="group_month" string="Delivery Month"
+                            context="{'group_by': 'planned_delivery_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_nexora_shipment_pivot" model="ir.ui.view">
+        <field name="name">nexora.shipment.pivot</field>
+        <field name="model">nexora.shipment</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="partner_id" type="row"/>
+                <field name="state" type="col"/>
+                <field name="total_weight" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_nexora_shipment_graph" model="ir.ui.view">
+        <field name="name">nexora.shipment.graph</field>
+        <field name="model">nexora.shipment</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="state"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_nexora_shipment" model="ir.actions.act_window">
+        <field name="name">Shipments</field>
+        <field name="res_model">nexora.shipment</field>
+        <field name="view_mode">list,form,pivot,graph</field>
+    </record>
+</odoo>

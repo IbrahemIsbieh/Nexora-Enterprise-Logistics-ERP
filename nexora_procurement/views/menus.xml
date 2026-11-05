@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_nexora_procurement" name="Procurement"
+              parent="nexora_core.menu_nexora_root" sequence="45"
+              groups="nexora_procurement.group_nexora_procurement_user"/>
+
+    <menuitem id="menu_nexora_purchase_requests" name="Purchase Requests"
+              parent="menu_nexora_procurement" action="action_nexora_purchase_request" sequence="10"/>
+    <menuitem id="menu_nexora_tenders" name="Tenders (RFQ Comparison)"
+              parent="menu_nexora_procurement" action="action_nexora_tender" sequence="20"
+              groups="nexora_procurement.group_nexora_procurement_officer"/>
+    <menuitem id="menu_nexora_rfq_orders" name="RFQs &amp; Purchase Orders"
+              parent="menu_nexora_procurement" action="action_nexora_rfq_orders" sequence="30"
+              groups="nexora_procurement.group_nexora_procurement_officer"/>
+    <menuitem id="menu_nexora_vendors" name="Vendors"
+              parent="menu_nexora_procurement" action="action_nexora_vendors" sequence="40"
+              groups="nexora_procurement.group_nexora_procurement_officer"/>
+    <menuitem id="menu_nexora_vendor_performance" name="Vendor Performance"
+              parent="menu_nexora_procurement" action="action_nexora_vendor_performance" sequence="50"
+              groups="nexora_procurement.group_nexora_procurement_officer"/>
+    <menuitem id="menu_nexora_vendor_performance_refresh" name="Recompute Performance"
+              parent="menu_nexora_procurement" action="action_nexora_vendor_performance_refresh" sequence="55"
+              groups="nexora_procurement.group_nexora_procurement_manager"/>
+    <menuitem id="menu_nexora_procurement_analysis" name="Procurement Analysis"
+              parent="menu_nexora_procurement" action="action_nexora_purchase_analysis" sequence="60"
+              groups="nexora_procurement.group_nexora_procurement_officer"/>
+
+    <menuitem id="menu_nexora_approval_rules" name="Approval Rules"
+              parent="nexora_core.menu_nexora_config" action="action_nexora_approval_rule" sequence="20"
+              groups="nexora_procurement.group_nexora_procurement_manager"/>
+</odoo>

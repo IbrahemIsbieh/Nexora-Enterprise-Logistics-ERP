@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_transport_trip_form_accounting" model="ir.ui.view">
+        <field name="name">nexora.transport.trip.form.accounting</field>
+        <field name="model">nexora.transport.trip</field>
+        <field name="inherit_id" ref="nexora_transport.view_nexora_transport_trip_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_compute_costs" type="object" string="Compute Costs"
+                        invisible="state != 'done'"
+                        groups="nexora_accounting.group_nexora_accounting_manager"/>
+            </xpath>
+            <xpath expr="//page[@name='shipments']" position="after">
+                <page string="Costs" name="costs" invisible="state != 'done'"
+                      groups="nexora_accounting.group_nexora_accounting_user">
+                    <group>
+                        <group string="Trip Cost Breakdown">
+                            <field name="currency_id" invisible="1"/>
+                            <field name="fuel_cost"/>
+                            <field name="maintenance_cost"/>
+                            <field name="driver_cost"/>
+                            <field name="other_cost"/>
+                            <field name="overhead_cost"/>
+                            <field name="total_cost" class="fw-bold"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

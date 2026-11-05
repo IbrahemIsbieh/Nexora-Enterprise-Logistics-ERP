@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="cron_nexora_fuel_card_maintenance" model="ir.cron">
+        <field name="name">Nexora: Fuel card expiry &amp; alerts</field>
+        <field name="model_id" ref="model_nexora_fuel_card"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_card_maintenance()</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+    </record>
+</odoo>

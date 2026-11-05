@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_nexora_procurement" model="ir.ui.view">
+        <field name="name">res.partner.form.nexora.procurement</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="nexora_core.view_partner_form_nexora"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='nexora']/group" position="inside">
+                <group string="Procurement" invisible="not is_nexora_vendor">
+                    <field name="nexora_vendor_rating" widget="badge"
+                           decoration-success="nexora_vendor_rating in ('a', 'b')"
+                           decoration-warning="nexora_vendor_rating == 'c'"
+                           decoration-danger="nexora_vendor_rating == 'd'"/>
+                    <field name="nexora_vendor_score"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_nexora_vendor_list" model="ir.ui.view">
+        <field name="name">res.partner.list.nexora.vendor</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="nexora_code"/>
+                <field name="name"/>
+                <field name="city"/>
+                <field name="phone"/>
+                <field name="nexora_vendor_rating" widget="badge"
+                       decoration-success="nexora_vendor_rating in ('a', 'b')"
+                       decoration-warning="nexora_vendor_rating == 'c'"
+                       decoration-danger="nexora_vendor_rating == 'd'"/>
+                <field name="nexora_vendor_score"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_nexora_vendors" model="ir.actions.act_window">
+        <field name="name">Vendors</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('is_nexora_vendor', '=', True)]</field>
+        <field name="context">{'default_is_nexora_vendor': True, 'default_is_company': True}</field>
+    </record>
+
+    <record id="action_nexora_vendors_list" model="ir.actions.act_window.view">
+        <field name="sequence">1</field>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="view_nexora_vendor_list"/>
+        <field name="act_window_id" ref="action_nexora_vendors"/>
+    </record>
+</odoo>

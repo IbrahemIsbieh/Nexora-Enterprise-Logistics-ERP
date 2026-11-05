@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="cron_nexora_vehicle_document_alert" model="ir.cron">
+        <field name="name">Nexora: Vehicle document expiry alerts</field>
+        <field name="model_id" ref="fleet.model_fleet_vehicle"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_document_expiry_alert()</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+    </record>
+</odoo>

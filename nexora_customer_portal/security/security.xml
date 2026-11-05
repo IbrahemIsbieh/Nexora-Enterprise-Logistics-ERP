@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_groups_privilege_nexora_portal" model="res.groups.privilege">
+        <field name="name">Nexora Customer Service</field>
+        <field name="category_id" ref="nexora_core.module_category_nexora"/>
+    </record>
+
+    <record id="group_nexora_portal_agent" model="res.groups">
+        <field name="name">Agent</field>
+        <field name="privilege_id" ref="res_groups_privilege_nexora_portal"/>
+        <field name="implied_ids" eval="[Command.link(ref('nexora_transport.group_nexora_transport_dispatcher'))]"/>
+    </record>
+
+    <record id="group_nexora_portal_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="privilege_id" ref="res_groups_privilege_nexora_portal"/>
+        <field name="implied_ids" eval="[
+            Command.link(ref('group_nexora_portal_agent')),
+            Command.link(ref('nexora_transport.group_nexora_transport_manager'))]"/>
+    </record>
+
+    <record id="nexora_core.group_nexora_admin" model="res.groups">
+        <field name="implied_ids" eval="[Command.link(ref('group_nexora_portal_manager'))]"/>
+    </record>
+
+    <!-- Portal customers only see the records of their own company -->
+    <record id="rule_portal_nexora_shipment" model="ir.rule">
+        <field name="name">Portal: own shipments</field>
+        <field name="model_id" ref="nexora_transport.model_nexora_shipment"/>
+        <field name="domain_force">[('partner_id', 'child_of', [user.commercial_partner_id.id])]</field>
+        <field name="groups" eval="[Command.link(ref('base.group_portal'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="rule_portal_nexora_order" model="ir.rule">
+        <field name="name">Portal: own transport orders</field>
+        <field name="model_id" ref="nexora_transport.model_nexora_transport_order"/>
+        <field name="domain_force">[('partner_id', 'child_of', [user.commercial_partner_id.id])]</field>
+        <field name="groups" eval="[Command.link(ref('base.group_portal'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="rule_portal_nexora_order_line" model="ir.rule">
+        <field name="name">Portal: own order lines</field>
+        <field name="model_id" ref="nexora_transport.model_nexora_transport_order_line"/>
+        <field name="domain_force">[('order_id.partner_id', 'child_of', [user.commercial_partner_id.id])]</field>
+        <field name="groups" eval="[Command.link(ref('base.group_portal'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="rule_portal_nexora_event" model="ir.rule">
+        <field name="name">Portal: own tracking events (no internal notes)</field>
+        <field name="model_id" ref="nexora_transport.model_nexora_shipment_event"/>
+        <field name="domain_force">[('event_type', '!=', 'note'), ('shipment_id.partner_id', 'child_of', [user.commercial_partner_id.id])]</field>
+        <field name="groups" eval="[Command.link(ref('base.group_portal'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="rule_portal_nexora_document" model="ir.rule">
+        <field name="name">Portal: own visible documents</field>
+        <field name="model_id" ref="model_nexora_shipment_document"/>
+        <field name="domain_force">[('visible_to_customer', '=', True), ('shipment_id.partner_id', 'child_of', [user.commercial_partner_id.id])]</field>
+        <field name="groups" eval="[Command.link(ref('base.group_portal'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="rule_portal_nexora_ticket" model="ir.rule">
+        <field name="name">Portal: own tickets</field>
+        <field name="model_id" ref="model_nexora_customer_ticket"/>
+        <field name="domain_force">[('partner_id', 'child_of', [user.commercial_partner_id.id])]</field>
+        <field name="groups" eval="[Command.link(ref('base.group_portal'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="rule_nexora_ticket_company" model="ir.rule">
+        <field name="name">Nexora Ticket: multi-company</field>
+        <field name="model_id" ref="model_nexora_customer_ticket"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>

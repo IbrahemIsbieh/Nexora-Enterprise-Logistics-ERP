@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_api_key_list" model="ir.ui.view">
+        <field name="name">nexora.api.key.list</field>
+        <field name="model">nexora.api.key</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="key_prefix"/>
+                <field name="user_id"/>
+                <field name="scope_ids" widget="many2many_tags"/>
+                <field name="rate_limit" optional="show"/>
+                <field name="date_expiry" optional="show"/>
+                <field name="last_used"/>
+                <field name="active" column_invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_api_key_form" model="ir.ui.view">
+        <field name="name">nexora.api.key.form</field>
+        <field name="model">nexora.api.key</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_generate_key" type="object"
+                            string="Generate Key" class="btn-primary"
+                            invisible="key_prefix or not id"/>
+                    <button name="action_generate_key" type="object"
+                            string="Regenerate Key (revokes the old one)"
+                            invisible="not key_prefix"
+                            confirm="The current key stops working immediately. Continue?"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Revoked" bg_color="text-bg-danger" invisible="active"/>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_logs" type="object" class="oe_stat_button"
+                                icon="fa-list" invisible="log_count == 0">
+                            <field name="log_count" widget="statinfo" string="Requests"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="e.g. Customer ERP"/></h1>
+                    </div>
+                    <group>
+                        <group string="Identity">
+                            <field name="active" invisible="1"/>
+                            <field name="user_id"/>
+                            <field name="responsible_id"/>
+                            <field name="key_prefix"/>
+                            <field name="last_used"/>
+                        </group>
+                        <group string="Limits">
+                            <field name="date_expiry"/>
+                            <field name="rate_limit"/>
+                            <field name="allowed_ips" placeholder="203.0.113.10, 198.51.100.0/24"/>
+                        </group>
+                    </group>
+                    <group string="Scopes">
+                        <field name="scope_ids" widget="many2many_tags" nolabel="1"/>
+                    </group>
+                    <div class="text-muted">
+                        Save the record first, then click <b>Generate Key</b>. The secret is shown
+                        only once; only its hash is stored. Archive the record to revoke the key.
+                    </div>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_api_key_search" model="ir.ui.view">
+        <field name="name">nexora.api.key.search</field>
+        <field name="model">nexora.api.key</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="user_id"/>
+                <filter name="revoked" string="Revoked" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_api_key" model="ir.actions.act_window">
+        <field name="name">API Keys</field>
+        <field name="res_model">nexora.api.key</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- One-time reveal of the generated key -->
+    <record id="view_nexora_api_key_reveal_form" model="ir.ui.view">
+        <field name="name">nexora.api.key.reveal.form</field>
+        <field name="model">nexora.api.key.reveal</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="alert alert-warning" role="alert">
+                    Copy this key now. It is <b>not stored</b> and cannot be shown again.
+                </div>
+                <group>
+                    <field name="key_id" invisible="1"/>
+                    <field name="raw_key" widget="CopyClipboardChar"/>
+                </group>
+                <footer>
+                    <button string="I have copied it" class="btn-primary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_nexora_api_key_reveal" model="ir.actions.act_window">
+        <field name="name">New API Key</field>
+        <field name="res_model">nexora.api.key.reveal</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

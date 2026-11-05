@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_request_tender_wizard_form" model="ir.ui.view">
+        <field name="name">nexora.request.tender.wizard.form</field>
+        <field name="model">nexora.request.tender.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="request_id" invisible="1"/>
+                    <field name="vendor_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                    <field name="deadline"/>
+                </group>
+                <footer>
+                    <button name="action_create" type="object" string="Create RFQs" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_nexora_request_tender_wizard" model="ir.actions.act_window">
+        <field name="name">Request Quotations</field>
+        <field name="res_model">nexora.request.tender.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

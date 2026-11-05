@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_scan_session_list" model="ir.ui.view">
+        <field name="name">nexora.scan.session.list</field>
+        <field name="model">nexora.scan.session</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state == 'cancelled'">
+                <field name="name"/>
+                <field name="operation"/>
+                <field name="warehouse_id"/>
+                <field name="location_src_id" optional="show"/>
+                <field name="location_dest_id"/>
+                <field name="picking_id" optional="show"/>
+                <field name="create_uid" optional="hide"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'done'"
+                       decoration-info="state == 'draft'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_scan_session_form" model="ir.ui.view">
+        <field name="name">nexora.scan.session.form</field>
+        <field name="model">nexora.scan.session</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_validate" type="object" string="Validate"
+                            class="btn-primary" invisible="state != 'draft'"/>
+                    <button name="action_cancel" type="object" string="Cancel"
+                            invisible="state != 'draft'"/>
+                    <button name="action_draft" type="object" string="Reset to Draft"
+                            invisible="state != 'cancelled'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_picking" type="object" class="oe_stat_button"
+                                icon="fa-truck" invisible="not picking_id">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Transfer</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="operation" readonly="state != 'draft'"/>
+                            <field name="warehouse_id" readonly="state != 'draft'"/>
+                            <field name="partner_id" readonly="state != 'draft'"/>
+                        </group>
+                        <group>
+                            <field name="location_src_id"
+                                   invisible="operation == 'receive'"
+                                   readonly="state != 'draft'"/>
+                            <field name="location_dest_id" readonly="state != 'draft'"/>
+                            <field name="picking_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <group invisible="state != 'draft'">
+                        <field name="scan_input" default_focus="1"
+                               placeholder="Scan a product, lot/serial or location barcode…"/>
+                    </group>
+                    <div class="alert alert-info" role="alert" invisible="not scan_message">
+                        <field name="scan_message" nolabel="1"/>
+                    </div>
+                    <field name="line_ids" readonly="state != 'draft'">
+                        <list editable="bottom"
+                              decoration-warning="tracking != 'none' and not lot_name">
+                            <field name="product_id"/>
+                            <field name="tracking" column_invisible="1"/>
+                            <field name="lot_name" readonly="tracking == 'none'"/>
+                            <field name="qty"/>
+                            <field name="uom_id"/>
+                        </list>
+                    </field>
+                    <group>
+                        <field name="note" placeholder="Notes…"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_scan_session_search" model="ir.ui.view">
+        <field name="name">nexora.scan.session.search</field>
+        <field name="model">nexora.scan.session</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="warehouse_id"/>
+                <filter name="draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="done" string="Done" domain="[('state', '=', 'done')]"/>
+                <separator/>
+                <filter name="receive" string="Receipts" domain="[('operation', '=', 'receive')]"/>
+                <filter name="internal" string="Internal" domain="[('operation', '=', 'internal')]"/>
+                <group>
+                    <filter name="group_warehouse" string="Warehouse" context="{'group_by': 'warehouse_id'}"/>
+                    <filter name="group_operation" string="Operation" context="{'group_by': 'operation'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_scan_session" model="ir.actions.act_window">
+        <field name="name">Barcode Scan Sessions</field>
+        <field name="res_model">nexora.scan.session</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

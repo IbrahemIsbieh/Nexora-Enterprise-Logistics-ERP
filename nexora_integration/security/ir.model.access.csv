@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_nexora_api_key_manager,nexora.api.key manager,model_nexora_api_key,nexora_integration.group_nexora_integration_manager,1,1,1,1
+access_nexora_api_scope_manager,nexora.api.scope manager,model_nexora_api_scope,nexora_integration.group_nexora_integration_manager,1,0,0,0
+access_nexora_api_log_manager,nexora.api.log manager,model_nexora_api_log,nexora_integration.group_nexora_integration_manager,1,0,0,1
+access_nexora_webhook_manager,nexora.webhook manager,model_nexora_webhook,nexora_integration.group_nexora_integration_manager,1,1,1,1
+access_nexora_webhook_event_manager,nexora.webhook.event manager,model_nexora_webhook_event,nexora_integration.group_nexora_integration_manager,1,0,0,0
+access_nexora_webhook_delivery_manager,nexora.webhook.delivery manager,model_nexora_webhook_delivery,nexora_integration.group_nexora_integration_manager,1,1,0,1

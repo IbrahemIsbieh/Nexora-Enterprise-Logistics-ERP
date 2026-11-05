@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_cost_center_list" model="ir.ui.view">
+        <field name="name">nexora.cost.center.list</field>
+        <field name="model">nexora.cost.center</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="code"/>
+                <field name="complete_name"/>
+                <field name="center_type"/>
+                <field name="manager_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_cost_center_form" model="ir.ui.view">
+        <field name="name">nexora.cost.center.form</field>
+        <field name="model">nexora.cost.center</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_create_analytic_account" type="object"
+                            string="Create Analytic Account"
+                            invisible="analytic_account_id"
+                            groups="nexora_core.group_nexora_manager"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger"
+                            invisible="active"/>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Cost center name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="center_type"/>
+                            <field name="parent_id"/>
+                            <field name="active" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="manager_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="analytic_account_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Notes" name="notes">
+                            <field name="note"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_cost_center_search" model="ir.ui.view">
+        <field name="name">nexora.cost.center.search</field>
+        <field name="model">nexora.cost.center</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="complete_name" string="Cost Center"/>
+                <field name="code"/>
+                <filter name="inactive" string="Archived" domain="[('active', '=', False)]"/>
+                <group>
+                    <filter name="group_type" string="Type" context="{'group_by': 'center_type'}"/>
+                    <filter name="group_parent" string="Parent" context="{'group_by': 'parent_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_cost_center" model="ir.actions.act_window">
+        <field name="name">Cost Centers</field>
+        <field name="res_model">nexora.cost.center</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

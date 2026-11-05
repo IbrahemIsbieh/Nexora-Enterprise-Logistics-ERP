@@ -1,0 +1,22 @@
+{
+    'name': 'Nexora Inventory',
+    'version': '19.0.1.0.0',
+    'category': 'Nexora',
+    'author': 'Ibrahem Issa',
+    'summary': 'Demand forecasting, replenishment planning and inventory risk analysis',
+    'author': 'Nexora',
+    'license': 'LGPL-3',
+    'depends': ['nexora_warehouse', 'stock', 'mail'],
+    'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'data/sequence_data.xml',
+        'data/cron_data.xml',
+        'views/analysis_views.xml',
+        'views/replenishment_plan_views.xml',
+        'views/analysis_wizard_views.xml',
+        'views/res_config_settings_views.xml',
+        'views/menus.xml',
+    ],
+    'installable': True,
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_api_log_list" model="ir.ui.view">
+        <field name="name">nexora.api.log.list</field>
+        <field name="model">nexora.api.log</field>
+        <field name="arch" type="xml">
+            <list create="0" edit="0" decoration-danger="status &gt;= 500"
+                  decoration-warning="status &gt;= 400 and status &lt; 500">
+                <field name="create_date"/>
+                <field name="key_name"/>
+                <field name="method"/>
+                <field name="path"/>
+                <field name="status"/>
+                <field name="error" optional="show"/>
+                <field name="ip" optional="show"/>
+                <field name="duration_ms" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_api_log_form" model="ir.ui.view">
+        <field name="name">nexora.api.log.form</field>
+        <field name="model">nexora.api.log</field>
+        <field name="arch" type="xml">
+            <form create="0" edit="0">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="create_date"/>
+                            <field name="key_id"/>
+                            <field name="key_name"/>
+                            <field name="ip"/>
+                        </group>
+                        <group>
+                            <field name="method"/>
+                            <field name="path"/>
+                            <field name="status"/>
+                            <field name="error"/>
+                            <field name="duration_ms"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_api_log_search" model="ir.ui.view">
+        <field name="name">nexora.api.log.search</field>
+        <field name="model">nexora.api.log</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="key_name"/>
+                <field name="path"/>
+                <field name="ip"/>
+                <filter name="errors" string="Errors (4xx / 5xx)" domain="[('status', '&gt;=', 400)]"/>
+                <filter name="server_errors" string="Server Errors" domain="[('status', '&gt;=', 500)]"/>
+                <filter name="throttled" string="Rate Limited" domain="[('status', '=', 429)]"/>
+                <group>
+                    <filter name="group_key" string="Key" context="{'group_by': 'key_id'}"/>
+                    <filter name="group_status" string="Status" context="{'group_by': 'status'}"/>
+                    <filter name="group_day" string="Day" context="{'group_by': 'create_date:day'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_api_log" model="ir.actions.act_window">
+        <field name="name">API Logs</field>
+        <field name="res_model">nexora.api.log</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_replenishment_plan_form_procurement" model="ir.ui.view">
+        <field name="name">nexora.replenishment.plan.form.procurement</field>
+        <field name="model">nexora.replenishment.plan</field>
+        <field name="inherit_id" ref="nexora_inventory.view_nexora_replenishment_plan_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_create_purchase_request" type="object"
+                        string="Create Purchase Request"
+                        invisible="state not in ('approved', 'applied') or purchase_request_id"
+                        groups="nexora_procurement.group_nexora_procurement_user"/>
+            </xpath>
+            <xpath expr="//field[@name='responsible_id']" position="after">
+                <field name="purchase_request_id" invisible="not purchase_request_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_vendor_performance_list" model="ir.ui.view">
+        <field name="name">nexora.vendor.performance.list</field>
+        <field name="model">nexora.vendor.performance</field>
+        <field name="arch" type="xml">
+            <list create="0" edit="0">
+                <field name="partner_id"/>
+                <field name="rating" widget="badge"
+                       decoration-success="rating in ('a', 'b')"
+                       decoration-warning="rating == 'c'"
+                       decoration-danger="rating == 'd'"/>
+                <field name="score"/>
+                <field name="order_count"/>
+                <field name="total_spend" sum="Total"/>
+                <field name="evaluated_orders"/>
+                <field name="on_time_rate"/>
+                <field name="fill_rate"/>
+                <field name="date_from" optional="hide"/>
+                <field name="date_to" optional="hide"/>
+                <field name="currency_id" column_invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_vendor_performance_graph" model="ir.ui.view">
+        <field name="name">nexora.vendor.performance.graph</field>
+        <field name="model">nexora.vendor.performance</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="partner_id"/>
+                <field name="score" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_nexora_vendor_performance_search" model="ir.ui.view">
+        <field name="name">nexora.vendor.performance.search</field>
+        <field name="model">nexora.vendor.performance</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="partner_id"/>
+                <filter name="poor" string="Poor (D)" domain="[('rating', '=', 'd')]"/>
+                <filter name="good" string="A / B" domain="[('rating', 'in', ('a', 'b'))]"/>
+                <group>
+                    <filter name="group_rating" string="Rating" context="{'group_by': 'rating'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_vendor_performance" model="ir.actions.act_window">
+        <field name="name">Vendor Performance</field>
+        <field name="res_model">nexora.vendor.performance</field>
+        <field name="view_mode">list,graph</field>
+    </record>
+
+    <record id="action_nexora_vendor_performance_refresh" model="ir.actions.server">
+        <field name="name">Recompute Vendor Performance</field>
+        <field name="model_id" ref="model_nexora_vendor_performance"/>
+        <field name="state">code</field>
+        <field name="code">model._compute_all()
+action = env.ref('nexora_procurement.action_nexora_vendor_performance').read()[0]</field>
+    </record>
+</odoo>

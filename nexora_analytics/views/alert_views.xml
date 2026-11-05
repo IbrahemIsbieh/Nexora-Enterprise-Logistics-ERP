@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_alert_list" model="ir.ui.view">
+        <field name="name">nexora.alert.list</field>
+        <field name="model">nexora.alert</field>
+        <field name="arch" type="xml">
+            <list create="0" decoration-muted="state in ('resolved', 'dismissed')"
+                  decoration-danger="severity == 'high' and state == 'open'">
+                <field name="date"/>
+                <field name="severity" widget="badge"
+                       decoration-danger="severity == 'high'"
+                       decoration-warning="severity == 'medium'"
+                       decoration-info="severity == 'low'"/>
+                <field name="alert_type"/>
+                <field name="name"/>
+                <field name="message" optional="show"/>
+                <field name="responsible_id" widget="many2one_avatar_user" optional="show"/>
+                <field name="state" widget="badge"
+                       decoration-info="state == 'open'"
+                       decoration-warning="state == 'acknowledged'"
+                       decoration-success="state == 'resolved'"/>
+                <field name="company_id" groups="base.group_multi_company" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_alert_form" model="ir.ui.view">
+        <field name="name">nexora.alert.form</field>
+        <field name="model">nexora.alert</field>
+        <field name="arch" type="xml">
+            <form create="0">
+                <header>
+                    <button name="action_open_record" type="object" string="Open Record"
+                            class="btn-primary" invisible="not res_model"/>
+                    <button name="action_acknowledge" type="object" string="Acknowledge"
+                            invisible="state != 'open'"/>
+                    <button name="action_ignore" type="object" string="Ignore"
+                            invisible="state not in ('open', 'acknowledged')"
+                            confirm="The alert stays hidden until its condition clears. Ignore it?"/>
+                    <button name="action_resolve" type="object" string="Resolve"
+                            invisible="state == 'resolved'"/>
+                    <button name="action_reopen" type="object" string="Reopen"
+                            invisible="state not in ('resolved', 'dismissed')"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="open,acknowledged,resolved"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Auto-resolved" bg_color="text-bg-success"
+                            invisible="not auto_resolved"/>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="alert_type"/>
+                            <field name="severity"/>
+                            <field name="responsible_id"/>
+                        </group>
+                        <group>
+                            <field name="date"/>
+                            <field name="date_resolved" invisible="not date_resolved"/>
+                            <field name="key" groups="base.group_no_one"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="auto_resolved" invisible="1"/>
+                            <field name="res_model" invisible="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="message" nolabel="1" placeholder="Details…"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_alert_search" model="ir.ui.view">
+        <field name="name">nexora.alert.search</field>
+        <field name="model">nexora.alert</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="message"/>
+                <field name="responsible_id"/>
+                <filter name="open" string="Open" domain="[('state', '=', 'open')]"/>
+                <filter name="acknowledged" string="Acknowledged" domain="[('state', '=', 'acknowledged')]"/>
+                <filter name="resolved" string="Resolved" domain="[('state', '=', 'resolved')]"/>
+                <separator/>
+                <filter name="high" string="High" domain="[('severity', '=', 'high')]"/>
+                <filter name="mine" string="My Alerts" domain="[('responsible_id', '=', uid)]"/>
+                <group>
+                    <filter name="group_type" string="Type" context="{'group_by': 'alert_type'}"/>
+                    <filter name="group_severity" string="Severity" context="{'group_by': 'severity'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="group_responsible" string="Responsible" context="{'group_by': 'responsible_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_nexora_alert_graph" model="ir.ui.view">
+        <field name="name">nexora.alert.graph</field>
+        <field name="model">nexora.alert</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="alert_type"/>
+                <field name="severity"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_nexora_alert" model="ir.actions.act_window">
+        <field name="name">Operational Alerts</field>
+        <field name="res_model">nexora.alert</field>
+        <field name="view_mode">list,form,graph</field>
+        <field name="context">{'search_default_open': 1}</field>
+    </record>
+
+    <record id="action_server_nexora_alert_acknowledge" model="ir.actions.server">
+        <field name="name">Acknowledge</field>
+        <field name="model_id" ref="model_nexora_alert"/>
+        <field name="binding_model_id" ref="model_nexora_alert"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.action_acknowledge()</field>
+    </record>
+
+    <record id="action_server_nexora_alert_ignore" model="ir.actions.server">
+        <field name="name">Ignore</field>
+        <field name="model_id" ref="model_nexora_alert"/>
+        <field name="binding_model_id" ref="model_nexora_alert"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.action_ignore()</field>
+    </record>
+
+    <record id="action_server_nexora_alert_resolve" model="ir.actions.server">
+        <field name="name">Resolve</field>
+        <field name="model_id" ref="model_nexora_alert"/>
+        <field name="binding_model_id" ref="model_nexora_alert"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.action_resolve()</field>
+    </record>
+
+    <record id="action_server_nexora_run_alert_check" model="ir.actions.server">
+        <field name="name">Run Alert Check Now</field>
+        <field name="model_id" ref="model_nexora_alert"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_generate_alerts()
+action = env.ref('nexora_analytics.action_nexora_alert').read()[0]</field>
+    </record>
+</odoo>

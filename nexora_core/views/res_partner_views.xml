@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_nexora" model="ir.ui.view">
+        <field name="name">res.partner.form.nexora</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_nexora_contracts" type="object"
+                        class="oe_stat_button" icon="fa-file-text-o"
+                        invisible="nexora_contract_count == 0">
+                    <field name="nexora_contract_count" widget="statinfo" string="Contracts"/>
+                </button>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Nexora" name="nexora">
+                    <group>
+                        <group string="Logistics Role">
+                            <field name="is_nexora_customer"/>
+                            <field name="is_nexora_vendor"/>
+                            <field name="nexora_code"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_search_nexora" model="ir.ui.view">
+        <field name="name">res.partner.search.nexora</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <filter name="nexora_customers" string="Logistics Customers"
+                        domain="[('is_nexora_customer', '=', True)]"/>
+                <filter name="nexora_vendors" string="Logistics Vendors"
+                        domain="[('is_nexora_vendor', '=', True)]"/>
+                <field name="nexora_code"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

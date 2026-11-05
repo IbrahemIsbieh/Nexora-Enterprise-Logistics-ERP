@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_vehicle_incident_form_maintenance" model="ir.ui.view">
+        <field name="name">nexora.vehicle.incident.form.maintenance</field>
+        <field name="model">nexora.vehicle.incident</field>
+        <field name="inherit_id" ref="nexora_fleet.view_nexora_vehicle_incident_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_create_maintenance_order" type="object"
+                        string="Create Maintenance Order"
+                        invisible="state in ('resolved', 'cancelled') or not id"
+                        groups="nexora_maintenance.group_nexora_maintenance_technician"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

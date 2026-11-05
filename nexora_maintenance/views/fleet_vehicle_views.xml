@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fleet_vehicle_view_form_nexora_maintenance" model="ir.ui.view">
+        <field name="name">fleet.vehicle.form.nexora.maintenance</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="nexora_fleet.fleet_vehicle_view_form_nexora"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_nexora_maintenance_orders" type="object"
+                        class="oe_stat_button" icon="fa-wrench">
+                    <field name="nexora_maintenance_order_count" widget="statinfo" string="Maintenance"/>
+                </button>
+                <button name="action_view_nexora_maintenance_plans" type="object"
+                        class="oe_stat_button" icon="fa-calendar-check-o">
+                    <field name="nexora_plan_count" widget="statinfo" string="Plans"/>
+                </button>
+            </xpath>
+            <!-- In-maintenance flag is now driven by maintenance orders -->
+            <xpath expr="//field[@name='nexora_in_maintenance']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//page[@name='nexora']" position="inside">
+                <group string="Maintenance">
+                    <group>
+                        <field name="nexora_maintenance_status" widget="badge"
+                               decoration-success="nexora_maintenance_status == 'ok'"
+                               decoration-warning="nexora_maintenance_status == 'due_soon'"
+                               decoration-danger="nexora_maintenance_status == 'overdue'"/>
+                        <field name="nexora_open_order_count"/>
+                        <field name="nexora_maintenance_cost"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="fleet_vehicle_view_list_nexora_maintenance" model="ir.ui.view">
+        <field name="name">fleet.vehicle.list.nexora.maintenance</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="nexora_fleet.fleet_vehicle_view_list_nexora"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='nexora_doc_status']" position="after">
+                <field name="nexora_maintenance_status" widget="badge" optional="show"
+                       decoration-success="nexora_maintenance_status == 'ok'"
+                       decoration-warning="nexora_maintenance_status == 'due_soon'"
+                       decoration-danger="nexora_maintenance_status == 'overdue'"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_nexora_transport" name="Transportation"
+              parent="nexora_core.menu_nexora_root" sequence="25"
+              groups="nexora_transport.group_nexora_transport_dispatcher"/>
+
+    <menuitem id="menu_nexora_transport_orders" name="Transport Orders"
+              parent="menu_nexora_transport" action="action_nexora_transport_order" sequence="10"/>
+    <menuitem id="menu_nexora_shipments" name="Shipments"
+              parent="menu_nexora_transport" action="action_nexora_shipment" sequence="20"/>
+    <menuitem id="menu_nexora_trips" name="Trips"
+              parent="menu_nexora_transport" action="action_nexora_transport_trip" sequence="30"/>
+</odoo>

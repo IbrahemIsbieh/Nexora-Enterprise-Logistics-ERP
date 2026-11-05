@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ===================== Delivery performance ===================== -->
+    <record id="view_nexora_delivery_report_pivot" model="ir.ui.view">
+        <field name="name">nexora.delivery.report.pivot</field>
+        <field name="model">nexora.delivery.report</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="partner_id" type="row"/>
+                <field name="date" interval="month" type="col"/>
+                <field name="delivered_count" type="measure"/>
+                <field name="on_time_pct" type="measure"/>
+                <field name="delay_hours" type="measure"/>
+                <field name="failed_count" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_nexora_delivery_report_graph" model="ir.ui.view">
+        <field name="name">nexora.delivery.report.graph</field>
+        <field name="model">nexora.delivery.report</field>
+        <field name="arch" type="xml">
+            <graph type="line">
+                <field name="date" interval="month"/>
+                <field name="on_time_pct" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_nexora_delivery_report_list" model="ir.ui.view">
+        <field name="name">nexora.delivery.report.list</field>
+        <field name="model">nexora.delivery.report</field>
+        <field name="arch" type="xml">
+            <list create="0" edit="0" decoration-danger="state == 'failed' or late_count &gt; 0">
+                <field name="date"/>
+                <field name="shipment_id"/>
+                <field name="partner_id"/>
+                <field name="driver_id" optional="show"/>
+                <field name="vehicle_id" optional="show"/>
+                <field name="state"/>
+                <field name="delay_hours"/>
+                <field name="late_count" column_invisible="1"/>
+                <field name="freight_amount" optional="hide"/>
+                <field name="profit" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_delivery_report_search" model="ir.ui.view">
+        <field name="name">nexora.delivery.report.search</field>
+        <field name="model">nexora.delivery.report</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="partner_id"/>
+                <field name="driver_id"/>
+                <field name="vehicle_id"/>
+                <field name="shipment_id"/>
+                <filter name="late" string="Late" domain="[('late_count', '&gt;', 0)]"/>
+                <filter name="failed" string="Failed" domain="[('failed_count', '&gt;', 0)]"/>
+                <filter name="on_time" string="On Time" domain="[('on_time_count', '&gt;', 0)]"/>
+                <separator/>
+                <filter name="this_year" string="This Year"
+                        domain="[('date', '&gt;=', context_today().strftime('%Y-01-01'))]"/>
+                <group>
+                    <filter name="group_partner" string="Customer" context="{'group_by': 'partner_id'}"/>
+                    <filter name="group_driver" string="Driver" context="{'group_by': 'driver_id'}"/>
+                    <filter name="group_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_delivery_report" model="ir.actions.act_window">
+        <field name="name">Delivery Performance</field>
+        <field name="res_model">nexora.delivery.report</field>
+        <field name="view_mode">pivot,graph,list</field>
+    </record>
+
+    <!-- ===================== Fleet utilization ===================== -->
+    <record id="view_nexora_fleet_report_pivot" model="ir.ui.view">
+        <field name="name">nexora.fleet.report.pivot</field>
+        <field name="model">nexora.fleet.report</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="vehicle_id" type="row"/>
+                <field name="date" interval="month" type="col"/>
+                <field name="trip_count" type="measure"/>
+                <field name="hours" type="measure"/>
+                <field name="distance" type="measure"/>
+                <field name="payload_usage" type="measure"/>
+                <field name="total_cost" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_nexora_fleet_report_graph" model="ir.ui.view">
+        <field name="name">nexora.fleet.report.graph</field>
+        <field name="model">nexora.fleet.report</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="vehicle_id"/>
+                <field name="distance" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_nexora_fleet_report_list" model="ir.ui.view">
+        <field name="name">nexora.fleet.report.list</field>
+        <field name="model">nexora.fleet.report</field>
+        <field name="arch" type="xml">
+            <list create="0" edit="0">
+                <field name="date"/>
+                <field name="trip_id"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <field name="hours" sum="Hours"/>
+                <field name="distance" sum="Distance"/>
+                <field name="weight" sum="Load"/>
+                <field name="payload_usage"/>
+                <field name="shipments_delivered" sum="Shipments"/>
+                <field name="total_cost" sum="Cost" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_fleet_report_search" model="ir.ui.view">
+        <field name="name">nexora.fleet.report.search</field>
+        <field name="model">nexora.fleet.report</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <field name="trip_id"/>
+                <filter name="low_load" string="Low Payload (&lt; 50%)"
+                        domain="[('payload_usage', '&lt;', 50)]"/>
+                <filter name="this_year" string="This Year"
+                        domain="[('date', '&gt;=', context_today().strftime('%Y-01-01'))]"/>
+                <group>
+                    <filter name="group_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_driver" string="Driver" context="{'group_by': 'driver_id'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_fleet_report" model="ir.actions.act_window">
+        <field name="name">Fleet Utilization</field>
+        <field name="res_model">nexora.fleet.report</field>
+        <field name="view_mode">pivot,graph,list</field>
+    </record>
+
+    <!-- ===================== Demand history ===================== -->
+    <record id="view_nexora_demand_report_pivot" model="ir.ui.view">
+        <field name="name">nexora.demand.report.pivot</field>
+        <field name="model">nexora.demand.report</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="product_id" type="row"/>
+                <field name="date" interval="month" type="col"/>
+                <field name="quantity" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_nexora_demand_report_graph" model="ir.ui.view">
+        <field name="name">nexora.demand.report.graph</field>
+        <field name="model">nexora.demand.report</field>
+        <field name="arch" type="xml">
+            <graph type="line">
+                <field name="date" interval="week"/>
+                <field name="quantity" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_nexora_demand_report_search" model="ir.ui.view">
+        <field name="name">nexora.demand.report.search</field>
+        <field name="model">nexora.demand.report</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="product_id"/>
+                <field name="categ_id"/>
+                <field name="warehouse_id"/>
+                <filter name="last_90" string="Last 90 Days"
+                        domain="[('date', '&gt;=', (context_today() - datetime.timedelta(days=90)).strftime('%Y-%m-%d'))]"/>
+                <group>
+                    <filter name="group_product" string="Product" context="{'group_by': 'product_id'}"/>
+                    <filter name="group_categ" string="Category" context="{'group_by': 'categ_id'}"/>
+                    <filter name="group_warehouse" string="Warehouse" context="{'group_by': 'warehouse_id'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_demand_report" model="ir.actions.act_window">
+        <field name="name">Demand History</field>
+        <field name="res_model">nexora.demand.report</field>
+        <field name="view_mode">pivot,graph</field>
+    </record>
+
+    <!-- ===================== Supplier analysis ===================== -->
+    <record id="view_nexora_supplier_report_pivot" model="ir.ui.view">
+        <field name="name">nexora.supplier.report.pivot</field>
+        <field name="model">nexora.supplier.report</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="partner_id" type="row"/>
+                <field name="date" interval="month" type="col"/>
+                <field name="amount" type="measure"/>
+                <field name="qty_ordered" type="measure"/>
+                <field name="qty_received" type="measure"/>
+                <field name="fill_rate" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_nexora_supplier_report_graph" model="ir.ui.view">
+        <field name="name">nexora.supplier.report.graph</field>
+        <field name="model">nexora.supplier.report</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="partner_id"/>
+                <field name="amount" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_nexora_supplier_report_list" model="ir.ui.view">
+        <field name="name">nexora.supplier.report.list</field>
+        <field name="model">nexora.supplier.report</field>
+        <field name="arch" type="xml">
+            <list create="0" edit="0">
+                <field name="date"/>
+                <field name="partner_id"/>
+                <field name="product_id"/>
+                <field name="qty_ordered" sum="Ordered"/>
+                <field name="qty_received" sum="Received"/>
+                <field name="price_unit"/>
+                <field name="amount" sum="Spend"/>
+                <field name="fill_rate"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_supplier_report_search" model="ir.ui.view">
+        <field name="name">nexora.supplier.report.search</field>
+        <field name="model">nexora.supplier.report</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="partner_id"/>
+                <field name="product_id"/>
+                <field name="categ_id"/>
+                <filter name="partial" string="Not Fully Received" domain="[('fill_rate', '&lt;', 100)]"/>
+                <group>
+                    <filter name="group_partner" string="Vendor" context="{'group_by': 'partner_id'}"/>
+                    <filter name="group_product" string="Product" context="{'group_by': 'product_id'}"/>
+                    <filter name="group_categ" string="Category" context="{'group_by': 'categ_id'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_supplier_report" model="ir.actions.act_window">
+        <field name="name">Supplier Analysis</field>
+        <field name="res_model">nexora.supplier.report</field>
+        <field name="view_mode">pivot,graph,list</field>
+    </record>
+</odoo>

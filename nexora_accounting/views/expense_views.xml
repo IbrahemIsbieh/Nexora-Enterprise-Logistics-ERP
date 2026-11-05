@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_vehicle_expense_form_accounting" model="ir.ui.view">
+        <field name="name">nexora.vehicle.expense.form.accounting</field>
+        <field name="model">nexora.vehicle.expense</field>
+        <field name="inherit_id" ref="nexora_fuel.view_nexora_vehicle_expense_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_create_vendor_bill" type="object" string="Create Vendor Bill"
+                        invisible="state != 'confirmed' or bill_id or not partner_id"
+                        groups="nexora_accounting.group_nexora_accounting_user"/>
+                <button name="action_view_bill" type="object" string="View Bill"
+                        invisible="not bill_id"
+                        groups="nexora_accounting.group_nexora_accounting_user"/>
+            </xpath>
+            <xpath expr="//field[@name='incident_id']" position="after">
+                <field name="bill_id" invisible="not bill_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_server_nexora_create_vendor_bills" model="ir.actions.server">
+        <field name="name">Create Vendor Bill</field>
+        <field name="model_id" ref="nexora_fuel.model_nexora_vehicle_expense"/>
+        <field name="binding_model_id" ref="nexora_fuel.model_nexora_vehicle_expense"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">action = records.action_create_vendor_bill()</field>
+    </record>
+</odoo>

@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_nexora_freight_rate_user,nexora.freight.rate user,model_nexora_freight_rate,nexora_accounting.group_nexora_accounting_user,1,0,0,0
+access_nexora_freight_rate_manager,nexora.freight.rate manager,model_nexora_freight_rate,nexora_accounting.group_nexora_accounting_manager,1,1,1,1
+access_nexora_cost_center_report_user,nexora.cost.center.report user,model_nexora_cost_center_report,nexora_accounting.group_nexora_accounting_user,1,0,0,0
+access_acc_shipment_user,billing shipment access,nexora_transport.model_nexora_shipment,nexora_accounting.group_nexora_accounting_user,1,1,0,0
+access_acc_order_user,billing order read,nexora_transport.model_nexora_transport_order,nexora_accounting.group_nexora_accounting_user,1,0,0,0
+access_acc_order_line_user,billing order line read,nexora_transport.model_nexora_transport_order_line,nexora_accounting.group_nexora_accounting_user,1,0,0,0
+access_acc_trip_user,billing trip read,nexora_transport.model_nexora_transport_trip,nexora_accounting.group_nexora_accounting_user,1,0,0,0
+access_acc_trip_manager,billing trip write,nexora_transport.model_nexora_transport_trip,nexora_accounting.group_nexora_accounting_manager,1,1,0,0
+access_acc_expense_user,billing expense access,nexora_fuel.model_nexora_vehicle_expense,nexora_accounting.group_nexora_accounting_user,1,1,0,0
+access_acc_vehicle_user,billing vehicle read,fleet.model_fleet_vehicle,nexora_accounting.group_nexora_accounting_user,1,0,0,0

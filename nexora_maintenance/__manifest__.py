@@ -1,0 +1,23 @@
+{
+    'name': 'Nexora Maintenance',
+    'version': '19.0.1.0.0',
+    'category': 'Nexora',
+    'author':'Ibrahem Issa',
+    'summary': 'Preventive plans, maintenance orders and downtime control for the fleet',
+    'author': 'Nexora',
+    'license': 'LGPL-3',
+    'depends': ['nexora_fleet', 'nexora_fuel', 'mail'],
+    'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'data/sequence_data.xml',
+        'data/cron_data.xml',
+        'views/plan_views.xml',
+        'views/order_views.xml',
+        'views/fleet_vehicle_views.xml',
+        'views/incident_views.xml',
+        'views/res_config_settings_views.xml',
+        'views/menus.xml',
+    ],
+    'installable': True,
+}

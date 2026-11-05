@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_warehouse_form_nexora" model="ir.ui.view">
+        <field name="name">stock.warehouse.form.nexora</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="stock.view_warehouse"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="Nexora" name="nexora">
+                    <group>
+                        <field name="nexora_warehouse_type"/>
+                        <field name="nexora_manager_id"/>
+                        <field name="nexora_cost_center_id"/>
+                    </group>
+                    <group>
+                        <field name="nexora_location_count"/>
+                        <field name="nexora_total_max_volume"/>
+                        <field name="nexora_total_used_volume"/>
+                        <field name="nexora_occupancy" widget="progressbar"/>
+                        <button name="action_view_nexora_locations" type="object"
+                                string="View Locations &amp; Capacity" class="btn-link"
+                                invisible="not id"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

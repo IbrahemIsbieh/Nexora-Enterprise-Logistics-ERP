@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_nexora_customer_service" name="Customer Service"
+              parent="nexora_core.menu_nexora_root" sequence="70"
+              groups="nexora_customer_portal.group_nexora_portal_agent"/>
+
+    <menuitem id="menu_nexora_portal_requests" name="Portal Requests"
+              parent="menu_nexora_customer_service" action="action_nexora_portal_requests" sequence="10"/>
+    <menuitem id="menu_nexora_customer_tickets" name="Tickets"
+              parent="menu_nexora_customer_service" action="action_nexora_customer_ticket" sequence="20"/>
+</odoo>

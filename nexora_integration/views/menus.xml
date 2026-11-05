@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_nexora_integration" name="Integration"
+              parent="nexora_core.menu_nexora_root" sequence="90"
+              groups="nexora_integration.group_nexora_integration_manager"/>
+
+    <menuitem id="menu_nexora_api_keys" name="API Keys"
+              parent="menu_nexora_integration" action="action_nexora_api_key" sequence="10"/>
+    <menuitem id="menu_nexora_webhooks" name="Webhooks"
+              parent="menu_nexora_integration" action="action_nexora_webhook" sequence="20"/>
+    <menuitem id="menu_nexora_webhook_deliveries" name="Webhook Deliveries"
+              parent="menu_nexora_integration" action="action_nexora_webhook_delivery" sequence="30"/>
+    <menuitem id="menu_nexora_api_logs" name="API Logs"
+              parent="menu_nexora_integration" action="action_nexora_api_log" sequence="40"/>
+</odoo>

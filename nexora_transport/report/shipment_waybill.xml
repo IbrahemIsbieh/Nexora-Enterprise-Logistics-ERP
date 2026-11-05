@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_shipment_waybill" model="ir.actions.report">
+        <field name="name">Shipment Waybill</field>
+        <field name="model">nexora.shipment</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">nexora_transport.report_shipment_waybill</field>
+        <field name="report_file">nexora_transport.report_shipment_waybill</field>
+        <field name="print_report_name">'Waybill - %s' % object.name</field>
+        <field name="binding_model_id" ref="model_nexora_shipment"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_shipment_waybill">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Shipment Waybill: <span t-field="o.name"/></h2>
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <strong>Customer</strong>
+                                <div t-field="o.partner_id"
+                                     t-options='{"widget": "contact", "fields": ["name", "phone"], "no_marker": True}'/>
+                                <strong class="d-block mt-2">Pickup</strong>
+                                <div t-field="o.pickup_partner_id"
+                                     t-options='{"widget": "contact", "fields": ["name", "address", "phone"], "no_marker": True}'/>
+                            </div>
+                            <div class="col-6">
+                                <strong>Deliver To</strong>
+                                <div t-field="o.delivery_partner_id"
+                                     t-options='{"widget": "contact", "fields": ["name", "address", "phone"], "no_marker": True}'/>
+                            </div>
+                        </div>
+                        <table class="table table-sm mt-3">
+                            <tr>
+                                <td><strong>Order</strong></td>
+                                <td><span t-field="o.order_id.name"/></td>
+                                <td><strong>Trip</strong></td>
+                                <td><span t-field="o.trip_id.name"/></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vehicle</strong></td>
+                                <td><span t-field="o.vehicle_id.license_plate"/></td>
+                                <td><strong>Driver</strong></td>
+                                <td><span t-field="o.driver_id.name"/></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Planned Delivery</strong></td>
+                                <td><span t-field="o.planned_delivery_date"/></td>
+                                <td><strong>Status</strong></td>
+                                <td><span t-field="o.state"/></td>
+                            </tr>
+                        </table>
+                        <h4>Cargo</h4>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th class="text-end">Qty</th>
+                                    <th class="text-end">Weight (kg)</th>
+                                    <th class="text-end">Volume (m³)</th>
+                                    <th>Temp.</th>
+                                    <th>Haz.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="o.line_ids" t-as="line">
+                                    <td><span t-field="line.name"/></td>
+                                    <td class="text-end"><span t-field="line.quantity"/></td>
+                                    <td class="text-end"><span t-field="line.weight"/></td>
+                                    <td class="text-end"><span t-field="line.volume"/></td>
+                                    <td><span t-field="line.temperature_class"/></td>
+                                    <td><span t-if="line.hazardous">Yes</span></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td><strong>Total</strong></td>
+                                    <td/>
+                                    <td class="text-end"><strong t-field="o.total_weight"/></td>
+                                    <td class="text-end"><strong t-field="o.total_volume"/></td>
+                                    <td colspan="2"/>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <div class="row mt-5">
+                            <div class="col-6">
+                                <strong>Received By:</strong>
+                                <span t-field="o.pod_receiver_name"/>
+                                <div class="mt-2">
+                                    <img t-if="o.pod_signature"
+                                         t-att-src="image_data_uri(o.pod_signature)"
+                                         style="max-height: 90px;"/>
+                                </div>
+                                <div t-if="not o.pod_signature" style="border-bottom: 1px solid #000; height: 60px;"/>
+                                <small>Signature</small>
+                            </div>
+                            <div class="col-6">
+                                <strong>Delivered On:</strong>
+                                <span t-field="o.actual_delivery_date"/>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

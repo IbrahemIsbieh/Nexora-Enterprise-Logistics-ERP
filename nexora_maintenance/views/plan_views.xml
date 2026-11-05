@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_maintenance_plan_list" model="ir.ui.view">
+        <field name="name">nexora.maintenance.plan.list</field>
+        <field name="model">nexora.maintenance.plan</field>
+        <field name="arch" type="xml">
+            <list decoration-danger="due_state == 'overdue'"
+                  decoration-warning="due_state == 'due_soon'">
+                <field name="vehicle_id"/>
+                <field name="name"/>
+                <field name="trigger_type" optional="hide"/>
+                <field name="last_done_odometer" optional="hide"/>
+                <field name="next_due_odometer"/>
+                <field name="remaining_km"/>
+                <field name="next_due_date"/>
+                <field name="remaining_days"/>
+                <field name="responsible_id" widget="many2one_avatar_user" optional="show"/>
+                <field name="due_state" widget="badge"
+                       decoration-success="due_state == 'ok'"
+                       decoration-warning="due_state == 'due_soon'"
+                       decoration-danger="due_state == 'overdue'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_maintenance_plan_form" model="ir.ui.view">
+        <field name="name">nexora.maintenance.plan.form</field>
+        <field name="model">nexora.maintenance.plan</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_create_order" type="object" string="Create Maintenance Order"
+                            class="btn-primary" invisible="not id"/>
+                    <field name="due_state" widget="statusbar" statusbar_visible="ok,due_soon,overdue"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger"
+                            invisible="active"/>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_orders" type="object" class="oe_stat_button"
+                                icon="fa-wrench" invisible="order_count == 0">
+                            <field name="order_count" widget="statinfo" string="Orders"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="e.g. Oil change"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="active" invisible="1"/>
+                            <field name="vehicle_id"/>
+                            <field name="trigger_type"/>
+                            <field name="interval_km" invisible="trigger_type == 'days'"/>
+                            <field name="interval_days" invisible="trigger_type == 'km'"/>
+                        </group>
+                        <group>
+                            <field name="last_done_odometer"/>
+                            <field name="last_done_date"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="estimated_cost"/>
+                            <field name="responsible_id"/>
+                        </group>
+                    </group>
+                    <group string="Next Service">
+                        <group>
+                            <field name="next_due_odometer" invisible="trigger_type == 'days'"/>
+                            <field name="remaining_km" invisible="trigger_type == 'days'"/>
+                        </group>
+                        <group>
+                            <field name="next_due_date" invisible="trigger_type == 'km'"/>
+                            <field name="remaining_days" invisible="trigger_type == 'km'"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Checklist" name="checklist">
+                            <field name="description" placeholder="Tasks to perform each time…"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_maintenance_plan_search" model="ir.ui.view">
+        <field name="name">nexora.maintenance.plan.search</field>
+        <field name="model">nexora.maintenance.plan</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="vehicle_id"/>
+                <field name="responsible_id"/>
+                <filter name="archived" string="Archived" domain="[('active', '=', False)]"/>
+                <group>
+                    <filter name="group_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_responsible" string="Responsible" context="{'group_by': 'responsible_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_maintenance_plan" model="ir.actions.act_window">
+        <field name="name">Maintenance Plans</field>
+        <field name="res_model">nexora.maintenance.plan</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

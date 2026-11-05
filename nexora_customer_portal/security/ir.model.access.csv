@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_nexora_customer_ticket_agent,nexora.customer.ticket agent,model_nexora_customer_ticket,nexora_customer_portal.group_nexora_portal_agent,1,1,1,0
+access_nexora_customer_ticket_manager,nexora.customer.ticket manager,model_nexora_customer_ticket,nexora_customer_portal.group_nexora_portal_manager,1,1,1,1
+access_nexora_customer_ticket_portal,nexora.customer.ticket portal,model_nexora_customer_ticket,base.group_portal,1,0,0,0
+access_nexora_shipment_document_dispatcher,nexora.shipment.document dispatcher,model_nexora_shipment_document,nexora_transport.group_nexora_transport_dispatcher,1,1,1,1
+access_nexora_shipment_document_portal,nexora.shipment.document portal,model_nexora_shipment_document,base.group_portal,1,0,0,0
+access_portal_nexora_shipment,portal shipment read,nexora_transport.model_nexora_shipment,base.group_portal,1,0,0,0
+access_portal_nexora_order,portal order read,nexora_transport.model_nexora_transport_order,base.group_portal,1,0,0,0
+access_portal_nexora_order_line,portal order line read,nexora_transport.model_nexora_transport_order_line,base.group_portal,1,0,0,0
+access_portal_nexora_event,portal event read,nexora_transport.model_nexora_shipment_event,base.group_portal,1,0,0,0

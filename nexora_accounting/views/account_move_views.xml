@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_move_form_nexora" model="ir.ui.view">
+        <field name="name">account.move.form.nexora</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Nexora" name="nexora"
+                      invisible="move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')">
+                    <group>
+                        <field name="nexora_cost_center_id"/>
+                    </group>
+                    <field name="nexora_shipment_ids" readonly="1" invisible="not nexora_shipment_ids">
+                        <list>
+                            <field name="name"/>
+                            <field name="order_id"/>
+                            <field name="delivery_partner_id"/>
+                            <field name="freight_amount"/>
+                            <field name="state" widget="badge"/>
+                        </list>
+                    </field>
+                    <field name="nexora_expense_ids" readonly="1" invisible="not nexora_expense_ids">
+                        <list>
+                            <field name="name"/>
+                            <field name="vehicle_id"/>
+                            <field name="expense_type"/>
+                            <field name="amount"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_nexora_freight_invoices" model="ir.actions.act_window">
+        <field name="name">Freight Invoices</field>
+        <field name="res_model">account.move</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('move_type', '=', 'out_invoice'), ('nexora_shipment_ids', '!=', False)]</field>
+        <field name="context">{'default_move_type': 'out_invoice'}</field>
+    </record>
+
+    <record id="action_nexora_vendor_bills" model="ir.actions.act_window">
+        <field name="name">Vendor Bills</field>
+        <field name="res_model">account.move</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('move_type', '=', 'in_invoice'),
+                              '|', ('nexora_cost_center_id', '!=', False),
+                              ('nexora_expense_ids', '!=', False)]</field>
+        <field name="context">{'default_move_type': 'in_invoice'}</field>
+    </record>
+</odoo>

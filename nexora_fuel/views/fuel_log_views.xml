@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_fuel_log_list" model="ir.ui.view">
+        <field name="name">nexora.fuel.log.list</field>
+        <field name="model">nexora.fuel.log</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state == 'cancelled'"
+                  decoration-danger="is_anomaly"
+                  decoration-info="state == 'draft'">
+                <field name="name"/>
+                <field name="date"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id" optional="show"/>
+                <field name="fuel_type" optional="show"/>
+                <field name="quantity" sum="Total Quantity"/>
+                <field name="price_unit" optional="hide"/>
+                <field name="amount" sum="Total Amount"/>
+                <field name="odometer" optional="show"/>
+                <field name="distance" optional="show"/>
+                <field name="consumption" optional="show"/>
+                <field name="cost_per_km" optional="hide"/>
+                <field name="card_id" optional="hide"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="is_anomaly" column_invisible="1"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'confirmed'"
+                       decoration-info="state == 'draft'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_fuel_log_form" model="ir.ui.view">
+        <field name="name">nexora.fuel.log.form</field>
+        <field name="model">nexora.fuel.log</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_confirm" type="object" string="Confirm"
+                            class="btn-primary" invisible="state != 'draft'"/>
+                    <button name="action_cancel" type="object" string="Cancel"
+                            invisible="state not in ('draft', 'confirmed')"/>
+                    <button name="action_draft" type="object" string="Reset to Draft"
+                            invisible="state != 'cancelled'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed"/>
+                </header>
+                <sheet>
+                    <field name="is_anomaly" invisible="1"/>
+                    <field name="over_limit" invisible="1"/>
+                    <div class="alert alert-danger" role="alert" invisible="not is_anomaly">
+                        Consumption of this fill is abnormally high compared to the reference value.
+                    </div>
+                    <div class="alert alert-warning" role="alert" invisible="not over_limit">
+                        The monthly limit of the fuel card was exceeded.
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="vehicle_id" readonly="state != 'draft'"/>
+                            <field name="driver_id" readonly="state != 'draft'"/>
+                            <field name="date" readonly="state != 'draft'"/>
+                            <field name="odometer" readonly="state != 'draft'"/>
+                            <field name="full_tank" readonly="state != 'draft'"/>
+                        </group>
+                        <group>
+                            <field name="fuel_type" readonly="state != 'draft'"/>
+                            <field name="quantity" readonly="state != 'draft'"/>
+                            <field name="price_unit" readonly="state != 'draft'"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="amount" readonly="state != 'draft'"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Source">
+                            <field name="station_id" readonly="state != 'draft'"/>
+                            <field name="card_id" readonly="state != 'draft'"/>
+                            <field name="cost_center_id" readonly="state != 'draft'"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group string="Analysis" invisible="state != 'confirmed'">
+                            <field name="distance"/>
+                            <field name="consumption"/>
+                            <field name="cost_per_km"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="notes" placeholder="Notes…"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_fuel_log_search" model="ir.ui.view">
+        <field name="name">nexora.fuel.log.search</field>
+        <field name="model">nexora.fuel.log</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <field name="station_id"/>
+                <field name="card_id"/>
+                <filter name="draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="confirmed" string="Confirmed" domain="[('state', '=', 'confirmed')]"/>
+                <separator/>
+                <filter name="anomaly" string="Abnormal Consumption" domain="[('is_anomaly', '=', True)]"/>
+                <filter name="over_limit" string="Over Card Limit" domain="[('over_limit', '=', True)]"/>
+                <separator/>
+                <filter name="this_month" string="This Month"
+                        domain="[('date', '>=', context_today().strftime('%Y-%m-01'))]"/>
+                <group>
+                    <filter name="group_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_driver" string="Driver" context="{'group_by': 'driver_id'}"/>
+                    <filter name="group_station" string="Station" context="{'group_by': 'station_id'}"/>
+                    <filter name="group_fuel" string="Fuel Type" context="{'group_by': 'fuel_type'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_nexora_fuel_log_pivot" model="ir.ui.view">
+        <field name="name">nexora.fuel.log.pivot</field>
+        <field name="model">nexora.fuel.log</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="vehicle_id" type="row"/>
+                <field name="date" interval="month" type="col"/>
+                <field name="amount" type="measure"/>
+                <field name="quantity" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_nexora_fuel_log_graph" model="ir.ui.view">
+        <field name="name">nexora.fuel.log.graph</field>
+        <field name="model">nexora.fuel.log</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="date" interval="month"/>
+                <field name="amount" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_nexora_fuel_log" model="ir.actions.act_window">
+        <field name="name">Fuel Logs</field>
+        <field name="res_model">nexora.fuel.log</field>
+        <field name="view_mode">list,form,graph,pivot</field>
+        <field name="context">{'search_default_confirmed': 1}</field>
+    </record>
+</odoo>

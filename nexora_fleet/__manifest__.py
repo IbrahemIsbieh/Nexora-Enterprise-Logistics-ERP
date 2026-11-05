@@ -1,0 +1,22 @@
+{
+    'name': 'Nexora Fleet',
+    'version': '19.0.1.0.0',
+    'category': 'Nexora',
+    'author': 'Ibrahem Issa',
+    'summary': 'Vehicle registration, driver assignment, availability and incident management',
+    'author': 'Nexora',
+    'license': 'LGPL-3',
+    'depends': ['nexora_core', 'fleet', 'stock', 'hr'],
+    'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'data/sequence_data.xml',
+        'data/cron_data.xml',
+        'views/fleet_vehicle_views.xml',
+        'views/assignment_views.xml',
+        'views/incident_views.xml',
+        'views/res_config_settings_views.xml',
+        'views/menus.xml',
+    ],
+    'installable': True,
+}

@@ -1,0 +1,1016 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* nexora_fleet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-04 13:51+0000\n"
+"PO-Revision-Date: 2026-11-04 13:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/assignment.py:0
+msgid "%s is not registered as a driver."
+msgstr "%s غير مسجل كسائق."
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_incident__incident_type__accident
+msgid "Accident"
+msgstr "حادث"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__message_needaction
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__message_needaction
+msgid "Action Needed"
+msgstr "يتطلب إجراءً"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_assignment__state__active
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_assignment_search
+msgid "Active"
+msgstr "نشط"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تمييز حالة استثناء النشاط"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__actual_cost
+msgid "Actual Cost"
+msgstr "التكلفة الفعلية"
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/incident.py:0
+msgid "Add a resolution note before resolving the incident."
+msgstr "أضف ملاحظة توضح الحل قبل إغلاق الحادث."
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_temperature_class__ambient
+msgid "Ambient"
+msgstr "درجة الحرارة العادية"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_availability__assigned
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.fleet_vehicle_view_search_nexora
+msgid "Assigned"
+msgstr "مخصص"
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/fleet_vehicle.py:0
+#: model:ir.ui.menu,name:nexora_fleet.menu_nexora_vehicle_assignments
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.fleet_vehicle_view_form_nexora
+msgid "Assignments"
+msgstr "التكليفات"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__message_attachment_count
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_availability
+#: model:ir.ui.menu,name:nexora_fleet.menu_nexora_vehicle_availability
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.fleet_vehicle_view_form_nexora
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.fleet_vehicle_view_search_nexora
+msgid "Availability"
+msgstr "التوفر"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_availability__available
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.fleet_vehicle_view_search_nexora
+msgid "Available"
+msgstr "متاح"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_axles
+msgid "Axles"
+msgstr "المحاور"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__blocks_vehicle
+msgid "Blocks Vehicle"
+msgstr "يمنع استخدام المركبة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_incident__incident_type__breakdown
+msgid "Breakdown"
+msgstr "عطل"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_assignment_form
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_assignment__state__cancelled
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_incident__state__cancelled
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_incident__incident_type__damage
+msgid "Cargo / Vehicle Damage"
+msgstr "تلف الشحنة / المركبة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_cargo_volume
+msgid "Cargo Volume (m³)"
+msgstr "حجم الحمولة (م³)"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_temperature_class__chilled
+msgid "Chilled"
+msgstr "مبرد"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__claim_reference
+msgid "Claim Reference"
+msgstr "مرجع المطالبة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__company_id
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: nexora_fleet
+#: model:ir.model,name:nexora_fleet.model_res_config_settings
+msgid "Config Settings"
+msgstr "إعدادات التهيئة"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_assignment_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_cost_center_id
+msgid "Cost Center"
+msgstr "مركز التكلفة"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_form
+msgid "Costs & Insurance"
+msgstr "التكاليف والتأمين"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__create_uid
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__create_date
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_current_driver_id
+msgid "Current Driver"
+msgstr "السائق الحالي"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__incident_date
+msgid "Date & Time"
+msgstr "التاريخ والوقت"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.res_config_settings_view_form_nexora_fleet
+msgid ""
+"Days before registration, insurance or inspection expiry to create a "
+"reminder."
+msgstr ""
+"عدد الأيام قبل انتهاء صلاحية التسجيل أو التأمين أو الفحص لإنشاء تذكير."
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__description
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: nexora_fleet
+#: model:res.groups,name:nexora_fleet.group_nexora_fleet_dispatcher
+msgid "Dispatcher"
+msgstr "مسؤول إرسال المركبات"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__display_name
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__display_name
+#: model:ir.model.fields,field_description:nexora_fleet.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__distance
+msgid "Distance"
+msgstr "المسافة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_doc_status
+msgid "Documents"
+msgstr "المستندات"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_assignment__state__done
+msgid "Done"
+msgstr "مكتمل"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_assignment__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__driver_id
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__driver_id
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_assignment_search
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_search
+msgid "Driver"
+msgstr "السائق"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__date_end
+msgid "End"
+msgstr "النهاية"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__estimated_cost
+msgid "Estimated Cost"
+msgstr "التكلفة التقديرية"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_doc_status__expired
+msgid "Expired"
+msgstr "منتهي الصلاحية"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.fleet_vehicle_view_search_nexora
+msgid "Expired Documents"
+msgstr "المستندات منتهية الصلاحية"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_doc_status__expiring
+msgid "Expiring Soon"
+msgstr "قريب من انتهاء الصلاحية"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_assignment_form
+msgid "Finish"
+msgstr "إنهاء"
+
+#. module: nexora_fleet
+#: model:ir.ui.menu,name:nexora_fleet.menu_nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.res_config_settings_view_form_nexora_fleet
+msgid "Fleet"
+msgstr "إدارة الأسطول"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__message_follower_ids
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__message_partner_ids
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (جهات الاتصال)"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_incident__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة من Font Awesome، مثل fa-tasks"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_temperature_class__frozen
+msgid "Frozen"
+msgstr "مجمد"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__has_message
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسائل"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_hazmat_certified
+msgid "Hazmat Certified"
+msgstr "معتمد لنقل المواد الخطرة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_vehicle_class__truck_heavy
+msgid "Heavy Truck"
+msgstr "شاحنة ثقيلة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_home_warehouse_id
+msgid "Home Warehouse"
+msgstr "المستودع الرئيسي"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__id
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__id
+#: model:ir.model.fields,field_description:nexora_fleet.field_res_config_settings__id
+msgid "ID"
+msgstr "المُعرّف"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_incident__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى وجود استثناء في النشاط."
+
+#. module: nexora_fleet
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_assignment__message_needaction
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_incident__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده، فإن الرسائل الجديدة تتطلب انتباهك."
+
+#. module: nexora_fleet
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_assignment__message_has_error
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_assignment__message_has_sms_error
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_incident__message_has_error
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_incident__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده، فهذا يعني وجود خطأ في تسليم بعض الرسائل."
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_in_maintenance
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_availability__maintenance
+msgid "In Maintenance"
+msgstr "قيد الصيانة"
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/incident.py:0
+msgid "Incident %s resolved: vehicle released."
+msgstr "تم حل الحادث %s: أصبحت المركبة متاحة للاستخدام."
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__incident_type
+msgid "Incident Type"
+msgstr "نوع الحادث"
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/fleet_vehicle.py:0
+#: model:ir.actions.act_window,name:nexora_fleet.action_nexora_vehicle_incident
+#: model:ir.ui.menu,name:nexora_fleet.menu_nexora_vehicle_incidents
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.fleet_vehicle_view_form_nexora
+msgid "Incidents"
+msgstr "الحوادث"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__injuries
+msgid "Injuries Reported"
+msgstr "الإصابات المبلغ عنها"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_inspection_expiry
+msgid "Inspection Expiry"
+msgstr "تاريخ انتهاء الفحص"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__insurance_claim
+msgid "Insurance Claim"
+msgstr "مطالبة التأمين"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_insurance_expiry
+msgid "Insurance Expiry"
+msgstr "تاريخ انتهاء التأمين"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_insurance_policy
+msgid "Insurance Policy No."
+msgstr "رقم وثيقة التأمين"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_incident__state__investigating
+msgid "Investigating"
+msgstr "قيد التحقيق"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__message_is_follower
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__write_uid
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__write_date
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_assignment__date_end
+msgid "Leave empty for an open-ended assignment."
+msgstr "اترك هذا الحقل فارغاً إذا كان التكليف مفتوح المدة."
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_vehicle_class__truck_light
+msgid "Light Truck"
+msgstr "شاحنة خفيفة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__location
+msgid "Location"
+msgstr "الموقع"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_assignment__purpose__long_term
+msgid "Long Term"
+msgstr "طويل الأمد"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_incident__severity__major
+msgid "Major"
+msgstr "جسيم"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_search
+msgid "Major / Total Loss"
+msgstr "حادث جسيم / خسارة كلية"
+
+#. module: nexora_fleet
+#: model:res.groups,name:nexora_fleet.group_nexora_fleet_manager
+msgid "Manager"
+msgstr "مدير الأسطول"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_max_payload
+msgid "Max Payload (kg)"
+msgstr "الحمولة القصوى (كغ)"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__message_has_error
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__message_ids
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_incident__severity__minor
+msgid "Minor"
+msgstr "بسيط"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_incident__severity__moderate
+msgid "Moderate"
+msgstr "متوسط"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_search
+msgid "Month"
+msgstr "الشهر"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.fleet_vehicle_view_form_nexora
+msgid "Nexora"
+msgstr "نيكسورا"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_assignment_ids
+msgid "Nexora Assignment"
+msgstr "تكليفات نيكسورا"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_assignment_count
+msgid "Nexora Assignment Count"
+msgstr "عدد تكليفات نيكسورا"
+
+#. module: nexora_fleet
+#: model:res.groups.privilege,name:nexora_fleet.res_groups_privilege_nexora_fleet
+msgid "Nexora Fleet"
+msgstr "أسطول نيكسورا"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_incident_ids
+msgid "Nexora Incident"
+msgstr "حوادث نيكسورا"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_incident_count
+msgid "Nexora Incident Count"
+msgstr "عدد حوادث نيكسورا"
+
+#. module: nexora_fleet
+#: model:ir.actions.server,name:nexora_fleet.cron_nexora_vehicle_document_alert_ir_actions_server
+msgid "Nexora: Vehicle document expiry alerts"
+msgstr "نيكسورا: تنبيهات انتهاء صلاحية مستندات المركبات"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "حدث التقويم للنشاط التالي"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_assignment_form
+msgid "Notes…"
+msgstr "ملاحظات…"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__message_needaction_counter
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__message_has_error_counter
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_assignment__message_needaction_counter
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_incident__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراءً"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_assignment__message_has_error_counter
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_incident__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي حدث خطأ في تسليمها"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_assignment_form
+msgid "Odometer"
+msgstr "عداد المسافة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__odometer_end
+msgid "Odometer End"
+msgstr "قراءة العداد عند النهاية"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__odometer_start
+msgid "Odometer Start"
+msgstr "قراءة العداد عند البداية"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_assignment_search
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_search
+msgid "Open"
+msgstr "مفتوح"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.fleet_vehicle_view_form_nexora
+msgid "Organization"
+msgstr "التنظيم"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_vehicle_class__other
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_incident__incident_type__other
+msgid "Other"
+msgstr "أخرى"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_out_of_service
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_availability__out_of_service
+msgid "Out of Service"
+msgstr "خارج الخدمة"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_form
+msgid "Outcome, repairs, lessons learned…"
+msgstr "النتيجة والإصلاحات والدروس المستفادة…"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_vehicle_class__pickup
+msgid "Pickup"
+msgstr "شاحنة صغيرة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_assignment__state__planned
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_assignment_search
+msgid "Planned"
+msgstr "مخطط له"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__police_report_no
+msgid "Police Report No."
+msgstr "رقم تقرير الشرطة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__purpose
+msgid "Purpose"
+msgstr "الغرض"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__name
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__name
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_vehicle_class__refrigerated
+msgid "Refrigerated Truck"
+msgstr "شاحنة مبردة"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.fleet_vehicle_view_form_nexora
+msgid "Registration & Documents"
+msgstr "التسجيل والمستندات"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_registration_expiry
+msgid "Registration Expiry"
+msgstr "تاريخ انتهاء التسجيل"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_registration_no
+msgid "Registration No."
+msgstr "رقم التسجيل"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_form
+msgid "Reopen"
+msgstr "إعادة فتح"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_incident__state__reported
+msgid "Reported"
+msgstr "تم الإبلاغ عنه"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_assignment_form
+msgid "Reset to Draft"
+msgstr "إعادة إلى المسودة"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_form
+msgid "Resolution"
+msgstr "الحل"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__resolution_note
+msgid "Resolution Note"
+msgstr "ملاحظة الحل"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_form
+msgid "Resolve"
+msgstr "حل الحادث"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_incident__state__resolved
+msgid "Resolved"
+msgstr "تم الحل"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__responsible_id
+msgid "Responsible"
+msgstr "المسؤول"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__message_has_sms_error
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__severity
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_search
+msgid "Severity"
+msgstr "درجة الخطورة"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.fleet_vehicle_view_form_nexora
+msgid "Specifications"
+msgstr "المواصفات"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__date_start
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_assignment_form
+msgid "Start"
+msgstr "البداية"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_form
+msgid "Start Investigation"
+msgstr "بدء التحقيق"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__state
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_assignment_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_incident__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناءً على الأنشطة\n"
+"متأخر: لقد تجاوز تاريخ الاستحقاق\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"مخطط له: أنشطة مستقبلية."
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_vehicle_class__tanker
+msgid "Tanker"
+msgstr "صهريج"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_temperature_class
+msgid "Temperature Capability"
+msgstr "قدرة التحكم بدرجة الحرارة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_assignment__purpose__temporary
+msgid "Temporary"
+msgstr "مؤقت"
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/assignment.py:0
+msgid "The end must be after the start."
+msgstr "يجب أن يكون وقت الانتهاء بعد وقت البداية."
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/assignment.py:0
+msgid "The ending odometer cannot be lower than the starting one."
+msgstr "لا يمكن أن تكون قراءة العداد النهائية أقل من القراءة الابتدائية."
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/assignment.py:0
+msgid "The license of %(driver)s expires before the assignment start."
+msgstr "تنتهي صلاحية رخصة السائق %(driver)s قبل تاريخ بدء التكليف."
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_incident__incident_type__theft
+msgid "Theft"
+msgstr "سرقة"
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/assignment.py:0
+msgid "This %(label)s is already assigned in the same period (%(ref)s)."
+msgstr "هذا %(label)s مخصص بالفعل خلال الفترة نفسها (%(ref)s)."
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_incident__severity__total_loss
+msgid "Total Loss"
+msgstr "خسارة كلية"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_incident__incident_type__violation
+msgid "Traffic Violation"
+msgstr "مخالفة مرورية"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_vehicle_class__trailer
+msgid "Trailer / Semi-trailer"
+msgstr "مقطورة / نصف مقطورة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__nexora_vehicle_assignment__purpose__trip
+msgid "Trip / Shipment"
+msgstr "رحلة / شحنة"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_incident__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي المسجل."
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.fleet_vehicle_view_search_nexora
+msgid "Unavailable"
+msgstr "غير متاح"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_doc_status__valid
+msgid "Valid"
+msgstr "ساري المفعول"
+
+#. module: nexora_fleet
+#: model:ir.model.fields.selection,name:nexora_fleet.selection__fleet_vehicle__nexora_vehicle_class__van
+msgid "Van"
+msgstr "شاحنة فان"
+
+#. module: nexora_fleet
+#: model:ir.model,name:nexora_fleet.model_fleet_vehicle
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__vehicle_id
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__vehicle_id
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_assignment_search
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_search
+msgid "Vehicle"
+msgstr "المركبة"
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/assignment.py:0
+msgid "Vehicle %(vehicle)s has expired documents: %(docs)s."
+msgstr "تحتوي المركبة %(vehicle)s على مستندات منتهية الصلاحية: %(docs)s."
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/assignment.py:0
+msgid "Vehicle %(vehicle)s is not operational (%(state)s)."
+msgstr "المركبة %(vehicle)s غير جاهزة للتشغيل (%(state)s)."
+
+#. module: nexora_fleet
+#: model:ir.model,name:nexora_fleet.model_nexora_vehicle_incident
+msgid "Vehicle Accident / Incident"
+msgstr "حادث / واقعة مركبة"
+
+#. module: nexora_fleet
+#: model:ir.model,name:nexora_fleet.model_nexora_vehicle_assignment
+msgid "Vehicle Assignment"
+msgstr "تكليف مركبة"
+
+#. module: nexora_fleet
+#: model:ir.actions.act_window,name:nexora_fleet.action_nexora_vehicle_assignment
+msgid "Vehicle Assignments"
+msgstr "تكليفات المركبات"
+
+#. module: nexora_fleet
+#: model:ir.actions.act_window,name:nexora_fleet.action_nexora_vehicle_availability
+msgid "Vehicle Availability"
+msgstr "توفر المركبات"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_form
+msgid "Vehicle Blocked"
+msgstr "المركبة متوقفة عن العمل"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_fleet_vehicle__nexora_vehicle_class
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.fleet_vehicle_view_search_nexora
+msgid "Vehicle Class"
+msgstr "فئة المركبة"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.res_config_settings_view_form_nexora_fleet
+msgid "Vehicle Document Alert"
+msgstr "تنبيه مستندات المركبة"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_res_config_settings__nexora_fleet_doc_alert_days
+msgid "Vehicle Document Alert (days)"
+msgstr "تنبيه مستندات المركبة (بالأيام)"
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/incident.py:0
+msgid "Vehicle blocked by incident %(ref)s (%(severity)s)."
+msgstr "تم إيقاف المركبة بسبب الحادث %(ref)s (درجة الخطورة: %(severity)s)."
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/fleet_vehicle.py:0
+msgid "Vehicle document expiring: %s"
+msgstr "مستند المركبة على وشك انتهاء الصلاحية: %s"
+
+#. module: nexora_fleet
+#: model:ir.ui.menu,name:nexora_fleet.menu_nexora_vehicles
+msgid "Vehicles"
+msgstr "المركبات"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_assignment__website_message_ids
+#: model:ir.model.fields,field_description:nexora_fleet.field_nexora_vehicle_incident__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_assignment__website_message_ids
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_incident__website_message_ids
+msgid "Website communication history"
+msgstr "سجل التواصل عبر الموقع الإلكتروني"
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_form
+msgid "What happened?"
+msgstr "ماذا حدث؟"
+
+#. module: nexora_fleet
+#: model:ir.model.fields,help:nexora_fleet.field_nexora_vehicle_incident__blocks_vehicle
+msgid "While the incident is open, the vehicle is considered out of service."
+msgstr "تُعتبر المركبة خارج الخدمة طوال فترة بقاء الحادث مفتوحاً."
+
+#. module: nexora_fleet
+#: model_terms:ir.ui.view,arch_db:nexora_fleet.view_nexora_vehicle_incident_search
+msgid "With Injuries"
+msgstr "مع وجود إصابات"
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/assignment.py:0
+msgid "driver"
+msgstr "السائق"
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/assignment.py:0
+msgid "driver_id"
+msgstr "معرّف السائق"
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/assignment.py:0
+msgid "vehicle"
+msgstr "المركبة"
+
+#. module: nexora_fleet
+#. odoo-python
+#: code:addons/nexora_fleet/models/fleet_vehicle.py:0
+msgid "vehicle_id"
+msgstr "معرّف المركبة"

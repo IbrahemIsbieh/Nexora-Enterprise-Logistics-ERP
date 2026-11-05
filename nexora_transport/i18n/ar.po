@@ -1,0 +1,1434 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* nexora_transport
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-04 14:10+0000\n"
+"PO-Revision-Date: 2026-11-04 14:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nexora_transport
+#: model:ir.actions.report,print_report_name:nexora_transport.action_report_shipment_waybill
+msgid "'Waybill - %s' % object.name"
+msgstr "'بوليصة الشحن - %s' % object.name"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "<small>Signature</small>"
+msgstr "<small>التوقيع</small>"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "<strong class=\"d-block mt-2\">Pickup</strong>"
+msgstr "<strong class=\"d-block mt-2\">الاستلام</strong>"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "<strong>Customer</strong>"
+msgstr "<strong>العميل</strong>"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "<strong>Deliver To</strong>"
+msgstr "<strong>التسليم إلى</strong>"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "<strong>Delivered On:</strong>"
+msgstr "<strong>تاريخ التسليم:</strong>"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "<strong>Driver</strong>"
+msgstr "<strong>السائق</strong>"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "<strong>Order</strong>"
+msgstr "<strong>الطلب</strong>"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "<strong>Planned Delivery</strong>"
+msgstr "<strong>التسليم المخطط</strong>"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "<strong>Received By:</strong>"
+msgstr "<strong>تم الاستلام بواسطة:</strong>"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "<strong>Status</strong>"
+msgstr "<strong>الحالة</strong>"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "<strong>Total</strong>"
+msgstr "<strong>الإجمالي</strong>"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "<strong>Trip</strong>"
+msgstr "<strong>الرحلة</strong>"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "<strong>Vehicle</strong>"
+msgstr "<strong>المركبة</strong>"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/transport_order.py:0
+msgid "A cargo line assigned to a shipment cannot be deleted."
+msgstr "لا يمكن حذف بند شحنة تم إسناده إلى بوليصة شحن."
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/trip.py:0
+msgid ""
+"A trip in progress cannot be cancelled. Mark undelivered shipments as failed"
+" and complete the trip."
+msgstr ""
+"لا يمكن إلغاء رحلة قيد التنفيذ. قم بتحديد الشحنات التي لم يتم تسليمها على أنها"
+" فاشلة، ثم أكمل الرحلة."
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__message_needaction
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__message_needaction
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__activity_ids
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__activity_ids
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__activity_exception_decoration
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__activity_exception_decoration
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "رمز استثناء النشاط"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__activity_state
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__activity_state
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__activity_type_icon
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__activity_type_icon
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__actual_delivery_date
+msgid "Actual Delivery Date"
+msgstr "تاريخ التسليم الفعلي"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__actual_end
+msgid "Actual End"
+msgstr "وقت الانتهاء الفعلي"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__actual_pickup_date
+msgid "Actual Pickup Date"
+msgstr "تاريخ الاستلام الفعلي"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__actual_start
+msgid "Actual Start"
+msgstr "وقت البدء الفعلي"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_trip_add_shipment_wizard_form
+msgid "Add"
+msgstr "إضافة"
+
+#. module: nexora_transport
+#: model:ir.actions.act_window,name:nexora_transport.action_nexora_trip_add_shipment
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_form
+msgid "Add Shipments"
+msgstr "إضافة شحنات"
+
+#. module: nexora_transport
+#: model:ir.model,name:nexora_transport.model_nexora_trip_add_shipment_wizard
+msgid "Add Shipments to Trip"
+msgstr "إضافة شحنات إلى الرحلة"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/transport_order.py:0
+msgid "Add at least one cargo line."
+msgstr "أضف بند شحنة واحداً على الأقل."
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/trip.py:0
+msgid "Add at least one shipment to the trip."
+msgstr "أضف شحنة واحدة على الأقل إلى الرحلة."
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/transport_order.py:0
+msgid "All cargo lines are already assigned to shipments."
+msgstr "تم بالفعل إسناد جميع بنود الشحنة إلى بوالص الشحن."
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment__temperature_class__ambient
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_order__temperature_class__ambient
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_order_line__temperature_class__ambient
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_trip__temperature_class__ambient
+msgid "Ambient"
+msgstr "درجة حرارة عادية"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__assignment_id
+msgid "Assignment"
+msgstr "التكليف"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__message_attachment_count
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__message_attachment_count
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__available_driver_ids
+msgid "Available Driver"
+msgstr "السائقون المتاحون"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__available_vehicle_ids
+msgid "Available Vehicle"
+msgstr "المركبات المتاحة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_res_config_settings__nexora_transport_strict_capacity
+msgid "Block Overloaded / Incompatible Trips"
+msgstr "منع الرحلات ذات الحمولة الزائدة أو غير المتوافقة"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.res_config_settings_view_form_nexora_transport
+msgid ""
+"Block planning when the load exceeds the vehicle capacity or is incompatible"
+" (temperature, hazmat). When off, only a warning is logged on the trip."
+msgstr ""
+"منع تخطيط الرحلة عندما تتجاوز الحمولة سعة المركبة أو تكون غير متوافقة معها"
+" (درجة الحرارة أو المواد الخطرة). عند تعطيل هذا الخيار، يتم تسجيل تحذير فقط في الرحلة."
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_form
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_form
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_form
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_trip_add_shipment_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_form
+msgid "Cancel this order and its open shipments?"
+msgstr "هل تريد إلغاء هذا الطلب والشحنات المفتوحة المرتبطة به؟"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment__state__cancelled
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_order__state__cancelled
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_trip__state__cancelled
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__line_ids
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__line_ids
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_form
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_form
+msgid "Cargo"
+msgstr "الشحنة"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment_event__event_type__checkpoint
+msgid "Checkpoint"
+msgstr "نقطة تفتيش"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment__temperature_class__chilled
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_order__temperature_class__chilled
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_order_line__temperature_class__chilled
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_trip__temperature_class__chilled
+msgid "Chilled"
+msgstr "مبرد"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__company_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__company_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_form
+msgid "Complete Trip"
+msgstr "إكمال الرحلة"
+
+#. module: nexora_transport
+#: model:ir.model,name:nexora_transport.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/transport_order.py:0
+msgid "Confirm the order before creating shipments."
+msgstr "قم بتأكيد الطلب قبل إنشاء الشحنات."
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_order__state__confirmed
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__contract_id
+msgid "Contract"
+msgstr "العقد"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__cost_center_id
+msgid "Cost Center"
+msgstr "مركز التكلفة"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_form
+msgid "Create Shipment"
+msgstr "إنشاء شحنة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__create_uid
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment_event__create_uid
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__create_uid
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__create_uid
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__create_uid
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_trip_add_shipment_wizard__create_uid
+msgid "Created by"
+msgstr "أُنشئ بواسطة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__create_date
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment_event__create_date
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__create_date
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__create_date
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__create_date
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_trip_add_shipment_wizard__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__partner_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__partner_id
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_search
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_search
+msgid "Customer"
+msgstr "العميل"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__reference
+msgid "Customer Reference"
+msgstr "مرجع العميل"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment_event__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__delay_hours
+msgid "Delay (h)"
+msgstr "التأخير (ساعة)"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_form
+msgid "Deliver"
+msgstr "تسليم"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/trip.py:0
+msgid "Deliver or mark as failed all shipments first: %s"
+msgstr "قم بتسليم جميع الشحنات أو تحديدها على أنها فاشلة أولاً: %s"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment__state__delivered
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment_event__event_type__delivered
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_form
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_search
+msgid "Delivered"
+msgstr "تم التسليم"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/shipment.py:0
+msgid "Delivered to %s"
+msgstr "تم التسليم إلى %s"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__delivery_partner_id
+msgid "Delivery Address"
+msgstr "عنوان التسليم"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__delivery_partner_id
+msgid "Delivery Address / Contact"
+msgstr "عنوان / جهة اتصال التسليم"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment_event__event_type__failed
+msgid "Delivery Failed"
+msgstr "فشل التسليم"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_search
+msgid "Delivery Month"
+msgstr "شهر التسليم"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__pod_note
+msgid "Delivery Note"
+msgstr "ملاحظة التسليم"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__pod_photo
+msgid "Delivery Photo"
+msgstr "صورة التسليم"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/transport_order.py:0
+msgid "Delivery cannot be requested before the pickup."
+msgstr "لا يمكن طلب التسليم قبل موعد الاستلام."
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/trip.py:0
+msgid "Departed with trip %s"
+msgstr "انطلقت مع الرحلة %s"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__name
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "Description"
+msgstr "الوصف"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__responsible_id
+#: model:res.groups,name:nexora_transport.group_nexora_transport_dispatcher
+msgid "Dispatcher"
+msgstr "منسق النقل"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__display_name
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment_event__display_name
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__display_name
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__display_name
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__display_name
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_trip_add_shipment_wizard__display_name
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_vehicle_assignment__display_name
+#: model:ir.model.fields,field_description:nexora_transport.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__distance
+msgid "Distance (km)"
+msgstr "المسافة (كم)"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_order__state__done
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_trip__state__done
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_search
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_search
+msgid "Done"
+msgstr "منجز"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment__state__draft
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_order__state__draft
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_trip__state__draft
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_search
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__driver_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__driver_id
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_search
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_search
+msgid "Driver"
+msgstr "السائق"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/shipment.py:0
+msgid "Enter the failure reason for %s first."
+msgstr "أدخل سبب الفشل للشحنة %s أولاً."
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment_event__event_type
+msgid "Event Type"
+msgstr "نوع الحدث"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_form
+msgid "Execution"
+msgstr "التنفيذ"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment__state__failed
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_form
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_search
+msgid "Failed"
+msgstr "فاشل"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_form
+msgid "Failure"
+msgstr "الفشل"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__failure_reason
+msgid "Failure Reason"
+msgstr "سبب الفشل"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__message_follower_ids
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__message_follower_ids
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__message_partner_ids
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__message_partner_ids
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (جهات الاتصال)"
+
+#. module: nexora_transport
+#: model:ir.model.fields,help:nexora_transport.field_nexora_shipment__activity_type_icon
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_order__activity_type_icon
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_trip__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font Awesome، مثل fa-tasks"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment__temperature_class__frozen
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_order__temperature_class__frozen
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_order_line__temperature_class__frozen
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_trip__temperature_class__frozen
+msgid "Frozen"
+msgstr "مجمّد"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__has_message
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__has_message
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسالة"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "Haz."
+msgstr "مواد خطرة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__has_hazardous
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__hazardous
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__has_hazardous
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_search
+msgid "Hazardous"
+msgstr "مواد خطرة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__has_hazardous
+msgid "Hazardous Cargo"
+msgstr "شحنة مواد خطرة"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.res_config_settings_view_form_nexora_transport
+msgid ""
+"Hours after the planned delivery during which a delivery is still considered"
+" on time."
+msgstr ""
+"عدد الساعات بعد موعد التسليم المخطط التي يظل خلالها التسليم محسوباً على أنه"
+" تم في الوقت المحدد."
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment_event__id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_trip_add_shipment_wizard__id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_vehicle_assignment__id
+#: model:ir.model.fields,field_description:nexora_transport.field_res_config_settings__id
+msgid "ID"
+msgstr "المُعرّف"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__activity_exception_icon
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__activity_exception_icon
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,help:nexora_transport.field_nexora_shipment__activity_exception_icon
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_order__activity_exception_icon
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_trip__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى وجود استثناء في النشاط."
+
+#. module: nexora_transport
+#: model:ir.model.fields,help:nexora_transport.field_nexora_shipment__message_needaction
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_order__message_needaction
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_trip__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده، فستتطلب الرسائل الجديدة انتباهك."
+
+#. module: nexora_transport
+#: model:ir.model.fields,help:nexora_transport.field_nexora_shipment__message_has_error
+#: model:ir.model.fields,help:nexora_transport.field_nexora_shipment__message_has_sms_error
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_order__message_has_error
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_order__message_has_sms_error
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_trip__message_has_error
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_trip__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده، فهذا يعني وجود خطأ في تسليم بعض الرسائل."
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_order__state__in_progress
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_trip__state__in_progress
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_search
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment__state__in_transit
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_search
+msgid "In Transit"
+msgstr "قيد النقل"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__message_is_follower
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__message_is_follower
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__write_uid
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment_event__write_uid
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__write_uid
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__write_uid
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__write_uid
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_trip_add_shipment_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__write_date
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment_event__write_date
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__write_date
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__write_date
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__write_date
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_trip_add_shipment_wizard__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_form
+msgid "Load"
+msgstr "الحمولة"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/trip.py:0
+msgid "Load %(w).1f kg exceeds the payload of %(v)s (%(m).1f kg)."
+msgstr "الحمولة %(w).1f كغ تتجاوز سعة حمولة المركبة %(v)s البالغة (%(m).1f كغ)."
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__total_weight
+msgid "Load (kg)"
+msgstr "الحمولة (كغ)"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__total_volume
+msgid "Load (m³)"
+msgstr "حجم الحمولة (م³)"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment_event__location
+msgid "Location"
+msgstr "الموقع"
+
+#. module: nexora_transport
+#: model:res.groups,name:nexora_transport.group_nexora_transport_manager
+msgid "Manager"
+msgstr "مدير"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_form
+msgid "Mark as Failed"
+msgstr "تحديد كفاشلة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__message_has_error
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__message_has_error
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__message_ids
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__message_ids
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_search
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_search
+msgid "Month"
+msgstr "الشهر"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__my_activity_date_deadline
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__my_activity_date_deadline
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__activity_calendar_event_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__activity_calendar_event_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "حدث التقويم للنشاط التالي"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__activity_date_deadline
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__activity_date_deadline
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__activity_summary
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__activity_summary
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__activity_type_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__activity_type_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_order__priority__normal
+msgid "Normal"
+msgstr "عادي"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment_event__note
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__note
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment_event__event_type__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__notes
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__notes
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_form
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__message_needaction_counter
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__message_needaction_counter
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__message_has_error_counter
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__message_has_error_counter
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: nexora_transport
+#: model:ir.model.fields,help:nexora_transport.field_nexora_shipment__message_needaction_counter
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_order__message_needaction_counter
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_trip__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراءً"
+
+#. module: nexora_transport
+#: model:ir.model.fields,help:nexora_transport.field_nexora_shipment__message_has_error_counter
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_order__message_has_error_counter
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_trip__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي حدث خطأ في تسليمها"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__odometer_end
+msgid "Odometer End (km)"
+msgstr "قراءة عداد المسافة عند النهاية (كم)"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__odometer_start
+msgid "Odometer Start"
+msgstr "قراءة عداد المسافة عند البداية"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__on_time
+msgid "On Time"
+msgstr "في الوقت المحدد"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_res_config_settings__nexora_transport_ontime_grace_hours
+msgid "On-time Grace (hours)"
+msgstr "هامش التأخير المقبول (بالساعات)"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.res_config_settings_view_form_nexora_transport
+msgid "On-time Grace Period"
+msgstr "فترة السماح للتسليم في الوقت المحدد"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/transport_order.py:0
+msgid "Only draft or cancelled orders can be deleted."
+msgstr "لا يمكن حذف سوى الطلبات التي بحالة مسودة أو ملغاة."
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/trip.py:0
+msgid "Only draft or cancelled trips can be deleted."
+msgstr "لا يمكن حذف سوى الرحلات التي بحالة مسودة أو ملغاة."
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/shipment.py:0
+msgid "Only shipments in transit can be delivered (%s)."
+msgstr "لا يمكن تسليم سوى الشحنات قيد النقل (%s)."
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/shipment.py:0
+msgid "Only shipments in transit can be marked as failed (%s)."
+msgstr "لا يمكن تحديد الشحنات على أنها فاشلة إلا إذا كانت قيد النقل (%s)."
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_search
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_search
+msgid "Open"
+msgstr "مفتوح"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__order_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__order_id
+msgid "Order"
+msgstr "الطلب"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/transport_order.py:0
+msgid ""
+"Order %s has shipments in transit or delivered and cannot be cancelled."
+msgstr ""
+"الطلب %s يحتوي على شحنات قيد النقل أو تم تسليمها، ولذلك لا يمكن إلغاؤه."
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__order_date
+msgid "Order Date"
+msgstr "تاريخ الطلب"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__origin_warehouse_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__origin_warehouse_id
+msgid "Origin Warehouse"
+msgstr "مستودع الانطلاق"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__payload_usage
+msgid "Payload Usage (%)"
+msgstr "نسبة استخدام حمولة المركبة (%)"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment_event__event_type__pickup
+msgid "Picked Up"
+msgstr "تم الاستلام"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__pickup_partner_id
+msgid "Pickup Address"
+msgstr "عنوان الاستلام"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__pickup_partner_id
+msgid "Pickup Address / Contact"
+msgstr "عنوان / جهة اتصال الاستلام"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_form
+msgid "Plan Trip"
+msgstr "تخطيط الرحلة"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment__state__planned
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_trip__state__planned
+msgid "Planned"
+msgstr "مخطط"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__planned_delivery_date
+msgid "Planned Delivery Date"
+msgstr "تاريخ التسليم المخطط"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__planned_end
+msgid "Planned End"
+msgstr "وقت الانتهاء المخطط"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__planned_pickup_date
+msgid "Planned Pickup Date"
+msgstr "تاريخ الاستلام المخطط"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__planned_start
+msgid "Planned Start"
+msgstr "وقت البدء المخطط"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/shipment.py:0
+msgid "Planned delivery was %s."
+msgstr "كان موعد التسليم المخطط هو %s."
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/shipment.py:0
+#: code:addons/nexora_transport/models/trip.py:0
+msgid "Planned on trip %s"
+msgstr "تمت الجدولة ضمن الرحلة %s"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__priority
+msgid "Priority"
+msgstr "الأولوية"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_form
+msgid "Proof of Delivery"
+msgstr "إثبات التسليم"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/shipment.py:0
+msgid ""
+"Proof of delivery is required for %s: receiver name and a signature or a "
+"photo."
+msgstr ""
+"إثبات التسليم مطلوب للشحنة %s: اسم المستلم مع توقيع أو صورة."
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "Qty"
+msgstr "الكمية"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__quantity
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/transport_order.py:0
+msgid "Quantity must be greater than zero."
+msgstr "يجب أن تكون الكمية أكبر من صفر."
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__pod_receiver_name
+msgid "Received By"
+msgstr "تم الاستلام بواسطة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__name
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__requested_delivery_date
+msgid "Requested Delivery Date"
+msgstr "تاريخ التسليم المطلوب"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__requested_pickup_date
+msgid "Requested Pickup Date"
+msgstr "تاريخ الاستلام المطلوب"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_form
+msgid "Reschedule"
+msgstr "إعادة الجدولة"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/shipment.py:0
+msgid "Rescheduled after a failed delivery"
+msgstr "تمت إعادة الجدولة بعد فشل التسليم"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_form
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_form
+msgid "Reset to Draft"
+msgstr "إعادة إلى المسودة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__responsible_id
+msgid "Responsible"
+msgstr "المسؤول"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__activity_user_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__activity_user_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__route
+msgid "Route"
+msgstr "المسار"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__message_has_sms_error
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__message_has_sms_error
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: nexora_transport
+#: model:ir.model,name:nexora_transport.model_nexora_shipment
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment_event__shipment_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__shipment_id
+msgid "Shipment"
+msgstr "الشحنة"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/shipment.py:0
+msgid "Shipment %s cannot be cancelled in its current state."
+msgstr "لا يمكن إلغاء الشحنة %s في حالتها الحالية."
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__shipment_count
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__shipment_count
+msgid "Shipment Count"
+msgstr "عدد الشحنات"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__name
+msgid "Shipment No."
+msgstr "رقم الشحنة"
+
+#. module: nexora_transport
+#: model:ir.model,name:nexora_transport.model_nexora_shipment_event
+msgid "Shipment Tracking Event"
+msgstr "حدث تتبع الشحنة"
+
+#. module: nexora_transport
+#: model:ir.actions.report,name:nexora_transport.action_report_shipment_waybill
+msgid "Shipment Waybill"
+msgstr "بوليصة الشحن"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "Shipment Waybill:"
+msgstr "بوليصة الشحن:"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/shipment.py:0
+msgid "Shipment cancelled"
+msgstr "تم إلغاء الشحنة"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/shipment.py:0
+msgid "Shipment created"
+msgstr "تم إنشاء الشحنة"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/shipment.py:0
+msgid "Shipment is late"
+msgstr "الشحنة متأخرة"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/transport_order.py:0
+#: code:addons/nexora_transport/models/trip.py:0
+#: model:ir.actions.act_window,name:nexora_transport.action_nexora_shipment
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__shipment_ids
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__shipment_ids
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_trip_add_shipment_wizard__shipment_ids
+#: model:ir.ui.menu,name:nexora_transport.menu_nexora_shipments
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_form
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_form
+msgid "Shipments"
+msgstr "الشحنات"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/shipment.py:0
+msgid "Shipments can only be added to draft or planned trips."
+msgstr "لا يمكن إضافة الشحنات إلا إلى الرحلات التي بحالة مسودة أو مخططة."
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__pod_signature
+msgid "Signature"
+msgstr "التوقيع"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_form
+msgid "Start Trip"
+msgstr "بدء الرحلة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__state
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__state
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_search
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_search
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_shipment_event__event_type__status
+msgid "Status Change"
+msgstr "تغيير الحالة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,help:nexora_transport.field_nexora_shipment__activity_state
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_order__activity_state
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_trip__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناءً على الأنشطة\n"
+"متأخر: تم تجاوز تاريخ الاستحقاق\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"مخطط: أنشطة مستقبلية."
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.res_config_settings_view_form_nexora_transport
+msgid "Strict Load Validation"
+msgstr "التحقق الصارم من الحمولة"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "Temp."
+msgstr "درجة الحرارة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__temperature_class
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__temperature_class
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__temperature_class
+msgid "Temperature Class"
+msgstr "فئة درجة الحرارة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__temperature_class
+msgid "Temperature Requirement"
+msgstr "متطلبات درجة الحرارة"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/trip.py:0
+msgid "The cargo is hazardous but %s is not hazmat certified."
+msgstr "الشحنة تحتوي على مواد خطرة، لكن المركبة %s غير معتمدة لنقل المواد الخطرة."
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/trip.py:0
+msgid "The cargo needs %(c)s transport but %(v)s only supports %(vc)s."
+msgstr "تتطلب الشحنة نقلاً من نوع %(c)s، لكن المركبة %(v)s تدعم فقط %(vc)s."
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/transport_order.py:0
+msgid "The contract %s is not active."
+msgstr "العقد %s غير نشط."
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/trip.py:0
+msgid "The ending odometer cannot be lower than the starting one."
+msgstr "لا يمكن أن تكون قراءة عداد المسافة عند النهاية أقل من القراءة عند البداية."
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/trip.py:0
+msgid "The planned end must be after the planned start."
+msgstr "يجب أن يكون وقت الانتهاء المخطط بعد وقت البدء المخطط."
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/shipment.py:0
+msgid "The trip of shipment %s can no longer be changed."
+msgstr "لم يعد بالإمكان تغيير رحلة الشحنة %s."
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_search
+msgid "To Plan"
+msgstr "بانتظار التخطيط"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__total_volume
+msgid "Total Volume (m³)"
+msgstr "الحجم الإجمالي (م³)"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__total_weight
+msgid "Total Weight (kg)"
+msgstr "الوزن الإجمالي (كغ)"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__event_ids
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_form
+msgid "Tracking"
+msgstr "التتبع"
+
+#. module: nexora_transport
+#: model:ir.model,name:nexora_transport.model_nexora_transport_order
+msgid "Transport Order"
+msgstr "طلب نقل"
+
+#. module: nexora_transport
+#: model:ir.model,name:nexora_transport.model_nexora_transport_order_line
+msgid "Transport Order Cargo Line"
+msgstr "بند شحنة طلب النقل"
+
+#. module: nexora_transport
+#: model:ir.actions.act_window,name:nexora_transport.action_nexora_transport_order
+#: model:ir.ui.menu,name:nexora_transport.menu_nexora_transport_orders
+msgid "Transport Orders"
+msgstr "طلبات النقل"
+
+#. module: nexora_transport
+#: model:ir.model,name:nexora_transport.model_nexora_transport_trip
+msgid "Transport Trip"
+msgstr "رحلة نقل"
+
+#. module: nexora_transport
+#: model:ir.ui.menu,name:nexora_transport.menu_nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.res_config_settings_view_form_nexora_transport
+msgid "Transportation"
+msgstr "النقل"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__trip_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_trip_add_shipment_wizard__trip_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_vehicle_assignment__trip_id
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_search
+msgid "Trip"
+msgstr "الرحلة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__name
+msgid "Trip No."
+msgstr "رقم الرحلة"
+
+#. module: nexora_transport
+#: model:ir.actions.act_window,name:nexora_transport.action_nexora_transport_trip
+#: model:ir.ui.menu,name:nexora_transport.menu_nexora_trips
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_calendar
+msgid "Trips"
+msgstr "الرحلات"
+
+#. module: nexora_transport
+#: model:ir.model.fields,help:nexora_transport.field_nexora_shipment__activity_exception_decoration
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_order__activity_exception_decoration
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_trip__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء المسجل."
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__uom_id
+msgid "Unit"
+msgstr "الوحدة"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__unshipped_count
+msgid "Unshipped Count"
+msgstr "عدد الشحنات غير المنشأة"
+
+#. module: nexora_transport
+#: model:ir.model.fields.selection,name:nexora_transport.selection__nexora_transport_order__priority__urgent
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_search
+msgid "Urgent"
+msgstr "عاجل"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment_event__user_id
+msgid "User"
+msgstr "المستخدم"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__vehicle_id
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__vehicle_id
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_search
+msgid "Vehicle"
+msgstr "المركبة"
+
+#. module: nexora_transport
+#: model:ir.model,name:nexora_transport.model_nexora_vehicle_assignment
+msgid "Vehicle Assignment"
+msgstr "تكليف مركبة"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/trip.py:0
+msgid ""
+"Vehicle and driver can only be changed on draft trips. Cancel the trip "
+"first."
+msgstr ""
+"لا يمكن تغيير المركبة والسائق إلا في الرحلات التي بحالة مسودة. قم بإلغاء الرحلة"
+" أولاً."
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_form
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_form
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_form
+msgid "Volume"
+msgstr "الحجم"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/trip.py:0
+msgid "Volume %(w).2f m³ exceeds the cargo volume of %(v)s (%(m).2f m³)."
+msgstr "الحجم %(w).2f م³ يتجاوز سعة الشحن للمركبة %(v)s البالغة (%(m).2f م³)."
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__total_volume
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__volume
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "Volume (m³)"
+msgstr "الحجم (م³)"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__volume_usage
+msgid "Volume Usage (%)"
+msgstr "نسبة استخدام الحجم (%)"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__website_message_ids
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order__website_message_ids
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_trip__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: nexora_transport
+#: model:ir.model.fields,help:nexora_transport.field_nexora_shipment__website_message_ids
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_order__website_message_ids
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_trip__website_message_ids
+msgid "Website communication history"
+msgstr "سجل المراسلات عبر الموقع الإلكتروني"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_form
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_order_form
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_transport_trip_form
+msgid "Weight"
+msgstr "الوزن"
+
+#. module: nexora_transport
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_shipment__total_weight
+#: model:ir.model.fields,field_description:nexora_transport.field_nexora_transport_order_line__weight
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "Weight (kg)"
+msgstr "الوزن (كغ)"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/transport_order.py:0
+msgid "Weight and volume cannot be negative."
+msgstr "لا يمكن أن يكون الوزن أو الحجم بقيمة سالبة."
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.view_nexora_shipment_form
+msgid "Why could the shipment not be delivered?"
+msgstr "ما سبب تعذر تسليم الشحنة؟"
+
+#. module: nexora_transport
+#: model_terms:ir.ui.view,arch_db:nexora_transport.report_shipment_waybill
+msgid "Yes"
+msgstr "نعم"
+
+#. module: nexora_transport
+#: model:ir.model.fields,help:nexora_transport.field_nexora_transport_trip__route
+msgid "e.g. Amman - Zarqa - Irbid"
+msgstr "مثال: عمّان - الزرقاء - إربد"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/transport_order.py:0
+msgid "order_id"
+msgstr "order_id"
+
+#. module: nexora_transport
+#. odoo-python
+#: code:addons/nexora_transport/models/trip.py:0
+msgid "trip_id"
+msgstr "trip_id"

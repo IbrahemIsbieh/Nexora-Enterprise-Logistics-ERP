@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_nexora_warehouse" name="Warehouse"
+              parent="nexora_core.menu_nexora_root" sequence="30"
+              groups="nexora_warehouse.group_nexora_warehouse_operator"/>
+
+    <menuitem id="menu_nexora_scan_sessions" name="Barcode Scan Sessions"
+              parent="menu_nexora_warehouse" action="action_nexora_scan_session" sequence="10"/>
+    <menuitem id="menu_nexora_warehouses" name="Warehouses"
+              parent="menu_nexora_warehouse" action="stock.action_warehouse_form" sequence="20"
+              groups="nexora_warehouse.group_nexora_warehouse_manager"/>
+    <menuitem id="menu_nexora_locations" name="Locations &amp; Capacity"
+              parent="menu_nexora_warehouse" action="action_nexora_location_capacity" sequence="30"
+              groups="nexora_warehouse.group_nexora_warehouse_manager"/>
+</odoo>

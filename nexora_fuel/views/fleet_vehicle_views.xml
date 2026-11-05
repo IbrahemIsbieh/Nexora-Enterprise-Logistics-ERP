@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fleet_vehicle_view_form_nexora_fuel" model="ir.ui.view">
+        <field name="name">fleet.vehicle.form.nexora.fuel</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="nexora_fleet.fleet_vehicle_view_form_nexora"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_nexora_fuel_logs" type="object"
+                        class="oe_stat_button" icon="fa-tint">
+                    <field name="nexora_fuel_log_count" widget="statinfo" string="Fuel Logs"/>
+                </button>
+                <button name="action_view_nexora_expenses" type="object"
+                        class="oe_stat_button" icon="fa-money">
+                    <field name="nexora_expense_count" widget="statinfo" string="Expenses"/>
+                </button>
+            </xpath>
+            <xpath expr="//page[@name='nexora']" position="inside">
+                <group string="Fuel &amp; Expenses">
+                    <group>
+                        <field name="nexora_target_consumption"/>
+                        <field name="nexora_avg_consumption"/>
+                        <field name="nexora_total_expense"/>
+                    </group>
+                </group>
+                <field name="nexora_fuel_card_ids" readonly="1">
+                    <list>
+                        <field name="name"/>
+                        <field name="provider_id"/>
+                        <field name="expiry_date"/>
+                        <field name="state" widget="badge"/>
+                    </list>
+                </field>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_transport_order_form_portal" model="ir.ui.view">
+        <field name="name">nexora.transport.order.form.portal</field>
+        <field name="model">nexora.transport.order</field>
+        <field name="inherit_id" ref="nexora_transport.view_nexora_transport_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='reference']" position="after">
+                <field name="portal_request" invisible="not portal_request"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_nexora_transport_order_search_portal" model="ir.ui.view">
+        <field name="name">nexora.transport.order.search.portal</field>
+        <field name="model">nexora.transport.order</field>
+        <field name="inherit_id" ref="nexora_transport.view_nexora_transport_order_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='urgent']" position="after">
+                <filter name="portal_requests" string="Portal Requests"
+                        domain="[('portal_request', '=', True)]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_nexora_portal_requests" model="ir.actions.act_window">
+        <field name="name">Portal Requests</field>
+        <field name="res_model">nexora.transport.order</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('portal_request', '=', True)]</field>
+        <field name="context">{'search_default_draft': 1}</field>
+    </record>
+</odoo>

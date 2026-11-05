@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_pr_list" model="ir.ui.view">
+        <field name="name">nexora.purchase.request.list</field>
+        <field name="model">nexora.purchase.request</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state in ('cancelled', 'rejected')"
+                  decoration-danger="priority == 'urgent' and state in ('draft', 'to_approve', 'approved')">
+                <field name="name"/>
+                <field name="requester_id" widget="many2one_avatar_user"/>
+                <field name="warehouse_id" optional="show"/>
+                <field name="cost_center_id" optional="show"/>
+                <field name="date_required"/>
+                <field name="priority" optional="show"/>
+                <field name="approver_id" widget="many2one_avatar_user" optional="show"/>
+                <field name="total_estimated" sum="Total"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="state" widget="badge"
+                       decoration-success="state in ('approved', 'ordered')"
+                       decoration-warning="state == 'to_approve'"
+                       decoration-info="state == 'rfq'"
+                       decoration-danger="state == 'rejected'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_pr_form" model="ir.ui.view">
+        <field name="name">nexora.purchase.request.form</field>
+        <field name="model">nexora.purchase.request</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="can_approve" invisible="1"/>
+                    <button name="action_submit" type="object" string="Submit for Approval"
+                            class="btn-primary" invisible="state != 'draft'"/>
+                    <button name="action_approve" type="object" string="Approve"
+                            class="btn-primary" invisible="not can_approve"/>
+                    <button name="action_reject" type="object" string="Reject"
+                            invisible="not can_approve"/>
+                    <button name="%(action_nexora_request_tender_wizard)d" type="action"
+                            string="Request Quotations" class="btn-primary"
+                            context="{'default_request_id': id}"
+                            invisible="state not in ('approved', 'rfq')"
+                            groups="nexora_procurement.group_nexora_procurement_officer"/>
+                    <button name="action_cancel" type="object" string="Cancel"
+                            invisible="state not in ('draft', 'to_approve', 'approved')"/>
+                    <button name="action_draft" type="object" string="Reset to Draft"
+                            invisible="state not in ('rejected', 'cancelled')"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,to_approve,approved,rfq,ordered"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_tenders" type="object" class="oe_stat_button"
+                                icon="fa-balance-scale" invisible="tender_count == 0"
+                                groups="nexora_procurement.group_nexora_procurement_officer">
+                            <field name="tender_count" widget="statinfo" string="Tenders"/>
+                        </button>
+                        <button name="action_view_orders" type="object" class="oe_stat_button"
+                                icon="fa-shopping-cart" invisible="order_count == 0"
+                                groups="nexora_procurement.group_nexora_procurement_officer">
+                            <field name="order_count" widget="statinfo" string="RFQs / POs"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="requester_id" readonly="state != 'draft'"/>
+                            <field name="warehouse_id" readonly="state != 'draft'"/>
+                            <field name="cost_center_id" readonly="state != 'draft'"/>
+                        </group>
+                        <group>
+                            <field name="date_required" readonly="state != 'draft'"/>
+                            <field name="priority" readonly="state != 'draft'"/>
+                            <field name="approver_id" invisible="not approver_id"/>
+                            <field name="approved_by" invisible="not approved_by"/>
+                            <field name="approved_date" invisible="not approved_date"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group invisible="state not in ('to_approve', 'rejected')">
+                        <field name="reject_reason" readonly="not can_approve"
+                               placeholder="Required when rejecting the request…"/>
+                    </group>
+                    <notebook>
+                        <page string="Items" name="items">
+                            <field name="line_ids" readonly="state != 'draft'">
+                                <list editable="bottom">
+                                    <field name="product_id"/>
+                                    <field name="name"/>
+                                    <field name="quantity"/>
+                                    <field name="uom_id"/>
+                                    <field name="estimated_price"/>
+                                    <field name="subtotal" sum="Total"/>
+                                    <field name="vendor_id" optional="show"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                </list>
+                            </field>
+                            <group class="oe_subtotal_footer">
+                                <field name="currency_id" invisible="1"/>
+                                <field name="total_estimated" class="oe_subtotal_footer_separator"/>
+                            </group>
+                        </page>
+                        <page string="Justification" name="reason">
+                            <field name="reason" readonly="state != 'draft'"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_pr_search" model="ir.ui.view">
+        <field name="name">nexora.purchase.request.search</field>
+        <field name="model">nexora.purchase.request</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="requester_id"/>
+                <field name="cost_center_id"/>
+                <filter name="my" string="My Requests" domain="[('requester_id', '=', uid)]"/>
+                <filter name="to_approve" string="To Approve" domain="[('state', '=', 'to_approve')]"/>
+                <filter name="approved" string="Approved" domain="[('state', '=', 'approved')]"/>
+                <filter name="urgent" string="Urgent" domain="[('priority', '=', 'urgent')]"/>
+                <group>
+                    <filter name="group_requester" string="Requester" context="{'group_by': 'requester_id'}"/>
+                    <filter name="group_cc" string="Cost Center" context="{'group_by': 'cost_center_id'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'create_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_nexora_pr_pivot" model="ir.ui.view">
+        <field name="name">nexora.purchase.request.pivot</field>
+        <field name="model">nexora.purchase.request</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="cost_center_id" type="row"/>
+                <field name="state" type="col"/>
+                <field name="total_estimated" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_nexora_pr_graph" model="ir.ui.view">
+        <field name="name">nexora.purchase.request.graph</field>
+        <field name="model">nexora.purchase.request</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="requester_id"/>
+                <field name="total_estimated" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_nexora_purchase_request" model="ir.actions.act_window">
+        <field name="name">Purchase Requests</field>
+        <field name="res_model">nexora.purchase.request</field>
+        <field name="view_mode">list,form,pivot,graph</field>
+    </record>
+</odoo>

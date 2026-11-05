@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_vehicle_expense_list" model="ir.ui.view">
+        <field name="name">nexora.vehicle.expense.list</field>
+        <field name="model">nexora.vehicle.expense</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state == 'cancelled'" decoration-info="state == 'draft'">
+                <field name="name"/>
+                <field name="date"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id" optional="show"/>
+                <field name="expense_type"/>
+                <field name="description" optional="show"/>
+                <field name="partner_id" optional="hide"/>
+                <field name="cost_center_id" optional="show"/>
+                <field name="amount" sum="Total"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'confirmed'"
+                       decoration-info="state == 'draft'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_vehicle_expense_form" model="ir.ui.view">
+        <field name="name">nexora.vehicle.expense.form</field>
+        <field name="model">nexora.vehicle.expense</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_confirm" type="object" string="Confirm"
+                            class="btn-primary" invisible="state != 'draft'"
+                            groups="nexora_fuel.group_nexora_fuel_manager"/>
+                    <button name="action_cancel" type="object" string="Cancel"
+                            invisible="state not in ('draft', 'confirmed') or fuel_log_id"
+                            groups="nexora_fuel.group_nexora_fuel_manager"/>
+                    <button name="action_draft" type="object" string="Reset to Draft"
+                            invisible="state != 'cancelled' or fuel_log_id"
+                            groups="nexora_fuel.group_nexora_fuel_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="vehicle_id" readonly="state != 'draft' or fuel_log_id"/>
+                            <field name="driver_id" readonly="state != 'draft'"/>
+                            <field name="date" readonly="state != 'draft'"/>
+                            <field name="expense_type" readonly="state != 'draft' or fuel_log_id"/>
+                            <field name="description" readonly="state != 'draft'"/>
+                        </group>
+                        <group>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="amount" readonly="state != 'draft' or fuel_log_id"/>
+                            <field name="partner_id" readonly="state != 'draft'"/>
+                            <field name="cost_center_id" readonly="state != 'draft'"/>
+                            <field name="fuel_log_id" invisible="not fuel_log_id"/>
+                            <field name="incident_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="notes" placeholder="Notes…"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_vehicle_expense_search" model="ir.ui.view">
+        <field name="name">nexora.vehicle.expense.search</field>
+        <field name="model">nexora.vehicle.expense</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <field name="partner_id"/>
+                <field name="cost_center_id"/>
+                <filter name="draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="confirmed" string="Confirmed" domain="[('state', '=', 'confirmed')]"/>
+                <separator/>
+                <filter name="this_month" string="This Month"
+                        domain="[('date', '>=', context_today().strftime('%Y-%m-01'))]"/>
+                <group>
+                    <filter name="group_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_type" string="Type" context="{'group_by': 'expense_type'}"/>
+                    <filter name="group_cc" string="Cost Center" context="{'group_by': 'cost_center_id'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_nexora_vehicle_expense_pivot" model="ir.ui.view">
+        <field name="name">nexora.vehicle.expense.pivot</field>
+        <field name="model">nexora.vehicle.expense</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="vehicle_id" type="row"/>
+                <field name="expense_type" type="col"/>
+                <field name="amount" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_nexora_vehicle_expense_graph" model="ir.ui.view">
+        <field name="name">nexora.vehicle.expense.graph</field>
+        <field name="model">nexora.vehicle.expense</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="expense_type"/>
+                <field name="amount" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_nexora_vehicle_expense" model="ir.actions.act_window">
+        <field name="name">Vehicle Expenses</field>
+        <field name="res_model">nexora.vehicle.expense</field>
+        <field name="view_mode">list,form,graph,pivot</field>
+        <field name="context">{'search_default_confirmed': 1}</field>
+    </record>
+</odoo>

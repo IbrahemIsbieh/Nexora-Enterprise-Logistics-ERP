@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="seq_nexora_purchase_request" model="ir.sequence">
+        <field name="name">Nexora Purchase Request</field>
+        <field name="code">nexora.purchase.request</field>
+        <field name="prefix">PR/%(year)s/</field>
+        <field name="padding">5</field>
+    </record>
+
+    <record id="seq_nexora_rfq_tender" model="ir.sequence">
+        <field name="name">Nexora RFQ Tender</field>
+        <field name="code">nexora.rfq.tender</field>
+        <field name="prefix">TD/%(year)s/</field>
+        <field name="padding">4</field>
+    </record>
+</odoo>

@@ -1,0 +1,22 @@
+{
+    'name': 'Nexora Integration (API & Webhooks)',
+    'version': '19.0.1.0.0',
+    'category': 'Ibrahem Issa',
+    'summary': 'REST API with API keys, webhooks and external integrations',
+    'author': 'Nexora',
+    'license': 'LGPL-3',
+    'depends': ['nexora_transport', 'mail'],
+    'external_dependencies': {'python': ['requests']},
+    'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'data/catalog_data.xml',
+        'data/cron_data.xml',
+        'views/api_key_views.xml',
+        'views/webhook_views.xml',
+        'views/api_log_views.xml',
+        'views/res_config_settings_views.xml',
+        'views/menus.xml',
+    ],
+    'installable': True,
+}

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_vehicle_incident_list" model="ir.ui.view">
+        <field name="name">nexora.vehicle.incident.list</field>
+        <field name="model">nexora.vehicle.incident</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state in ('resolved', 'cancelled')"
+                  decoration-danger="severity in ('major', 'total_loss') and state in ('reported', 'investigating')">
+                <field name="name"/>
+                <field name="incident_date"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <field name="incident_type"/>
+                <field name="severity" widget="badge"
+                       decoration-danger="severity in ('major', 'total_loss')"
+                       decoration-warning="severity == 'moderate'"/>
+                <field name="estimated_cost" optional="show"/>
+                <field name="actual_cost" optional="hide"/>
+                <field name="responsible_id" widget="many2one_avatar_user" optional="show"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'resolved'"
+                       decoration-warning="state == 'investigating'"
+                       decoration-info="state == 'reported'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_vehicle_incident_form" model="ir.ui.view">
+        <field name="name">nexora.vehicle.incident.form</field>
+        <field name="model">nexora.vehicle.incident</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_investigate" type="object" string="Start Investigation"
+                            class="btn-primary" invisible="state != 'reported'"/>
+                    <button name="action_resolve" type="object" string="Resolve"
+                            class="btn-primary" invisible="state not in ('reported', 'investigating')"/>
+                    <button name="action_cancel" type="object" string="Cancel"
+                            invisible="state not in ('reported', 'investigating')"/>
+                    <button name="action_reopen" type="object" string="Reopen"
+                            invisible="state not in ('resolved', 'cancelled')"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="reported,investigating,resolved"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Vehicle Blocked" bg_color="text-bg-danger"
+                            invisible="not blocks_vehicle or state not in ('reported', 'investigating')"/>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="vehicle_id"/>
+                            <field name="driver_id"/>
+                            <field name="incident_date"/>
+                            <field name="location"/>
+                        </group>
+                        <group>
+                            <field name="incident_type"/>
+                            <field name="severity"/>
+                            <field name="blocks_vehicle"/>
+                            <field name="injuries"/>
+                            <field name="police_report_no"/>
+                            <field name="responsible_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description" name="description">
+                            <field name="description" placeholder="What happened?"/>
+                        </page>
+                        <page string="Costs &amp; Insurance" name="costs">
+                            <group>
+                                <group>
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="estimated_cost"/>
+                                    <field name="actual_cost"/>
+                                </group>
+                                <group>
+                                    <field name="insurance_claim"/>
+                                    <field name="claim_reference" invisible="not insurance_claim"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Resolution" name="resolution">
+                            <field name="resolution_note" placeholder="Outcome, repairs, lessons learned…"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_vehicle_incident_search" model="ir.ui.view">
+        <field name="name">nexora.vehicle.incident.search</field>
+        <field name="model">nexora.vehicle.incident</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <filter name="open" string="Open"
+                        domain="[('state', 'in', ('reported', 'investigating'))]"/>
+                <filter name="serious" string="Major / Total Loss"
+                        domain="[('severity', 'in', ('major', 'total_loss'))]"/>
+                <filter name="injuries" string="With Injuries" domain="[('injuries', '=', True)]"/>
+                <group>
+                    <filter name="group_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_driver" string="Driver" context="{'group_by': 'driver_id'}"/>
+                    <filter name="group_type" string="Type" context="{'group_by': 'incident_type'}"/>
+                    <filter name="group_severity" string="Severity" context="{'group_by': 'severity'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'incident_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_nexora_vehicle_incident_graph" model="ir.ui.view">
+        <field name="name">nexora.vehicle.incident.graph</field>
+        <field name="model">nexora.vehicle.incident</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="incident_type"/>
+                <field name="actual_cost" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_nexora_vehicle_incident" model="ir.actions.act_window">
+        <field name="name">Incidents</field>
+        <field name="res_model">nexora.vehicle.incident</field>
+        <field name="view_mode">list,form,graph</field>
+        <field name="context">{'search_default_open': 1}</field>
+    </record>
+</odoo>

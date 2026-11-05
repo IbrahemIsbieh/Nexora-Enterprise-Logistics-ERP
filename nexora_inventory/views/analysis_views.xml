@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_inventory_analysis_list" model="ir.ui.view">
+        <field name="name">nexora.inventory.analysis.list</field>
+        <field name="model">nexora.inventory.analysis</field>
+        <field name="arch" type="xml">
+            <list create="0" edit="0"
+                  decoration-danger="risk_level in ('stockout', 'critical')"
+                  decoration-warning="risk_level == 'low'"
+                  decoration-info="risk_level == 'overstock'"
+                  decoration-muted="risk_level == 'dead'">
+                <field name="warehouse_id"/>
+                <field name="product_id"/>
+                <field name="categ_id" optional="hide"/>
+                <field name="on_hand"/>
+                <field name="incoming" optional="show"/>
+                <field name="position" optional="hide"/>
+                <field name="avg_daily_demand" optional="hide"/>
+                <field name="forecast_daily"/>
+                <field name="trend_pct" optional="show"/>
+                <field name="days_of_cover"/>
+                <field name="lead_time" optional="show"/>
+                <field name="safety_stock" optional="hide"/>
+                <field name="reorder_point"/>
+                <field name="suggested_qty"/>
+                <field name="risk_level" widget="badge"
+                       decoration-danger="risk_level in ('stockout', 'critical')"
+                       decoration-warning="risk_level == 'low'"
+                       decoration-success="risk_level == 'ok'"
+                       decoration-info="risk_level == 'overstock'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_inventory_analysis_form" model="ir.ui.view">
+        <field name="name">nexora.inventory.analysis.form</field>
+        <field name="model">nexora.inventory.analysis</field>
+        <field name="arch" type="xml">
+            <form create="0" edit="0">
+                <sheet>
+                    <group>
+                        <group string="Product">
+                            <field name="product_id"/>
+                            <field name="warehouse_id"/>
+                            <field name="risk_level" widget="badge"/>
+                            <field name="analysis_date"/>
+                            <field name="history_days"/>
+                        </group>
+                        <group string="Stock">
+                            <field name="on_hand"/>
+                            <field name="incoming"/>
+                            <field name="position"/>
+                            <field name="days_of_cover"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Demand">
+                            <field name="avg_daily_demand"/>
+                            <field name="forecast_daily"/>
+                            <field name="trend_pct"/>
+                            <field name="demand_std"/>
+                        </group>
+                        <group string="Replenishment">
+                            <field name="lead_time"/>
+                            <field name="safety_stock"/>
+                            <field name="reorder_point"/>
+                            <field name="suggested_qty"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_inventory_analysis_search" model="ir.ui.view">
+        <field name="name">nexora.inventory.analysis.search</field>
+        <field name="model">nexora.inventory.analysis</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="product_id"/>
+                <field name="warehouse_id"/>
+                <field name="categ_id"/>
+                <filter name="at_risk" string="At Risk"
+                        domain="[('risk_level', 'in', ('stockout', 'critical', 'low'))]"/>
+                <filter name="stockout" string="Stockout" domain="[('risk_level', '=', 'stockout')]"/>
+                <filter name="critical" string="Critical" domain="[('risk_level', '=', 'critical')]"/>
+                <filter name="overstock" string="Overstock" domain="[('risk_level', '=', 'overstock')]"/>
+                <filter name="dead" string="No Demand" domain="[('risk_level', '=', 'dead')]"/>
+                <separator/>
+                <filter name="needs_order" string="Needs Ordering" domain="[('suggested_qty', '>', 0)]"/>
+                <group>
+                    <filter name="group_risk" string="Risk Level" context="{'group_by': 'risk_level'}"/>
+                    <filter name="group_warehouse" string="Warehouse" context="{'group_by': 'warehouse_id'}"/>
+                    <filter name="group_categ" string="Category" context="{'group_by': 'categ_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_nexora_inventory_analysis_pivot" model="ir.ui.view">
+        <field name="name">nexora.inventory.analysis.pivot</field>
+        <field name="model">nexora.inventory.analysis</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="risk_level" type="row"/>
+                <field name="warehouse_id" type="col"/>
+                <field name="suggested_qty" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_nexora_inventory_analysis_graph" model="ir.ui.view">
+        <field name="name">nexora.inventory.analysis.graph</field>
+        <field name="model">nexora.inventory.analysis</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="risk_level"/>
+                <field name="warehouse_id"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_nexora_inventory_analysis" model="ir.actions.act_window">
+        <field name="name">Inventory Analysis</field>
+        <field name="res_model">nexora.inventory.analysis</field>
+        <field name="view_mode">list,graph,pivot,form</field>
+        <field name="context">{'search_default_at_risk': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No analysis yet</p>
+            <p>Use <b>Run Analysis</b> to compute demand forecasts and stock risks.</p>
+        </field>
+    </record>
+</odoo>

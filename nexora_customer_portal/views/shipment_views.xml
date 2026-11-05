@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_shipment_form_portal" model="ir.ui.view">
+        <field name="name">nexora.shipment.form.portal</field>
+        <field name="model">nexora.shipment</field>
+        <field name="inherit_id" ref="nexora_transport.view_nexora_shipment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <button name="action_view_tickets" type="object" class="oe_stat_button"
+                            icon="fa-ticket" invisible="ticket_count == 0">
+                        <field name="ticket_count" widget="statinfo" string="Tickets"/>
+                    </button>
+                </div>
+            </xpath>
+            <xpath expr="//page[@name='pod']" position="after">
+                <page string="Customer Documents" name="documents">
+                    <field name="document_ids">
+                        <list editable="bottom">
+                            <field name="name"/>
+                            <field name="doc_type"/>
+                            <field name="file" filename="filename"/>
+                            <field name="filename" column_invisible="1"/>
+                            <field name="visible_to_customer"/>
+                            <field name="uploaded_by" optional="show"/>
+                            <field name="date" optional="show"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_approval_rule_list" model="ir.ui.view">
+        <field name="name">nexora.purchase.approval.rule.list</field>
+        <field name="model">nexora.purchase.approval.rule</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="name"/>
+                <field name="min_amount"/>
+                <field name="approver_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="active" column_invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_nexora_approval_rule" model="ir.actions.act_window">
+        <field name="name">Approval Rules</field>
+        <field name="res_model">nexora.purchase.approval.rule</field>
+        <field name="view_mode">list</field>
+    </record>
+</odoo>

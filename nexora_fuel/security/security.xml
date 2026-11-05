@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_groups_privilege_nexora_fuel" model="res.groups.privilege">
+        <field name="name">Nexora Fuel</field>
+        <field name="category_id" ref="nexora_core.module_category_nexora"/>
+    </record>
+
+    <record id="group_nexora_fuel_user" model="res.groups">
+        <field name="name">Clerk</field>
+        <field name="privilege_id" ref="res_groups_privilege_nexora_fuel"/>
+        <field name="implied_ids" eval="[Command.link(ref('nexora_fleet.group_nexora_fleet_dispatcher'))]"/>
+    </record>
+
+    <record id="group_nexora_fuel_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="privilege_id" ref="res_groups_privilege_nexora_fuel"/>
+        <field name="implied_ids" eval="[
+            Command.link(ref('group_nexora_fuel_user')),
+            Command.link(ref('nexora_fleet.group_nexora_fleet_manager'))]"/>
+    </record>
+
+    <record id="nexora_core.group_nexora_admin" model="res.groups">
+        <field name="implied_ids" eval="[Command.link(ref('group_nexora_fuel_manager'))]"/>
+    </record>
+
+    <record id="rule_nexora_fuel_card_company" model="ir.rule">
+        <field name="name">Nexora Fuel Card: multi-company</field>
+        <field name="model_id" ref="model_nexora_fuel_card"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="rule_nexora_fuel_log_company" model="ir.rule">
+        <field name="name">Nexora Fuel Log: multi-company</field>
+        <field name="model_id" ref="model_nexora_fuel_log"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="rule_nexora_vehicle_expense_company" model="ir.rule">
+        <field name="name">Nexora Vehicle Expense: multi-company</field>
+        <field name="model_id" ref="model_nexora_vehicle_expense"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>

@@ -1,0 +1,23 @@
+{
+    'name': 'Nexora Fuel & Vehicle Expenses',
+    'version': '19.0.1.0.0',
+    'category': 'Nexora',
+    'author':'Ibrahem Issa',
+    'summary': 'Fuel logs, fuel cards, consumption analysis and vehicle expenses',
+    'author': 'Nexora',
+    'license': 'LGPL-3',
+    'depends': ['nexora_fleet', 'mail'],
+    'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'data/sequence_data.xml',
+        'data/cron_data.xml',
+        'views/fuel_card_views.xml',
+        'views/fuel_log_views.xml',
+        'views/expense_views.xml',
+        'views/fleet_vehicle_views.xml',
+        'views/res_config_settings_views.xml',
+        'views/menus.xml',
+    ],
+    'installable': True,
+}

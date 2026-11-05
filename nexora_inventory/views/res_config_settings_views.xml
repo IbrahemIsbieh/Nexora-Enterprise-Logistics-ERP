@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_nexora_inventory" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.nexora.inventory</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="nexora_core.res_config_settings_view_form_nexora"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='nexora_core']" position="inside">
+                <block title="Inventory Planning" name="nexora_inventory_block">
+                    <setting string="History Window"
+                             help="Days of past outgoing moves used to estimate demand.">
+                        <field name="nexora_history_days"/>
+                    </setting>
+                    <setting string="Planning Horizon"
+                             help="Days of demand to cover on top of the reorder point when suggesting quantities.">
+                        <field name="nexora_horizon_days"/>
+                    </setting>
+                    <setting string="Service Level"
+                             help="Target probability of not stocking out during lead time (50 - 99.9).">
+                        <field name="nexora_service_level"/>
+                    </setting>
+                    <setting string="Default Lead Time"
+                             help="Used when a product has no vendor.">
+                        <field name="nexora_default_lead_time"/>
+                    </setting>
+                    <setting string="Overstock Threshold"
+                             help="Products with more days of cover than this are flagged as overstock.">
+                        <field name="nexora_overstock_days"/>
+                    </setting>
+                    <setting string="Auto-create Draft Plans"
+                             help="The weekly job creates a draft replenishment plan per warehouse.">
+                        <field name="nexora_auto_plan"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

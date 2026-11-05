@@ -1,0 +1,992 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* nexora_fuel
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-04 14:00+0000\n"
+"PO-Revision-Date: 2026-11-04 14:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fuel_log.py:0
+msgid "%(value).1f per 100 km on %(vehicle)s"
+msgstr "%(value).1f لكل 100 كم للمركبة %(vehicle)s"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_card__monthly_limit
+msgid "0 = no limit"
+msgstr "0 = بدون حد"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.res_config_settings_view_form_nexora_fuel
+msgid ""
+"A fill is flagged when its consumption exceeds the reference by more than "
+"this percentage."
+msgstr ""
+"يتم وضع علامة على عملية التزود بالوقود عندما يتجاوز استهلاكها القيمة المرجعية "
+"بنسبة تزيد على هذه النسبة المئوية."
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__is_anomaly
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_search
+msgid "Abnormal Consumption"
+msgstr "استهلاك غير طبيعي"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.res_config_settings_view_form_nexora_fuel
+msgid "Abnormal Consumption Threshold"
+msgstr "حد الاستهلاك غير الطبيعي"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_res_config_settings__nexora_fuel_anomaly_pct
+msgid "Abnormal Consumption Threshold (%)"
+msgstr "حد الاستهلاك غير الطبيعي (%)"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fuel_log.py:0
+msgid "Abnormal fuel consumption"
+msgstr "استهلاك وقود غير طبيعي"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__message_needaction
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__message_needaction
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_card_form
+msgid "Activate"
+msgstr "تفعيل"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_fuel_card__state__active
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_card_search
+msgid "Active"
+msgstr "نشط"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__activity_ids
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__activity_exception_decoration
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تمييز استثناء النشاط"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__activity_state
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__activity_type_icon
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__amount
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_form
+msgid "Analysis"
+msgstr "التحليل"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__vehicle_id
+msgid "Assigned Vehicle"
+msgstr "المركبة المعيّنة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__message_attachment_count
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__message_attachment_count
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_fleet_vehicle__nexora_avg_consumption
+msgid "Avg. Consumption (per 100 km)"
+msgstr "متوسط الاستهلاك (لكل 100 كم)"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_card_form
+msgid "Block"
+msgstr "حظر"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_fuel_card__state__blocked
+msgid "Blocked"
+msgstr "محظورة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_fuel_log__fuel_type__cng
+msgid "CNG"
+msgstr "غاز طبيعي مضغوط"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_form
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_vehicle_expense_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_fuel_log__state__cancelled
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_vehicle_expense__state__cancelled
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fuel_card.py:0
+msgid "Card %s is past its expiry date. Update the date first."
+msgstr "انتهت صلاحية البطاقة %s. يرجى تحديث تاريخ الانتهاء أولاً."
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__name
+msgid "Card Number"
+msgstr "رقم البطاقة"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_card_form
+msgid "Card number"
+msgstr "رقم البطاقة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_vehicle_expense__expense_type__cleaning
+msgid "Cleaning"
+msgstr "تنظيف"
+
+#. module: nexora_fuel
+#: model:res.groups,name:nexora_fuel.group_nexora_fuel_user
+msgid "Clerk"
+msgstr "موظف"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__company_id
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__company_id
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_log__amount
+msgid ""
+"Computed from quantity x price, but can be overridden with the invoiced "
+"total."
+msgstr ""
+"يتم احتسابه من خلال ضرب الكمية في السعر، ويمكن استبداله بإجمالي المبلغ "
+"الوارد في الفاتورة."
+
+#. module: nexora_fuel
+#: model:ir.model,name:nexora_fuel.model_res_config_settings
+msgid "Config Settings"
+msgstr "إعدادات التهيئة"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_form
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_vehicle_expense_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_fuel_log__state__confirmed
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_vehicle_expense__state__confirmed
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_search
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_vehicle_expense_search
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/expense.py:0
+msgid "Confirmed expenses cannot be deleted. Cancel them first."
+msgstr "لا يمكن حذف المصروفات المؤكدة. يرجى إلغاؤها أولاً."
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fuel_log.py:0
+msgid "Confirmed fuel logs cannot be deleted. Cancel them first."
+msgstr "لا يمكن حذف سجلات الوقود المؤكدة. يرجى إلغاؤها أولاً."
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__consumption
+msgid "Consumption (per 100 km)"
+msgstr "الاستهلاك (لكل 100 كم)"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_form
+msgid ""
+"Consumption of this fill is abnormally high compared to the reference value."
+msgstr "استهلاك عملية التزود بالوقود هذه مرتفع بشكل غير طبيعي مقارنة بالقيمة المرجعية."
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__cost_center_id
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__cost_center_id
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_vehicle_expense_search
+msgid "Cost Center"
+msgstr "مركز التكلفة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__cost_per_km
+msgid "Cost per km"
+msgstr "التكلفة لكل كيلومتر"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__create_uid
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__create_uid
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__create_uid
+msgid "Created by"
+msgstr "أُنشئ بواسطة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__create_date
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__create_date
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__currency_id
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__currency_id
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__date
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.res_config_settings_view_form_nexora_fuel
+msgid "Days before card expiry to remind the responsible user."
+msgstr "عدد الأيام قبل انتهاء صلاحية البطاقة لإرسال تذكير إلى المستخدم المسؤول."
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_fuel_log__fuel_type__diesel
+msgid "Diesel"
+msgstr "ديزل"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__display_name
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__display_name
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__display_name
+#: model:ir.model.fields,field_description:nexora_fuel.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__distance
+msgid "Distance (km)"
+msgstr "المسافة (كم)"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_fuel_log__state__draft
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_vehicle_expense__state__draft
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_search
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_vehicle_expense_search
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__driver_id
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__driver_id
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_search
+msgid "Driver"
+msgstr "السائق"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_fuel_log__fuel_type__electric
+msgid "Electric (kWh)"
+msgstr "كهرباء (كيلوواط ساعة)"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__expense_ids
+msgid "Expense"
+msgstr "المصروف"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__expense_type
+msgid "Expense Type"
+msgstr "نوع المصروف"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fleet_vehicle.py:0
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.fleet_vehicle_view_form_nexora_fuel
+msgid "Expenses"
+msgstr "المصروفات"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/expense.py:0
+msgid "Expenses generated from a fuel log are managed from the fuel log."
+msgstr "تتم إدارة المصروفات الناتجة عن سجل الوقود من خلال سجل الوقود نفسه."
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_fuel_card__state__expired
+msgid "Expired"
+msgstr "منتهي الصلاحية"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__expiry_date
+msgid "Expiry Date"
+msgstr "تاريخ انتهاء الصلاحية"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__message_follower_ids
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__message_follower_ids
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__message_partner_ids
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__message_partner_ids
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (جهات الاتصال)"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_card__activity_type_icon
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_log__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font Awesome، مثل fa-tasks"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_vehicle_expense__expense_type__fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.res_config_settings_view_form_nexora_fuel
+msgid "Fuel"
+msgstr "وقود"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fuel_log.py:0
+msgid "Fuel %(log)s"
+msgstr "وقود %(log)s"
+
+#. module: nexora_fuel
+#: model:ir.ui.menu,name:nexora_fuel.menu_nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.fleet_vehicle_view_form_nexora_fuel
+msgid "Fuel & Expenses"
+msgstr "الوقود والمصروفات"
+
+#. module: nexora_fuel
+#: model:ir.model,name:nexora_fuel.model_nexora_fuel_card
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__card_id
+msgid "Fuel Card"
+msgstr "بطاقة الوقود"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.res_config_settings_view_form_nexora_fuel
+msgid "Fuel Card Expiry Alert"
+msgstr "تنبيه انتهاء صلاحية بطاقة الوقود"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_res_config_settings__nexora_fuel_card_alert_days
+msgid "Fuel Card Expiry Alert (days)"
+msgstr "تنبيه انتهاء صلاحية بطاقة الوقود (بالأيام)"
+
+#. module: nexora_fuel
+#: model:ir.actions.act_window,name:nexora_fuel.action_nexora_fuel_card
+#: model:ir.model.fields,field_description:nexora_fuel.field_fleet_vehicle__nexora_fuel_card_ids
+#: model:ir.ui.menu,name:nexora_fuel.menu_nexora_fuel_cards
+msgid "Fuel Cards"
+msgstr "بطاقات الوقود"
+
+#. module: nexora_fuel
+#: model:ir.model,name:nexora_fuel.model_nexora_fuel_log
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__fuel_log_id
+msgid "Fuel Log"
+msgstr "سجل الوقود"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fleet_vehicle.py:0
+#: code:addons/nexora_fuel/models/fuel_card.py:0
+#: model:ir.actions.act_window,name:nexora_fuel.action_nexora_fuel_log
+#: model:ir.ui.menu,name:nexora_fuel.menu_nexora_fuel_logs
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.fleet_vehicle_view_form_nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_card_form
+msgid "Fuel Logs"
+msgstr "سجلات الوقود"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__fuel_type
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_search
+msgid "Fuel Type"
+msgstr "نوع الوقود"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fuel_log.py:0
+msgid "Fuel card %(card)s is assigned to %(vehicle)s."
+msgstr "بطاقة الوقود %(card)s مخصصة للمركبة %(vehicle)s."
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fuel_log.py:0
+msgid "Fuel card %s had expired on the fuel date."
+msgstr "كانت بطاقة الوقود %s منتهية الصلاحية في تاريخ التزود بالوقود."
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fuel_log.py:0
+msgid "Fuel card %s is not active."
+msgstr "بطاقة الوقود %s غير نشطة."
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fuel_card.py:0
+msgid "Fuel card expiring"
+msgstr "اقتراب انتهاء صلاحية بطاقة الوقود"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__full_tank
+msgid "Full Tank"
+msgstr "خزان ممتلئ"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_fuel_log__fuel_type__gasoline
+msgid "Gasoline"
+msgstr "بنزين"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__has_message
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__has_message
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسالة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__driver_id
+msgid "Holder"
+msgstr "حامل البطاقة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__id
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__id
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__id
+#: model:ir.model.fields,field_description:nexora_fuel.field_res_config_settings__id
+msgid "ID"
+msgstr "المعرّف"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__activity_exception_icon
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_card__activity_exception_icon
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_log__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى وجود استثناء في النشاط."
+
+#. module: nexora_fuel
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_card__message_needaction
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_log__message_needaction
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_vehicle_expense__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده، فستحتاج الرسائل الجديدة إلى انتباهك."
+
+#. module: nexora_fuel
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_card__message_has_error
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_card__message_has_sms_error
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_log__message_has_error
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_log__message_has_sms_error
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_vehicle_expense__message_has_error
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_vehicle_expense__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده، فهذا يعني وجود خطأ في تسليم بعض الرسائل."
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_vehicle_expense__expense_type__insurance
+msgid "Insurance"
+msgstr "تأمين"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__message_is_follower
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__message_is_follower
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_fuel_log__fuel_type__lpg
+msgid "LPG"
+msgstr "غاز بترولي مسال"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__write_uid
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__write_uid
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__write_date
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__write_date
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__usage_pct
+msgid "Limit Usage (%)"
+msgstr "نسبة استهلاك الحد (%)"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__log_ids
+msgid "Log"
+msgstr "السجل"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__log_count
+msgid "Log Count"
+msgstr "عدد السجلات"
+
+#. module: nexora_fuel
+#: model:res.groups,name:nexora_fuel.group_nexora_fuel_manager
+msgid "Manager"
+msgstr "مدير"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__message_has_error
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__message_has_error
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__message_ids
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__message_ids
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_search
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_vehicle_expense_search
+msgid "Month"
+msgstr "الشهر"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__monthly_limit
+msgid "Monthly Limit"
+msgstr "الحد الشهري"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fuel_log.py:0
+msgid "Monthly limit of card %(card)s exceeded after %(log)s."
+msgstr "تم تجاوز الحد الشهري للبطاقة %(card)s بعد تسجيل العملية %(log)s."
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__my_activity_date_deadline
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_fleet_vehicle__nexora_expense_count
+msgid "Nexora Expense Count"
+msgstr "عدد مصروفات نكسورا"
+
+#. module: nexora_fuel
+#: model:res.groups.privilege,name:nexora_fuel.res_groups_privilege_nexora_fuel
+msgid "Nexora Fuel"
+msgstr "وقود نكسورا"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_fleet_vehicle__nexora_fuel_log_count
+msgid "Nexora Fuel Log Count"
+msgstr "عدد سجلات وقود نكسورا"
+
+#. module: nexora_fuel
+#: model:ir.actions.server,name:nexora_fuel.cron_nexora_fuel_card_maintenance_ir_actions_server
+msgid "Nexora: Fuel card expiry & alerts"
+msgstr "نكسورا: انتهاء صلاحية بطاقات الوقود والتنبيهات"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__activity_calendar_event_id
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "حدث التقويم للنشاط التالي"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__activity_date_deadline
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__activity_summary
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__activity_type_id
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__notes
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_form
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_vehicle_expense_form
+msgid "Notes…"
+msgstr "ملاحظات…"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__message_needaction_counter
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__message_needaction_counter
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__message_has_error_counter
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__message_has_error_counter
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_card__message_needaction_counter
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_log__message_needaction_counter
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_vehicle_expense__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراءً"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_card__message_has_error_counter
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_log__message_has_error_counter
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_vehicle_expense__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي حدث خطأ في تسليمها"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__odometer
+msgid "Odometer"
+msgstr "عداد المسافة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_vehicle_expense__expense_type__other
+msgid "Other"
+msgstr "أخرى"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__over_limit
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_search
+msgid "Over Card Limit"
+msgstr "تجاوز حد البطاقة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_vehicle_expense__expense_type__parking
+msgid "Parking"
+msgstr "مواقف السيارات"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fuel_log.py:0
+msgid "Price and odometer cannot be negative."
+msgstr "لا يمكن أن يكون السعر أو قراءة عداد المسافة سالباً."
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__price_unit
+msgid "Price per Unit"
+msgstr "سعر الوحدة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__provider_id
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_card_search
+msgid "Provider"
+msgstr "مزوّد الخدمة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__quantity
+msgid "Quantity (L / kWh)"
+msgstr "الكمية (لتر / كيلوواط ساعة)"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fuel_log.py:0
+msgid "Quantity must be greater than zero."
+msgstr "يجب أن تكون الكمية أكبر من صفر."
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__name
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__name
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,help:nexora_fuel.field_fleet_vehicle__nexora_target_consumption
+msgid ""
+"Reference value used to detect abnormal consumption. If empty, the vehicle's"
+" own average is used (after 3 measurements)."
+msgstr ""
+"القيمة المرجعية المستخدمة لاكتشاف الاستهلاك غير الطبيعي. إذا تُركت فارغة، "
+"يتم استخدام متوسط استهلاك المركبة نفسها (بعد تسجيل 3 قراءات)."
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_vehicle_expense__expense_type__registration
+msgid "Registration / Licensing"
+msgstr "التسجيل / الترخيص"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__incident_id
+msgid "Related Incident"
+msgstr "البلاغ المرتبط"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_vehicle_expense__expense_type__repair
+msgid "Repair / Maintenance"
+msgstr "الإصلاح / الصيانة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_log__full_tank
+msgid "Required for accurate consumption calculation."
+msgstr "مطلوب لإجراء حساب دقيق للاستهلاك."
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_form
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_vehicle_expense_form
+msgid "Reset to Draft"
+msgstr "إعادة إلى المسودة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__responsible_id
+msgid "Responsible"
+msgstr "المسؤول"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__activity_user_id
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__message_has_sms_error
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__message_has_sms_error
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_form
+msgid "Source"
+msgstr "المصدر"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__state
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__state
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_search
+msgid "Station"
+msgstr "المحطة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__station_id
+msgid "Station / Vendor"
+msgstr "المحطة / المورّد"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_card_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_card__activity_state
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_log__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناءً على الأنشطة\n"
+"متأخر: لقد تجاوز الموعد النهائي\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"مخطط: أنشطة مستقبلية."
+
+#. module: nexora_fuel
+#: model:ir.model.fields,help:nexora_fuel.field_fleet_vehicle__nexora_total_expense
+msgid "Sum of confirmed expenses (no currency conversion)."
+msgstr "مجموع المصروفات المؤكدة (دون تحويل العملات)."
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_fleet_vehicle__nexora_target_consumption
+msgid "Target Consumption (per 100 km)"
+msgstr "الاستهلاك المستهدف (لكل 100 كم)"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/expense.py:0
+msgid "The amount cannot be negative."
+msgstr "لا يمكن أن يكون المبلغ سالباً."
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_form
+msgid "The monthly limit of the fuel card was exceeded."
+msgstr "تم تجاوز الحد الشهري لبطاقة الوقود."
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fuel_log.py:0
+msgid ""
+"The odometer reading %(odo).0f is inconsistent with other fuel logs of this "
+"vehicle."
+msgstr ""
+"قراءة عداد المسافة %(odo).0f غير متوافقة مع سجلات الوقود الأخرى لهذه المركبة."
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_search
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_vehicle_expense_search
+msgid "This Month"
+msgstr "هذا الشهر"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__month_spend
+msgid "This Month Spend"
+msgstr "الإنفاق خلال هذا الشهر"
+
+#. module: nexora_fuel
+#: model:ir.model.constraint,message:nexora_fuel.constraint_nexora_fuel_card_name_company_uniq
+msgid "This card number already exists."
+msgstr "رقم البطاقة هذا موجود مسبقاً."
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_vehicle_expense__expense_type__tires
+msgid "Tires"
+msgstr "إطارات"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_vehicle_expense__expense_type__toll
+msgid "Tolls"
+msgstr "رسوم الطرق"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_vehicle_expense_list
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_list
+msgid "Total Amount"
+msgstr "إجمالي المبلغ"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_fleet_vehicle__nexora_total_expense
+msgid "Total Expenses"
+msgstr "إجمالي المصروفات"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_list
+msgid "Total Quantity"
+msgstr "إجمالي الكمية"
+
+#. module: nexora_fuel
+#: model:ir.model.fields.selection,name:nexora_fuel.selection__nexora_vehicle_expense__expense_type__fine
+msgid "Traffic Fine"
+msgstr "مخالفة مرورية"
+
+#. module: nexora_fuel
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_vehicle_expense_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_card__activity_exception_decoration
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_log__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء المسجل."
+
+#. module: nexora_fuel
+#: model:ir.model,name:nexora_fuel.model_fleet_vehicle
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__vehicle_id
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__vehicle_id
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_fuel_log_search
+#: model_terms:ir.ui.view,arch_db:nexora_fuel.view_nexora_vehicle_expense_search
+msgid "Vehicle"
+msgstr "المركبة"
+
+#. module: nexora_fuel
+#: model:ir.model,name:nexora_fuel.model_nexora_vehicle_expense
+msgid "Vehicle Expense"
+msgstr "مصروف المركبة"
+
+#. module: nexora_fuel
+#: model:ir.actions.act_window,name:nexora_fuel.action_nexora_vehicle_expense
+#: model:ir.ui.menu,name:nexora_fuel.menu_nexora_vehicle_expenses
+msgid "Vehicle Expenses"
+msgstr "مصروفات المركبات"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__partner_id
+msgid "Vendor"
+msgstr "المورّد"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_card__website_message_ids
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_fuel_log__website_message_ids
+#: model:ir.model.fields,field_description:nexora_fuel.field_nexora_vehicle_expense__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: nexora_fuel
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_card__website_message_ids
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_fuel_log__website_message_ids
+#: model:ir.model.fields,help:nexora_fuel.field_nexora_vehicle_expense__website_message_ids
+msgid "Website communication history"
+msgstr "سجل المراسلات عبر الموقع الإلكتروني"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fuel_card.py:0
+msgid "card_id"
+msgstr "معرّف البطاقة"
+
+#. module: nexora_fuel
+#. odoo-python
+#: code:addons/nexora_fuel/models/fleet_vehicle.py:0
+msgid "vehicle_id"
+msgstr "معرّف المركبة"

@@ -1,0 +1,878 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* nexora_integration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 13:12+0000\n"
+"PO-Revision-Date: 2026-11-05 13:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nexora_integration
+#. odoo-python
+#: code:addons/nexora_integration/models/api_key.py:0
+msgid "'%s' is not a valid IP address or range."
+msgstr "'%s' ليس عنوان IP أو نطاق عناوين صالحاً."
+
+#. module: nexora_integration
+#: model:ir.model.fields,help:nexora_integration.field_nexora_api_key__rate_limit
+msgid "0 = unlimited."
+msgstr "0 = غير محدود."
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_form
+msgid "<span class=\"o_stat_text\">Deliveries</span>"
+msgstr "<span class=\"o_stat_text\">عمليات التسليم</span>"
+
+#. module: nexora_integration
+#. odoo-python
+#: code:addons/nexora_integration/models/api_key.py:0
+msgid "A new key was generated (starts with %s…)."
+msgstr "تم إنشاء مفتاح جديد (يبدأ بـ %s…)."
+
+#. module: nexora_integration
+#: model:ir.model,name:nexora_integration.model_nexora_api_key
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key_reveal__raw_key
+msgid "API Key"
+msgstr "مفتاح API"
+
+#. module: nexora_integration
+#: model:ir.actions.act_window,name:nexora_integration.action_nexora_api_key
+#: model:ir.ui.menu,name:nexora_integration.menu_nexora_api_keys
+msgid "API Keys"
+msgstr "مفاتيح API"
+
+#. module: nexora_integration
+#: model:ir.actions.act_window,name:nexora_integration.action_nexora_api_log
+#: model:ir.ui.menu,name:nexora_integration.menu_nexora_api_logs
+msgid "API Logs"
+msgstr "سجلات API"
+
+#. module: nexora_integration
+#: model:ir.model,name:nexora_integration.model_nexora_api_log
+msgid "API Request Log"
+msgstr "سجل طلبات API"
+
+#. module: nexora_integration
+#. odoo-python
+#: code:addons/nexora_integration/models/api_key.py:0
+msgid "API Requests"
+msgstr "طلبات API"
+
+#. module: nexora_integration
+#: model:ir.model,name:nexora_integration.model_nexora_api_scope
+msgid "API Scope"
+msgstr "نطاق API"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.res_config_settings_view_form_nexora_integration
+msgid ""
+"API request logs and delivered webhooks older than this are purged daily."
+msgstr ""
+"يتم حذف سجلات طلبات API وعمليات تسليم Webhook الأقدم من هذه المدة يومياً."
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__message_needaction
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__message_needaction
+msgid "Action Needed"
+msgstr "يتطلب إجراء"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__active
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__user_id
+msgid "Acts As"
+msgstr "يعمل بصفة"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.res_config_settings_view_form_nexora_integration
+msgid "After this many failed attempts a delivery is marked as failed."
+msgstr "بعد هذا العدد من المحاولات الفاشلة، يتم اعتبار عملية التسليم فاشلة."
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_res_config_settings__nexora_api_allow_private_urls
+#: model_terms:ir.ui.view,arch_db:nexora_integration.res_config_settings_view_form_nexora_integration
+msgid "Allow Private Webhook URLs"
+msgstr "السماح بعناوين Webhook الخاصة"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__allowed_ips
+msgid "Allowed IPs"
+msgstr "عناوين IP المسموح بها"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__message_attachment_count
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__attempts
+msgid "Attempts"
+msgstr "المحاولات"
+
+#. module: nexora_integration
+#: model:ir.model.fields,help:nexora_integration.field_nexora_api_key__responsible_id
+msgid ""
+"Becomes the responsible of the transport orders created through the API."
+msgstr ""
+"يصبح المسؤول عن أوامر النقل التي يتم إنشاؤها عبر API."
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_scope__code
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_event__code
+msgid "Code"
+msgstr "الرمز"
+
+#. module: nexora_integration
+#: model:ir.model.fields,help:nexora_integration.field_nexora_api_key__allowed_ips
+msgid "Comma-separated IPs or CIDR ranges. Empty = any address."
+msgstr "عناوين IP أو نطاقات CIDR مفصولة بفواصل. فارغ = أي عنوان."
+
+#. module: nexora_integration
+#: model:ir.model,name:nexora_integration.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_key_reveal_form
+msgid "Copy this key now. It is <b>not stored</b> and cannot be shown again."
+msgstr "انسخ هذا المفتاح الآن. فهو <b>غير مخزن</b> ولا يمكن عرضه مرة أخرى."
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__create_uid
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key_reveal__create_uid
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_log__create_uid
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_scope__create_uid
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__create_uid
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__create_uid
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_event__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__create_date
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key_reveal__create_date
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_log__create_date
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_scope__create_date
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__create_date
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__create_date
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_event__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: nexora_integration
+#. odoo-python
+#: code:addons/nexora_integration/controllers/main.py:0
+msgid "Created through the API (key: %s)."
+msgstr "تم الإنشاء عبر API (المفتاح: %s)."
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_log_search
+msgid "Day"
+msgstr "اليوم"
+
+#. module: nexora_integration
+#: model:ir.model.fields.selection,name:nexora_integration.selection__nexora_webhook_delivery__state__done
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_delivery_search
+msgid "Delivered"
+msgstr "تم التسليم"
+
+#. module: nexora_integration
+#. odoo-python
+#: code:addons/nexora_integration/models/webhook.py:0
+msgid "Delivered (HTTP %s)."
+msgstr "تم التسليم (HTTP %s)."
+
+#. module: nexora_integration
+#. odoo-python
+#: code:addons/nexora_integration/models/webhook.py:0
+msgid "Deliveries"
+msgstr "عمليات التسليم"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__delivery_ids
+msgid "Delivery"
+msgstr "عملية التسليم"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_form
+msgid "Disabled"
+msgstr "معطّل"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__display_name
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key_reveal__display_name
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_log__display_name
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_scope__display_name
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_shipment__display_name
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_transport_order__display_name
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_transport_trip__display_name
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__display_name
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__display_name
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_event__display_name
+#: model:ir.model.fields,field_description:nexora_integration.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_log__duration_ms
+msgid "Duration (ms)"
+msgstr "المدة (مللي ثانية)"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_res_config_settings__nexora_api_enabled
+#: model_terms:ir.ui.view,arch_db:nexora_integration.res_config_settings_view_form_nexora_integration
+msgid "Enable the REST API"
+msgstr "تفعيل REST API"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__url
+msgid "Endpoint URL"
+msgstr "عنوان نقطة النهاية"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_log__error
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__error
+msgid "Error"
+msgstr "خطأ"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_log_search
+msgid "Errors (4xx / 5xx)"
+msgstr "الأخطاء (4xx / 5xx)"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_delivery_search
+msgid "Event"
+msgstr "الحدث"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__event_code
+msgid "Event Code"
+msgstr "رمز الحدث"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__event_uid
+msgid "Event ID"
+msgstr "معرّف الحدث"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__event_ids
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_form
+msgid "Events"
+msgstr "الأحداث"
+
+#. module: nexora_integration
+#: model:ir.model.fields,help:nexora_integration.field_nexora_api_key__user_id
+msgid ""
+"Every request made with this key runs with this user's access rights. Use a "
+"dedicated technical user (a portal user for a customer integration)."
+msgstr ""
+"يتم تنفيذ كل طلب باستخدام هذا المفتاح وفق صلاحيات هذا المستخدم. استخدم "
+"مستخدمًا تقنيًا مخصصًا (مستخدم بوابة لتكامل العملاء)."
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__date_expiry
+msgid "Expires On"
+msgstr "تاريخ انتهاء الصلاحية"
+
+#. module: nexora_integration
+#: model:ir.model.fields.selection,name:nexora_integration.selection__nexora_webhook_delivery__state__failed
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_delivery_search
+msgid "Failed"
+msgstr "فشل"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__failed_count
+msgid "Failed Count"
+msgstr "عدد العمليات الفاشلة"
+
+#. module: nexora_integration
+#. odoo-python
+#: code:addons/nexora_integration/models/webhook.py:0
+msgid "Failed: %s"
+msgstr "فشل: %s"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__message_follower_ids
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__message_partner_ids
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (جهات الاتصال)"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_key_form
+msgid "Generate Key"
+msgstr "إنشاء مفتاح"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__has_message
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسائل"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_key_reveal_form
+msgid "I have copied it"
+msgstr "لقد نسخته"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__id
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key_reveal__id
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_log__id
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_scope__id
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_shipment__id
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_transport_order__id
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_transport_trip__id
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__id
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__id
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_event__id
+#: model:ir.model.fields,field_description:nexora_integration.field_res_config_settings__id
+msgid "ID"
+msgstr "المُعرّف"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_log__ip
+msgid "IP Address"
+msgstr "عنوان IP"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_key_form
+msgid "Identity"
+msgstr "الهوية"
+
+#. module: nexora_integration
+#: model:ir.model.fields,help:nexora_integration.field_nexora_api_key__message_needaction
+#: model:ir.model.fields,help:nexora_integration.field_nexora_webhook__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده، فإن الرسائل الجديدة تتطلب انتباهك."
+
+#. module: nexora_integration
+#: model:ir.model.fields,help:nexora_integration.field_nexora_api_key__message_has_error
+#: model:ir.model.fields,help:nexora_integration.field_nexora_api_key__message_has_sms_error
+#: model:ir.model.fields,help:nexora_integration.field_nexora_webhook__message_has_error
+#: model:ir.model.fields,help:nexora_integration.field_nexora_webhook__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: nexora_integration
+#: model:ir.ui.menu,name:nexora_integration.menu_nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.res_config_settings_view_form_nexora_integration
+msgid "Integration"
+msgstr "التكامل"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__message_is_follower
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_res_config_settings__nexora_api_log_days
+#: model_terms:ir.ui.view,arch_db:nexora_integration.res_config_settings_view_form_nexora_integration
+msgid "Keep Logs (days)"
+msgstr "الاحتفاظ بالسجلات (أيام)"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key_reveal__key_id
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_log__key_id
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_log_search
+msgid "Key"
+msgstr "المفتاح"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__key_hash
+msgid "Key Hash"
+msgstr "تجزئة المفتاح"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_log__key_name
+msgid "Key Name"
+msgstr "اسم المفتاح"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__key_prefix
+msgid "Key Prefix"
+msgstr "بادئة المفتاح"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__write_uid
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key_reveal__write_uid
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_log__write_uid
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_scope__write_uid
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__write_uid
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__write_uid
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_event__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__write_date
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key_reveal__write_date
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_log__write_date
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_scope__write_date
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__write_date
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__write_date
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_event__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__last_used
+msgid "Last Used"
+msgstr "آخر استخدام"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_key_form
+msgid "Limits"
+msgstr "الحدود"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__log_count
+msgid "Log Count"
+msgstr "عدد السجلات"
+
+#. module: nexora_integration
+#: model:res.groups,name:nexora_integration.group_nexora_integration_manager
+msgid "Manager"
+msgstr "المدير"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.res_config_settings_view_form_nexora_integration
+msgid "Master switch. When off, every API request is refused with 503."
+msgstr "مفتاح التحكم الرئيسي. عند إيقافه، يتم رفض جميع طلبات API برمز 503."
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__message_has_error
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__message_ids
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_log__method
+msgid "Method"
+msgstr "الطريقة"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__name
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_scope__name
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__name
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_event__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: nexora_integration
+#: model:ir.actions.act_window,name:nexora_integration.action_nexora_api_key_reveal
+msgid "New API Key"
+msgstr "مفتاح API جديد"
+
+#. module: nexora_integration
+#: model:res.groups.privilege,name:nexora_integration.res_groups_privilege_nexora_integration
+msgid "Nexora Integration"
+msgstr "تكامل Nexora"
+
+#. module: nexora_integration
+#: model:ir.actions.server,name:nexora_integration.cron_nexora_api_purge_ir_actions_server
+msgid "Nexora: Purge API logs and delivered webhooks"
+msgstr "Nexora: حذف سجلات API وعمليات Webhook المسلّمة"
+
+#. module: nexora_integration
+#: model:ir.actions.server,name:nexora_integration.cron_nexora_webhook_queue_ir_actions_server
+msgid "Nexora: Send queued webhooks"
+msgstr "Nexora: إرسال Webhooks الموجودة في قائمة الانتظار"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__next_attempt
+msgid "Next Attempt"
+msgstr "المحاولة التالية"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__message_needaction_counter
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__message_has_error_counter
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: nexora_integration
+#: model:ir.model.fields,help:nexora_integration.field_nexora_api_key__message_needaction_counter
+#: model:ir.model.fields,help:nexora_integration.field_nexora_webhook__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: nexora_integration
+#: model:ir.model.fields,help:nexora_integration.field_nexora_api_key__message_has_error_counter
+#: model:ir.model.fields,help:nexora_integration.field_nexora_webhook__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__partner_id
+msgid "Only for Customer"
+msgstr "للعميل فقط"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__responsible_id
+msgid "Order Responsible"
+msgstr "المسؤول عن الطلب"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_log__path
+msgid "Path"
+msgstr "المسار"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__payload
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_delivery_form
+msgid "Payload"
+msgstr "محتوى الطلب"
+
+#. module: nexora_integration
+#: model:ir.model.fields.selection,name:nexora_integration.selection__nexora_webhook_delivery__state__pending
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_delivery_search
+msgid "Pending / Retrying"
+msgstr "قيد الانتظار / إعادة المحاولة"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__pending_count
+msgid "Pending Count"
+msgstr "عدد العمليات المعلقة"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.res_config_settings_view_form_nexora_integration
+msgid ""
+"Permit webhook endpoints on localhost or private networks. Keep this off in "
+"production: it protects the server from being used to reach internal "
+"services."
+msgstr ""
+"السماح لنقاط نهاية Webhook بالعمل على localhost أو الشبكات الخاصة. اترك هذا "
+"الخيار معطلاً في بيئة الإنتاج: فهو يحمي الخادم من استخدامه للوصول إلى "
+"الخدمات الداخلية."
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_log_search
+msgid "Rate Limited"
+msgstr "تم تجاوز حد الطلبات"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_key_form
+msgid "Regenerate Key (revokes the old one)"
+msgstr "إعادة إنشاء المفتاح (إلغاء المفتاح القديم)"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_key_form
+msgid "Requests"
+msgstr "الطلبات"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__rate_limit
+msgid "Requests per Minute"
+msgstr "الطلبات في الدقيقة"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__res_id
+msgid "Res"
+msgstr "معرّف السجل"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__res_model
+msgid "Res Model"
+msgstr "نموذج السجل"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_delivery_form
+msgid "Response"
+msgstr "الاستجابة"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__response_body
+msgid "Response Body"
+msgstr "محتوى الاستجابة"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__response_code
+msgid "Response Code"
+msgstr "رمز الاستجابة"
+
+#. module: nexora_integration
+#: model:ir.model.fields,help:nexora_integration.field_nexora_webhook__partner_id
+msgid ""
+"Restrict the events to this customer's shipments and orders. Leave empty for"
+" all records (trip events are only sent to unrestricted endpoints)."
+msgstr ""
+"قصر الأحداث على شحنات هذا العميل وأوامره. اتركه فارغاً لجميع السجلات "
+"(يتم إرسال أحداث الرحلات إلى نقاط النهاية غير المقيدة فقط)."
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_delivery_form
+msgid "Retry"
+msgstr "إعادة المحاولة"
+
+#. module: nexora_integration
+#: model:ir.actions.server,name:nexora_integration.action_server_nexora_delivery_retry
+msgid "Retry Failed"
+msgstr "إعادة محاولة العمليات الفاشلة"
+
+#. module: nexora_integration
+#: model:ir.model.fields.selection,name:nexora_integration.selection__nexora_webhook_delivery__state__retry
+msgid "Retrying"
+msgstr "قيد إعادة المحاولة"
+
+#. module: nexora_integration
+#: model:ir.model,name:nexora_integration.model_nexora_api_key_reveal
+msgid "Reveal a freshly generated API key"
+msgstr "عرض مفتاح API الذي تم إنشاؤه حديثاً"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_key_form
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_key_search
+msgid "Revoked"
+msgstr "ملغى"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__message_has_sms_error
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_key_form
+msgid ""
+"Save the record first, then click <b>Generate Key</b>. The secret is shown\n"
+"                        only once; only its hash is stored. Archive the record to revoke the key."
+msgstr ""
+"احفظ السجل أولاً، ثم انقر على <b>إنشاء مفتاح</b>. يتم عرض المفتاح السري\n"
+"                        مرة واحدة فقط؛ ويتم تخزين تجزئته فقط. قم بأرشفة السجل لإلغاء المفتاح."
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__scope_ids
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_key_form
+msgid "Scopes"
+msgstr "النطاقات"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__secret
+msgid "Secret"
+msgstr "المفتاح السري"
+
+#. module: nexora_integration
+#: model:ir.actions.server,name:nexora_integration.action_server_nexora_delivery_send
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_delivery_form
+msgid "Send Now"
+msgstr "إرسال الآن"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_form
+msgid "Send Test"
+msgstr "إرسال اختبار"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__sent_date
+msgid "Sent Date"
+msgstr "تاريخ الإرسال"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_log_search
+msgid "Server Errors"
+msgstr "أخطاء الخادم"
+
+#. module: nexora_integration
+#: model:ir.model,name:nexora_integration.model_nexora_shipment
+msgid "Shipment"
+msgstr "الشحنة"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_log__status
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_log_search
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_delivery_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: nexora_integration
+#. odoo-python
+#: code:addons/nexora_integration/models/webhook.py:0
+msgid "The URL must start with http:// or https://."
+msgstr "يجب أن يبدأ عنوان URL بـ http:// أو https://."
+
+#. module: nexora_integration
+#. odoo-python
+#: code:addons/nexora_integration/models/webhook.py:0
+msgid ""
+"The address %s is internal. Enable 'Allow private webhook URLs' in the "
+"settings if this is intentional (development only)."
+msgstr ""
+"العنوان %s داخلي. قم بتفعيل 'السماح بعناوين Webhook الخاصة' في الإعدادات "
+"إذا كان ذلك مقصوداً (للتطوير فقط)."
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_key_form
+msgid "The current key stops working immediately. Continue?"
+msgstr "سيتوقف المفتاح الحالي عن العمل فوراً. هل تريد المتابعة؟"
+
+#. module: nexora_integration
+#: model:ir.model.constraint,message:nexora_integration.constraint_nexora_webhook_event_code_uniq
+msgid "The event code must be unique."
+msgstr "يجب أن يكون رمز الحدث فريداً."
+
+#. module: nexora_integration
+#. odoo-python
+#: code:addons/nexora_integration/models/webhook.py:0
+msgid "The host '%s' cannot be resolved."
+msgstr "تعذر العثور على عنوان المضيف '%s'."
+
+#. module: nexora_integration
+#. odoo-python
+#: code:addons/nexora_integration/models/api_key.py:0
+msgid "The rate limit cannot be negative."
+msgstr "لا يمكن أن يكون حد الطلبات سالباً."
+
+#. module: nexora_integration
+#: model:ir.model.constraint,message:nexora_integration.constraint_nexora_api_scope_code_uniq
+msgid "The scope code must be unique."
+msgstr "يجب أن يكون رمز النطاق فريداً."
+
+#. module: nexora_integration
+#: model:ir.model,name:nexora_integration.model_nexora_transport_order
+msgid "Transport Order"
+msgstr "طلب نقل"
+
+#. module: nexora_integration
+#: model:ir.model,name:nexora_integration.model_nexora_transport_trip
+msgid "Transport Trip"
+msgstr "رحلة نقل"
+
+#. module: nexora_integration
+#: model:ir.model.fields,help:nexora_integration.field_nexora_webhook__secret
+msgid "Used to sign every request (HMAC-SHA256). Share it with the receiver."
+msgstr "يُستخدم لتوقيع كل طلب (HMAC-SHA256). شاركه مع الجهة المستقبلة."
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook_delivery__webhook_id
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_delivery_search
+msgid "Webhook"
+msgstr "Webhook"
+
+#. module: nexora_integration
+#: model:ir.actions.act_window,name:nexora_integration.action_nexora_webhook_delivery
+#: model:ir.ui.menu,name:nexora_integration.menu_nexora_webhook_deliveries
+msgid "Webhook Deliveries"
+msgstr "عمليات تسليم Webhook"
+
+#. module: nexora_integration
+#: model:ir.model,name:nexora_integration.model_nexora_webhook_delivery
+msgid "Webhook Delivery"
+msgstr "عملية تسليم Webhook"
+
+#. module: nexora_integration
+#: model:ir.model,name:nexora_integration.model_nexora_webhook
+msgid "Webhook Endpoint"
+msgstr "نقطة نهاية Webhook"
+
+#. module: nexora_integration
+#: model:ir.model,name:nexora_integration.model_nexora_webhook_event
+msgid "Webhook Event"
+msgstr "حدث Webhook"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_res_config_settings__nexora_webhook_max_attempts
+#: model_terms:ir.ui.view,arch_db:nexora_integration.res_config_settings_view_form_nexora_integration
+msgid "Webhook Max Attempts"
+msgstr "الحد الأقصى لمحاولات Webhook"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_res_config_settings__nexora_webhook_timeout
+#: model_terms:ir.ui.view,arch_db:nexora_integration.res_config_settings_view_form_nexora_integration
+msgid "Webhook Timeout (seconds)"
+msgstr "مهلة Webhook (بالثواني)"
+
+#. module: nexora_integration
+#. odoo-python
+#: code:addons/nexora_integration/models/webhook.py:0
+msgid "Webhook test"
+msgstr "اختبار Webhook"
+
+#. module: nexora_integration
+#: model:ir.actions.act_window,name:nexora_integration.action_nexora_webhook
+#: model:ir.ui.menu,name:nexora_integration.menu_nexora_webhooks
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#. module: nexora_integration
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_api_key__website_message_ids
+#: model:ir.model.fields,field_description:nexora_integration.field_nexora_webhook__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: nexora_integration
+#: model:ir.model.fields,help:nexora_integration.field_nexora_api_key__website_message_ids
+#: model:ir.model.fields,help:nexora_integration.field_nexora_webhook__website_message_ids
+msgid "Website communication history"
+msgstr "سجل التواصل عبر الموقع الإلكتروني"
+
+#. module: nexora_integration
+#: model:ir.model.fields,help:nexora_integration.field_nexora_api_key__name
+msgid "Who uses this key, e.g. 'Customer ERP'."
+msgstr "من يستخدم هذا المفتاح، مثال: 'Customer ERP'."
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_api_key_form
+msgid "e.g. Customer ERP"
+msgstr "مثال: Customer ERP"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_form
+msgid "e.g. Customer ERP - shipments"
+msgstr "مثال: Customer ERP - الشحنات"
+
+#. module: nexora_integration
+#: model_terms:ir.ui.view,arch_db:nexora_integration.view_nexora_webhook_form
+msgid "https://example.com/hooks/nexora"
+msgstr "https://example.com/hooks/nexora"
+
+#. module: nexora_integration
+#. odoo-python
+#: code:addons/nexora_integration/models/api_key.py:0
+msgid "key_id"
+msgstr "معرّف المفتاح"
+
+#. module: nexora_integration
+#. odoo-python
+#: code:addons/nexora_integration/models/webhook.py:0
+msgid "webhook_id"
+msgstr "معرّف Webhook"

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_nexora" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.nexora</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app string="Nexora" name="nexora_core"
+                     groups="nexora_core.group_nexora_admin">
+                    <block title="Alerts">
+                        <setting string="Driver License Alert"
+                                 help="Days before license expiry to create a reminder activity.">
+                            <field name="nexora_license_alert_days"/>
+                        </setting>
+                        <setting string="Contract Expiry Alert"
+                                 help="Days before contract end date to remind the responsible user.">
+                            <field name="nexora_contract_alert_days"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_nexora_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+        <field name="context">{'module': 'nexora_core', 'bin_size': False}</field>
+    </record>
+</odoo>

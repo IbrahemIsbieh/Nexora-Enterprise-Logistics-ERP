@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_nexora_vehicle_assignment_dispatcher,nexora.vehicle.assignment dispatcher,model_nexora_vehicle_assignment,nexora_fleet.group_nexora_fleet_dispatcher,1,1,1,0
+access_nexora_vehicle_assignment_manager,nexora.vehicle.assignment manager,model_nexora_vehicle_assignment,nexora_fleet.group_nexora_fleet_manager,1,1,1,1
+access_nexora_vehicle_incident_dispatcher,nexora.vehicle.incident dispatcher,model_nexora_vehicle_incident,nexora_fleet.group_nexora_fleet_dispatcher,1,1,1,0
+access_nexora_vehicle_incident_manager,nexora.vehicle.incident manager,model_nexora_vehicle_incident,nexora_fleet.group_nexora_fleet_manager,1,1,1,1

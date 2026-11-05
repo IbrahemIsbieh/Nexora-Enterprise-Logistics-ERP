@@ -1,0 +1,1534 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* nexora_analytics
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 13:12+0000\n"
+"PO-Revision-Date: 2026-11-05 13:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "%(c).1f per 100 km on %(date)s (%(name)s)."
+msgstr "%(c).1f لكل 100 كم بتاريخ %(date)s (%(name)s)."
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "%(customer)s: %(reason)s"
+msgstr "%(customer)s: %(reason)s"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "%(customer)s: planned delivery %(date)s, %(hours).0f h overdue."
+msgstr "%(customer)s: موعد التسليم المخطط %(date)s، متأخر %(hours).0f ساعة."
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "%(partner)s - ends on %(date)s."
+msgstr "%(partner)s - ينتهي بتاريخ %(date)s."
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "%(partner)s: %(subject)s"
+msgstr "%(partner)s: %(subject)s"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__alert_type__fuel_anomaly
+msgid "Abnormal Fuel Consumption"
+msgstr "استهلاك وقود غير طبيعي"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Abnormal fuel consumption: %s"
+msgstr "استهلاك وقود غير طبيعي: %s"
+
+#. module: nexora_analytics
+#: model:ir.actions.server,name:nexora_analytics.action_server_nexora_alert_acknowledge
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_form
+msgid "Acknowledge"
+msgstr "الإقرار"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__state__acknowledged
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_search
+msgid "Acknowledged"
+msgstr "تم الإقرار"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__message_needaction
+msgid "Action Needed"
+msgstr "يتطلب إجراء"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تمييز استثناء النشاط"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__name
+msgid "Alert"
+msgstr "التنبيه"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__alert_type
+msgid "Alert Type"
+msgstr "نوع التنبيه"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Alerts & Support"
+msgstr "التنبيهات والدعم"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Allocated cost"
+msgstr "التكلفة الموزعة"
+
+#. module: nexora_analytics
+#: model:res.groups,name:nexora_analytics.group_nexora_analytics_user
+msgid "Analyst"
+msgstr "محلل"
+
+#. module: nexora_analytics
+#: model:ir.ui.menu,name:nexora_analytics.menu_nexora_analytics
+msgid "Analytics"
+msgstr "التحليلات"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.res_config_settings_view_form_nexora_analytics
+msgid "Analytics & Alerts"
+msgstr "التحليلات والتنبيهات"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Approved requests"
+msgstr "الطلبات المعتمدة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Assigned"
+msgstr "مسند"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__auto_resolved
+msgid "Auto Resolved"
+msgstr "تم الحل تلقائياً"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_form
+msgid "Auto-resolved"
+msgstr "تم الحل تلقائياً"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Available"
+msgstr "متاح"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Available now"
+msgstr "متاح الآن"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Available vehicles"
+msgstr "المركبات المتاحة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__delay_hours
+msgid "Avg. Delay (h)"
+msgstr "متوسط التأخير (ساعة)"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_supplier_report__price_unit
+msgid "Avg. Unit Price"
+msgstr "متوسط سعر الوحدة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Awaiting RFQ"
+msgstr "بانتظار طلب عرض سعر"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Below reorder point"
+msgstr "أقل من نقطة إعادة الطلب"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_demand_report_search
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_supplier_report_search
+msgid "Category"
+msgstr "الفئة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__company_id
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__company_id
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_demand_report__company_id
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__company_id
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_supplier_report__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Completed trips"
+msgstr "الرحلات المكتملة"
+
+#. module: nexora_analytics
+#: model:ir.model,name:nexora_analytics.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Contract %(state)s: %(name)s"
+msgstr "العقد %(state)s: %(name)s"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__alert_type__contract
+msgid "Contract Expiry"
+msgstr "انتهاء صلاحية العقد"
+
+#. module: nexora_analytics
+#. odoo-javascript
+#: code:addons/nexora_analytics/static/src/xml/dashboard.xml:0
+#: model:ir.actions.client,name:nexora_analytics.action_nexora_dashboard
+#: model:ir.ui.menu,name:nexora_analytics.menu_nexora_dashboard
+msgid "Control Tower"
+msgstr "برج التحكم"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__allocated_cost
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_fleet_report_list
+msgid "Cost"
+msgstr "التكلفة"
+
+#. module: nexora_analytics
+#: model:ir.ui.menu,name:nexora_analytics.menu_nexora_cost_center_link
+msgid "Cost Center Analysis"
+msgstr "تحليل مراكز التكلفة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Critical"
+msgstr "حرج"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Critical stock: %(p)s @ %(w)s"
+msgstr "مخزون حرج: %(p)s في %(w)s"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__partner_id
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_delivery_report_search
+msgid "Customer"
+msgstr "العميل"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.res_config_settings_view_form_nexora_analytics
+msgid "Dashboard Period"
+msgstr "فترة لوحة المعلومات"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_res_config_settings__nexora_dashboard_days
+msgid "Dashboard Period (days)"
+msgstr "فترة لوحة المعلومات (بالأيام)"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__date
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__date
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_demand_report__date
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__date
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_supplier_report__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__date_resolved
+msgid "Date Resolved"
+msgstr "تاريخ الحل"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.res_config_settings_view_form_nexora_analytics
+msgid ""
+"Days a purchase request may wait for approval before an alert is raised."
+msgstr ""
+"عدد الأيام التي يمكن أن ينتظر فيها طلب الشراء الموافقة قبل إصدار تنبيه."
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_res_config_settings__nexora_alert_responsible_id
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.res_config_settings_view_form_nexora_analytics
+msgid "Default Alert Responsible"
+msgstr "المسؤول الافتراضي عن التنبيهات"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__delivered_count
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_delivery_report__state__delivered
+msgid "Delivered"
+msgstr "تم التسليم"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Delivered shipments"
+msgstr "الشحنات المسلّمة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Deliveries"
+msgstr "التسليمات"
+
+#. module: nexora_analytics
+#: model:ir.actions.act_window,name:nexora_analytics.action_nexora_delivery_report
+#: model:ir.model,name:nexora_analytics.model_nexora_delivery_report
+#: model:ir.ui.menu,name:nexora_analytics.menu_nexora_delivery_report
+msgid "Delivery Performance"
+msgstr "أداء التسليم"
+
+#. module: nexora_analytics
+#: model:ir.actions.act_window,name:nexora_analytics.action_nexora_demand_report
+#: model:ir.model,name:nexora_analytics.model_nexora_demand_report
+#: model:ir.ui.menu,name:nexora_analytics.menu_nexora_demand_report
+msgid "Demand History"
+msgstr "سجل الطلب"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.res_config_settings_view_form_nexora_analytics
+msgid "Denominator of the fleet utilization rate."
+msgstr "المقام المستخدم في حساب معدل استغلال الأسطول."
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_form
+msgid "Details…"
+msgstr "التفاصيل…"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__display_name
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_dashboard__display_name
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__display_name
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_demand_report__display_name
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__display_name
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_supplier_report__display_name
+#: model:ir.model.fields,field_description:nexora_analytics.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_fleet_report_list
+msgid "Distance"
+msgstr "المسافة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__distance
+msgid "Distance (km)"
+msgstr "المسافة (كم)"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Documents at risk"
+msgstr "المستندات المعرضة للخطر"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__driver_id
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__driver_id
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_delivery_report_search
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_fleet_report_search
+msgid "Driver"
+msgstr "السائق"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__alert_type__driver_license
+msgid "Driver License"
+msgstr "رخصة السائق"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Driver license expired: %s"
+msgstr "انتهت صلاحية رخصة السائق: %s"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Driver license expiring: %s"
+msgstr "رخصة السائق على وشك انتهاء الصلاحية: %s"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Due at %(km).0f km / %(date)s. Remaining: %(rkm).0f km, %(rd)s days."
+msgstr "مستحق عند %(km).0f كم / %(date)s. المتبقي: %(rkm).0f كم، و%(rd)s يومًا."
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Estimated %(amount).2f, requested by %(user)s."
+msgstr "المبلغ التقديري %(amount).2f، مقدم الطلب %(user)s."
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Exceeded after %(name)s on %(date)s."
+msgstr "تم التجاوز بعد %(name)s بتاريخ %(date)s."
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__failed_count
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_delivery_report__state__failed
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_delivery_report_search
+msgid "Failed"
+msgstr "فشل"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__alert_type__failed_delivery
+msgid "Failed Delivery"
+msgstr "فشل التسليم"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Failed delivery %s"
+msgstr "فشل التسليم %s"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Failed shipments"
+msgstr "الشحنات الفاشلة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_supplier_report__fill_rate
+msgid "Fill Rate (%)"
+msgstr "نسبة تلبية الطلب (%)"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Fleet"
+msgstr "الأسطول"
+
+#. module: nexora_analytics
+#: model:ir.actions.act_window,name:nexora_analytics.action_nexora_fleet_report
+#: model:ir.model,name:nexora_analytics.model_nexora_fleet_report
+#: model:ir.ui.menu,name:nexora_analytics.menu_nexora_fleet_report
+msgid "Fleet Utilization"
+msgstr "استغلال الأسطول"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (جهات الاتصال)"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,help:nexora_analytics.field_nexora_alert__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font Awesome، مثل fa-tasks"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Freight revenue"
+msgstr "إيرادات الشحن"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__alert_type__fuel_card
+msgid "Fuel Card Limit"
+msgstr "حد بطاقة الوقود"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Fuel card limit exceeded: %s"
+msgstr "تم تجاوز حد بطاقة الوقود: %s"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.res_config_settings_view_form_nexora_analytics
+msgid ""
+"Gets the activity for high-severity alerts that have no natural owner. "
+"Defaults to the administrator."
+msgstr ""
+"يتولى الأنشطة الخاصة بالتنبيهات عالية الخطورة التي لا يوجد لها مسؤول محدد. "
+"يكون المسؤول الافتراضي هو المدير."
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسالة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__severity__high
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_search
+msgid "High"
+msgstr "مرتفع"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "High alerts"
+msgstr "تنبيهات عالية الخطورة"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_fleet_report_list
+msgid "Hours"
+msgstr "الساعات"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__id
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_dashboard__id
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__id
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_demand_report__id
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__id
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_supplier_report__id
+#: model:ir.model.fields,field_description:nexora_analytics.field_res_config_settings__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,help:nexora_analytics.field_nexora_alert__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة تشير إلى وجود استثناء في النشاط."
+
+#. module: nexora_analytics
+#: model:ir.model.fields,help:nexora_analytics.field_nexora_alert__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده، فإن الرسائل الجديدة تتطلب انتباهك."
+
+#. module: nexora_analytics
+#: model:ir.model.fields,help:nexora_analytics.field_nexora_alert__message_has_error
+#: model:ir.model.fields,help:nexora_analytics.field_nexora_alert__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده، فهذا يعني وجود خطأ في تسليم بعض الرسائل."
+
+#. module: nexora_analytics
+#: model:ir.actions.server,name:nexora_analytics.action_server_nexora_alert_ignore
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_form
+msgid "Ignore"
+msgstr "تجاهل"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__state__dismissed
+msgid "Ignored"
+msgstr "تم التجاهل"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "In maintenance"
+msgstr "قيد الصيانة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "In transit"
+msgstr "قيد النقل"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Inventory Risk"
+msgstr "مخاطر المخزون"
+
+#. module: nexora_analytics
+#: model:ir.ui.menu,name:nexora_analytics.menu_nexora_inventory_risk_link
+msgid "Inventory Risk & Forecast"
+msgstr "مخاطر المخزون والتنبؤ"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__key
+msgid "Key"
+msgstr "المفتاح"
+
+#. module: nexora_analytics
+#. odoo-javascript
+#: code:addons/nexora_analytics/static/src/xml/dashboard.xml:0
+msgid "Last"
+msgstr "آخر"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_demand_report_search
+msgid "Last 90 Days"
+msgstr "آخر 90 يومًا"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__late_count
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_delivery_report_search
+msgid "Late"
+msgstr "متأخر"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__alert_type__late_shipment
+msgid "Late Shipment"
+msgstr "شحنة متأخرة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Late now"
+msgstr "متأخر حاليًا"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Late shipment %s"
+msgstr "شحنة متأخرة %s"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Late shipments"
+msgstr "الشحنات المتأخرة"
+
+#. module: nexora_analytics
+#. odoo-javascript
+#: code:addons/nexora_analytics/static/src/xml/dashboard.xml:0
+msgid "Latest Alerts"
+msgstr "أحدث التنبيهات"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "License %(no)s expires on %(date)s."
+msgstr "تنتهي صلاحية الترخيص %(no)s بتاريخ %(date)s."
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_fleet_report_list
+msgid "Load"
+msgstr "الحمولة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__weight
+msgid "Load (kg)"
+msgstr "الحمولة (كغ)"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Loss-making"
+msgstr "خاسرة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Loss-making shipment %s"
+msgstr "شحنة خاسرة %s"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Loss-making shipments"
+msgstr "الشحنات الخاسرة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__severity__low
+msgid "Low"
+msgstr "منخفض"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_fleet_report_search
+msgid "Low Payload (< 50%)"
+msgstr "حمولة منخفضة (< 50%)"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Low alerts"
+msgstr "تنبيهات منخفضة الخطورة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__alert_type__maintenance
+msgid "Maintenance Overdue"
+msgstr "صيانة متأخرة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Maintenance overdue"
+msgstr "صيانة متأخرة عن موعدها"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Maintenance overdue: %(plan)s - %(vehicle)s"
+msgstr "الصيانة متأخرة: %(plan)s - %(vehicle)s"
+
+#. module: nexora_analytics
+#: model:res.groups,name:nexora_analytics.group_nexora_analytics_manager
+msgid "Manager"
+msgstr "مدير"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Margin"
+msgstr "الهامش"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__severity__medium
+msgid "Medium"
+msgstr "متوسط"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Medium alerts"
+msgstr "تنبيهات متوسطة الخطورة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__message
+msgid "Message"
+msgstr "الرسالة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_delivery_report_search
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_demand_report_search
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_fleet_report_search
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_supplier_report_search
+msgid "Month"
+msgstr "الشهر"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_search
+msgid "My Alerts"
+msgstr "تنبيهاتي"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Need ordering"
+msgstr "بحاجة إلى طلب"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__alert_type__negative_margin
+msgid "Negative Margin"
+msgstr "هامش سلبي"
+
+#. module: nexora_analytics
+#: model:res.groups.privilege,name:nexora_analytics.res_groups_privilege_nexora_analytics
+msgid "Nexora Analytics"
+msgstr "تحليلات Nexora"
+
+#. module: nexora_analytics
+#: model:ir.model,name:nexora_analytics.model_nexora_dashboard
+msgid "Nexora Control Tower"
+msgstr "برج التحكم Nexora"
+
+#. module: nexora_analytics
+#: model:ir.actions.server,name:nexora_analytics.cron_nexora_generate_alerts_ir_actions_server
+msgid "Nexora: Generate operational alerts"
+msgstr "Nexora: إنشاء التنبيهات التشغيلية"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "حدث التقويم للنشاط التالي"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "No demand"
+msgstr "لا يوجد طلب"
+
+#. module: nexora_analytics
+#. odoo-javascript
+#: code:addons/nexora_analytics/static/src/xml/dashboard.xml:0
+msgid "No open alerts."
+msgstr "لا توجد تنبيهات مفتوحة."
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_supplier_report_search
+msgid "Not Fully Received"
+msgstr "لم يتم الاستلام بالكامل"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,help:nexora_analytics.field_nexora_alert__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,help:nexora_analytics.field_nexora_alert__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.res_config_settings_view_form_nexora_analytics
+msgid "Number of past days used by the Control Tower KPIs."
+msgstr "عدد الأيام السابقة المستخدمة في مؤشرات الأداء الرئيسية لبرج التحكم."
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__on_time_count
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_delivery_report_search
+msgid "On Time"
+msgstr "في الموعد"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid ""
+"On hand %(oh).0f, forecast demand %(fc).2f/day, suggested order %(q).0f."
+msgstr ""
+"المتوفر %(oh).0f، الطلب المتوقع %(fc).2f يوميًا، كمية الطلب المقترحة %(q).0f."
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__on_time_pct
+msgid "On-time Rate (%)"
+msgstr "نسبة التسليم في الموعد (%)"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "On-time rate"
+msgstr "معدل الالتزام بالمواعيد"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__state__open
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_search
+msgid "Open"
+msgstr "مفتوح"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_form
+msgid "Open Record"
+msgstr "فتح السجل"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Open customer tickets"
+msgstr "تذاكر العملاء المفتوحة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Open tenders"
+msgstr "المناقصات المفتوحة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Open tickets"
+msgstr "التذاكر المفتوحة"
+
+#. module: nexora_analytics
+#: model:ir.model,name:nexora_analytics.model_nexora_alert
+msgid "Operational Alert"
+msgstr "تنبيه تشغيلي"
+
+#. module: nexora_analytics
+#: model:ir.actions.act_window,name:nexora_analytics.action_nexora_alert
+#: model:ir.ui.menu,name:nexora_analytics.menu_nexora_alerts
+msgid "Operational Alerts"
+msgstr "التنبيهات التشغيلية"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_supplier_report_list
+msgid "Ordered"
+msgstr "تم الطلب"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Out of service"
+msgstr "خارج الخدمة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Overdue maintenance plans"
+msgstr "خطط الصيانة المتأخرة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Overstock"
+msgstr "زيادة المخزون"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__payload_usage
+msgid "Payload Usage (%)"
+msgstr "نسبة استخدام الحمولة (%)"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__alert_type__approval
+msgid "Pending Approval"
+msgstr "بانتظار الموافقة"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.res_config_settings_view_form_nexora_analytics
+msgid "Pending Approval Alert"
+msgstr "تنبيه الموافقات المعلقة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_res_config_settings__nexora_approval_stale_days
+msgid "Pending Approval Alert (days)"
+msgstr "تنبيه الموافقات المعلقة (بالأيام)"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__alert_type__vendor
+msgid "Poor Vendor"
+msgstr "مورد ضعيف الأداء"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Poor vendor rating: %s"
+msgstr "تقييم المورد ضعيف: %s"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Poor vendors"
+msgstr "الموردون ضعيفو الأداء"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Procurement"
+msgstr "المشتريات"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_demand_report__product_id
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_supplier_report__product_id
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_demand_report_search
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_supplier_report_search
+msgid "Product"
+msgstr "المنتج"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_demand_report__categ_id
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_supplier_report__categ_id
+msgid "Product Category"
+msgstr "فئة المنتج"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Products to reorder"
+msgstr "المنتجات المطلوب إعادة طلبها"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__profit
+msgid "Profit"
+msgstr "الربح"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/dashboard.py:0
+msgid "Profitability"
+msgstr "الربحية"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Purchase request waiting for approval: %s"
+msgstr "طلب شراء بانتظار الموافقة: %s"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "Purchase spend"
+msgstr "إنفاق المشتريات"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_supplier_report__qty_ordered
+msgid "Qty Ordered"
+msgstr "الكمية المطلوبة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_supplier_report__qty_received
+msgid "Qty Received"
+msgstr "الكمية المستلمة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_demand_report__quantity
+msgid "Quantity Shipped"
+msgstr "الكمية المشحونة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code:addons/nexora_analytics/models/alert.py:0
+msgid "Rated D with a score of %.1f."
+msgstr "حصل على التقييم D بدرجة %.1f."
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_supplier_report_list
+msgid "Received"
+msgstr "تم الاستلام"
+
+#. module: nexora_analytics
+#. odoo-javascript
+#: code/addons/nexora_analytics/static/src/xml/dashboard.xml:0
+msgid "Refresh"
+msgstr "تحديث"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__res_model
+msgid "Related Model"
+msgstr "النموذج المرتبط"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__res_id
+msgid "Related Record"
+msgstr "السجل المرتبط"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_form
+msgid "Reopen"
+msgstr "إعادة فتح"
+
+#. module: nexora_analytics
+#: model:ir.ui.menu,name:nexora_analytics.menu_nexora_reports
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "Requests to approve"
+msgstr "طلبات بانتظار الموافقة"
+
+#. module: nexora_analytics
+#: model:ir.actions.server,name:nexora_analytics.action_server_nexora_alert_resolve
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_form
+msgid "Resolve"
+msgstr "حل"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__state__resolved
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_search
+msgid "Resolved"
+msgstr "تم الحل"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__responsible_id
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_search
+msgid "Responsible"
+msgstr "المسؤول"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__freight_amount
+msgid "Revenue"
+msgstr "الإيرادات"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/alert.py:0
+msgid "Revenue %(r).2f, allocated cost %(c).2f, profit %(p).2f."
+msgstr "الإيرادات %(r).2f، التكلفة الموزعة %(c).2f، الربح %(p).2f."
+
+#. module: nexora_analytics
+#: model:ir.actions.server,name:nexora_analytics.action_server_nexora_run_alert_check
+#: model:ir.ui.menu,name:nexora_analytics.menu_nexora_run_alert_check
+msgid "Run Alert Check Now"
+msgstr "تشغيل فحص التنبيهات الآن"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__severity
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_search
+msgid "Severity"
+msgstr "درجة الخطورة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__severity_rank
+msgid "Severity Rank"
+msgstr "ترتيب درجة الخطورة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__shipment_id
+msgid "Shipment"
+msgstr "الشحنة"
+
+#. module: nexora_analytics
+#: model:ir.ui.menu,name:nexora_analytics.menu_nexora_profitability_link
+msgid "Shipment Profitability"
+msgstr "ربحية الشحنات"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_fleet_report_list
+msgid "Shipments"
+msgstr "الشحنات"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__shipments_delivered
+msgid "Shipments Delivered"
+msgstr "الشحنات المسلّمة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "Shipments in transit"
+msgstr "الشحنات قيد النقل"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "Shipments to invoice"
+msgstr "الشحنات المطلوب إصدار فواتير لها"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "Shipments waiting for a trip"
+msgstr "الشحنات بانتظار رحلة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_supplier_report__amount
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_supplier_report_list
+msgid "Spend"
+msgstr "الإنفاق"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__state
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,help:nexora_analytics.field_nexora_alert__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناءً على الأنشطة\n"
+"متأخر: تم تجاوز تاريخ الاستحقاق\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"مخطط: أنشطة مستقبلية."
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__alert_type__stock
+msgid "Stock Risk"
+msgstr "مخاطر المخزون"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "Stockout"
+msgstr "نفاد المخزون"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/alert.py:0
+msgid "Stockout: %(p)s @ %(w)s"
+msgstr "نفاد المخزون: %(p)s في %(w)s"
+
+#. module: nexora_analytics
+#: model:ir.actions.act_window,name:nexora_analytics.action_nexora_supplier_report
+#: model:ir.model,name:nexora_analytics.model_nexora_supplier_report
+#: model:ir.ui.menu,name:nexora_analytics.menu_nexora_supplier_report
+msgid "Supplier Analysis"
+msgstr "تحليل الموردين"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,help:nexora_analytics.field_nexora_alert__key
+msgid "Technical key that identifies the condition behind the alert."
+msgstr "مفتاح تقني يحدد الحالة التي أدت إلى إصدار التنبيه."
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_form
+msgid "The alert stays hidden until its condition clears. Ignore it?"
+msgstr "سيظل التنبيه مخفيًا حتى زوال الحالة المسببة له. هل تريد تجاهله؟"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_delivery_report_search
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_fleet_report_search
+msgid "This Year"
+msgstr "هذا العام"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "To approve"
+msgstr "للموافقة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "To invoice"
+msgstr "لإصدار الفاتورة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "To plan"
+msgstr "للتخطيط"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__trip_id
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__trip_id
+msgid "Trip"
+msgstr "الرحلة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__total_cost
+msgid "Trip Cost"
+msgstr "تكلفة الرحلة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__hours
+msgid "Trip Hours"
+msgstr "ساعات الرحلة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__trip_count
+msgid "Trips"
+msgstr "الرحلات"
+
+#. module: nexora_analytics
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_alert_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,help:nexora_analytics.field_nexora_alert__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي في السجل."
+
+#. module: nexora_analytics
+#. odoo-javascript
+#: code/addons/nexora_analytics/static/src/xml/dashboard.xml:0
+msgid "UTC"
+msgstr "UTC"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__alert_type__ticket
+msgid "Unattended Ticket"
+msgstr "تذكرة غير متابَعة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/alert.py:0
+msgid "Unattended ticket %s"
+msgstr "تذكرة غير متابَعة %s"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "Unavailable"
+msgstr "غير متاح"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "Unavailable vehicles"
+msgstr "المركبات غير المتاحة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "Utilization"
+msgstr "معدل الاستغلال"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__vehicle_id
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__vehicle_id
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_delivery_report_search
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_fleet_report_search
+msgid "Vehicle"
+msgstr "المركبة"
+
+#. module: nexora_analytics
+#: model:ir.model.fields.selection,name:nexora_analytics.selection__nexora_alert__alert_type__vehicle_docs
+msgid "Vehicle Documents"
+msgstr "وثائق المركبة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/alert.py:0
+msgid "Vehicle documents expired: %s"
+msgstr "انتهت صلاحية وثائق المركبة: %s"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/alert.py:0
+msgid "Vehicle documents expiring: %s"
+msgstr "وثائق المركبة على وشك انتهاء الصلاحية: %s"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "Vehicles"
+msgstr "المركبات"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "Vehicles with document issues"
+msgstr "مركبات لديها مشاكل في الوثائق"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_supplier_report__partner_id
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_supplier_report_search
+msgid "Vendor"
+msgstr "المورّد"
+
+#. module: nexora_analytics
+#: model:ir.ui.menu,name:nexora_analytics.menu_nexora_vendor_rating_link
+msgid "Vendor Ratings"
+msgstr "تقييمات الموردين"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "Vendors rated D"
+msgstr "الموردون الحاصلون على التقييم D"
+
+#. module: nexora_analytics
+#. odoo-javascript
+#: code/addons/nexora_analytics/static/src/xml/dashboard.xml:0
+msgid "View all"
+msgstr "عرض الكل"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_fleet_report__volume_usage
+msgid "Volume Usage (%)"
+msgstr "نسبة استخدام الحجم (%)"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_demand_report__warehouse_id
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.view_nexora_demand_report_search
+msgid "Warehouse"
+msgstr "المستودع"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_alert__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,help:nexora_analytics.field_nexora_alert__website_message_ids
+msgid "Website communication history"
+msgstr "سجل التواصل عبر الموقع الإلكتروني"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_nexora_delivery_report__weight
+msgid "Weight (kg)"
+msgstr "الوزن (كغ)"
+
+#. module: nexora_analytics
+#: model:ir.model.fields,field_description:nexora_analytics.field_res_config_settings__nexora_working_hours
+#: model_terms:ir.ui.view,arch_db:nexora_analytics.res_config_settings_view_form_nexora_analytics
+msgid "Working Hours per Vehicle per Day"
+msgstr "ساعات العمل لكل مركبة يوميًا"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "You do not have access to the Control Tower."
+msgstr "ليس لديك صلاحية الوصول إلى برج التحكم."
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "assigned"
+msgstr "مسند"
+
+#. module: nexora_analytics
+#. odoo-javascript
+#: code/addons/nexora_analytics/static/src/xml/dashboard.xml:0
+msgid "days · updated"
+msgstr "يومًا · تم التحديث"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/alert.py:0
+msgid "expired"
+msgstr "منتهي الصلاحية"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "expired or expiring"
+msgstr "منتهي الصلاحية أو على وشك الانتهاء"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/alert.py:0
+msgid "expiring"
+msgstr "على وشك انتهاء الصلاحية"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "last %s days"
+msgstr "آخر %s يومًا"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "maintenance"
+msgstr "الصيانة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "need rescheduling"
+msgstr "بحاجة إلى إعادة جدولة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/alert.py:0
+msgid "no reason recorded"
+msgstr "لم يتم تسجيل سبب"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "out_of_service"
+msgstr "خارج الخدمة"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "rated D"
+msgstr "حاصل على التقييم D"
+
+#. module: nexora_analytics
+#. odoo-python
+#: code/addons/nexora_analytics/models/dashboard.py:0
+msgid "trip hours, last %s days"
+msgstr "ساعات الرحلات خلال آخر %s يومًا"

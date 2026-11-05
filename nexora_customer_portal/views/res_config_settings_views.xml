@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_nexora_portal" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.nexora.portal</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="nexora_core.res_config_settings_view_form_nexora"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='nexora_core']" position="inside">
+                <block title="Customer Portal" name="nexora_portal_block">
+                    <setting string="Transport Requests"
+                             help="Let logistics customers submit transport requests from the portal.">
+                        <field name="nexora_portal_requests_enabled"/>
+                    </setting>
+                    <setting string="Default Responsible"
+                             help="Receives the activity for new portal requests and tickets. Defaults to the administrator.">
+                        <field name="nexora_portal_responsible_id"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_vehicle_assignment_form_transport" model="ir.ui.view">
+        <field name="name">nexora.vehicle.assignment.form.transport</field>
+        <field name="model">nexora.vehicle.assignment</field>
+        <field name="inherit_id" ref="nexora_fleet.view_nexora_vehicle_assignment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='purpose']" position="after">
+                <field name="trip_id" invisible="not trip_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

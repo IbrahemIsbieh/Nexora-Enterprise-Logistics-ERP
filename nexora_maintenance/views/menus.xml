@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_nexora_maintenance_orders" name="Maintenance Orders"
+              parent="nexora_fleet.menu_nexora_fleet" action="action_nexora_maintenance_order"
+              sequence="50" groups="nexora_maintenance.group_nexora_maintenance_technician"/>
+    <menuitem id="menu_nexora_maintenance_plans" name="Maintenance Plans"
+              parent="nexora_fleet.menu_nexora_fleet" action="action_nexora_maintenance_plan"
+              sequence="60" groups="nexora_maintenance.group_nexora_maintenance_technician"/>
+</odoo>

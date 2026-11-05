@@ -1,0 +1,1277 @@
+
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* nexora_customer_portal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 06:59+0000\n"
+"PO-Revision-Date: 2026-11-05 06:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid ""
+".\n"
+"                    Our team will contact you to reschedule."
+msgstr ""
+".\n"
+"                    سيتواصل معك فريقنا لإعادة جدولة الموعد."
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "<option value=\"\">Default (my main address)</option>"
+msgstr "<option value=\"\">الافتراضي (عنواني الرئيسي)</option>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_new
+msgid "<option value=\"\">None</option>"
+msgstr "<option value=\"\">لا شيء</option>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "<option value=\"\">Select…</option>"
+msgstr "<option value=\"\">اختر…</option>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "<span>Shipment waybill (PDF)</span>"
+msgstr "<span>بوليصة الشحن (PDF)</span>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "<strong>Delivered on:</strong>"
+msgstr "<strong>تاريخ التسليم:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "<strong>Delivery</strong>"
+msgstr "<strong>التسليم</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+msgid "<strong>Notes:</strong>"
+msgstr "<strong>ملاحظات:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_page
+msgid "<strong>Opened:</strong>"
+msgstr "<strong>تاريخ الفتح:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "<strong>Order:</strong>"
+msgstr "<strong>الطلب:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "<strong>Pickup</strong>"
+msgstr "<strong>الاستلام</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "<strong>Planned delivery:</strong>"
+msgstr "<strong>التسليم المخطط:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "<strong>Planned pickup:</strong>"
+msgstr "<strong>الاستلام المخطط:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+msgid "<strong>Priority:</strong>"
+msgstr "<strong>الأولوية:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "<strong>Received by:</strong>"
+msgstr "<strong>تم الاستلام بواسطة:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>المرجع:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+msgid "<strong>Requested delivery:</strong>"
+msgstr "<strong>التسليم المطلوب:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+msgid "<strong>Requested pickup:</strong>"
+msgstr "<strong>الاستلام المطلوب:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_page
+msgid "<strong>Resolution</strong>"
+msgstr "<strong>الحل</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_page
+msgid "<strong>Shipment:</strong>"
+msgstr "<strong>الشحنة:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "<strong>Total weight:</strong>"
+msgstr "<strong>الوزن الإجمالي:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_page
+msgid "<strong>Type:</strong>"
+msgstr "<strong>النوع:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "<strong>Vehicle:</strong>"
+msgstr "<strong>المركبة:</strong>"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__access_warning
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment__access_warning
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_transport_order__access_warning
+msgid "Access warning"
+msgstr "تحذير الوصول"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__message_needaction
+msgid "Action Needed"
+msgstr "يتطلب إجراء"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تمييز استثناء النشاط"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "Add at least one cargo line."
+msgstr "أضف بندًا واحدًا على الأقل للبضائع."
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "Addresses"
+msgstr "العناوين"
+
+#. module: nexora_customer_portal
+#: model:res.groups,name:nexora_customer_portal.group_nexora_portal_agent
+msgid "Agent"
+msgstr "موظف خدمة العملاء"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "All"
+msgstr "الكل"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_res_config_settings__nexora_portal_requests_enabled
+msgid "Allow Transport Requests from the Portal"
+msgstr "السماح بطلبات النقل من البوابة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "Awaiting Confirmation"
+msgstr "بانتظار التأكيد"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_shipment_document__doc_type__bol
+msgid "Bill of Lading"
+msgstr "بوليصة الشحن"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_new
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+msgid "Cancel this request"
+msgstr "إلغاء هذا الطلب"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "Cancelled by the customer from the portal."
+msgstr "تم الإلغاء بواسطة العميل من البوابة."
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "Cargo"
+msgstr "البضائع"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Cargo (up to 5 lines)"
+msgstr "البضائع (حتى 5 بنود)"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_shipment_document__doc_type__certificate
+msgid "Certificate"
+msgstr "شهادة"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "Choose a delivery address or enter a new one."
+msgstr "اختر عنوان التسليم أو أدخل عنوانًا جديدًا."
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "City"
+msgstr "المدينة"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_form
+msgid "Close"
+msgstr "إغلاق"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_customer_ticket__state__closed
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_customer_ticket__ticket_type__complaint
+msgid "Complaint"
+msgstr "شكوى"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_home_nexora
+msgid "Complaints and service requests"
+msgstr "الشكاوى وطلبات الخدمة"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "Completed"
+msgstr "مكتمل"
+
+#. module: nexora_customer_portal
+#: model:ir.model,name:nexora_customer_portal.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Contact / place name"
+msgstr "اسم جهة الاتصال / المكان"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__create_uid
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment_document__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__create_date
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment_document__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__partner_id
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_search
+msgid "Customer"
+msgstr "العميل"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_shipment_form_portal
+msgid "Customer Documents"
+msgstr "مستندات العميل"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_customer_ticket__source__portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.res_config_settings_view_form_nexora_portal
+msgid "Customer Portal"
+msgstr "بوابة العملاء"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,help:nexora_customer_portal.field_nexora_customer_ticket__access_url
+#: model:ir.model.fields,help:nexora_customer_portal.field_nexora_shipment__access_url
+#: model:ir.model.fields,help:nexora_customer_portal.field_nexora_transport_order__access_url
+msgid "Customer Portal URL"
+msgstr "رابط بوابة العميل"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_orders
+msgid "Customer Ref."
+msgstr "مرجع العميل"
+
+#. module: nexora_customer_portal
+#: model:ir.ui.menu,name:nexora_customer_portal.menu_nexora_customer_service
+msgid "Customer Service"
+msgstr "خدمة العملاء"
+
+#. module: nexora_customer_portal
+#: model:ir.model,name:nexora_customer_portal.model_nexora_customer_ticket
+msgid "Customer Ticket"
+msgstr "تذكرة العميل"
+
+#. module: nexora_customer_portal
+#: model:ir.actions.act_window,name:nexora_customer_portal.action_nexora_customer_ticket
+msgid "Customer Tickets"
+msgstr "تذاكر العملاء"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_shipment_document__doc_type__customs
+msgid "Customs Document"
+msgstr "مستند جمركي"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment_document__date
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_orders
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__date_resolved
+msgid "Date Resolved"
+msgstr "تاريخ الحل"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_res_config_settings__nexora_portal_responsible_id
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.res_config_settings_view_form_nexora_portal
+msgid "Default Responsible"
+msgstr "المسؤول الافتراضي"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_shipments
+msgid "Deliver To"
+msgstr "التسليم إلى"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "Delivered"
+msgstr "تم التسليم"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_shipment_document__doc_type__delivery_note
+msgid "Delivery Note"
+msgstr "إشعار تسليم"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Delivery address"
+msgstr "عنوان التسليم"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "Delivery photo"
+msgstr "صورة التسليم"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "Describe your request."
+msgstr "يرجى وصف طلبك."
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__description
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_new
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__display_name
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment__display_name
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment_document__display_name
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_transport_order__display_name
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment_document__doc_type
+msgid "Doc Type"
+msgstr "نوع المستند"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment__document_ids
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "Documents"
+msgstr "المستندات"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "Download"
+msgstr "تنزيل"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "Enter a subject."
+msgstr "أدخل عنوانًا."
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "Enter both the street and the city of the new address."
+msgstr "أدخل الشارع والمدينة للعنوان الجديد."
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "Enter valid dates."
+msgstr "أدخل تواريخ صحيحة."
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "Failed"
+msgstr "فشل"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment_document__file
+msgid "File"
+msgstr "الملف"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment_document__filename
+msgid "Filename"
+msgstr "اسم الملف"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (جهات الاتصال)"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,help:nexora_customer_portal.field_nexora_customer_ticket__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font Awesome مثل fa-tasks"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_search
+msgid "From Portal"
+msgstr "من البوابة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسالة"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Hazardous"
+msgstr "مواد خطرة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_customer_ticket__priority__high
+msgid "High"
+msgstr "عالية"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_search
+msgid "High Priority"
+msgstr "أولوية عالية"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__id
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment__id
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment_document__id
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_transport_order__id
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_res_config_settings__id
+msgid "ID"
+msgstr "المُعرّف"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,help:nexora_customer_portal.field_nexora_customer_ticket__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة تشير إلى وجود استثناء في النشاط."
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,help:nexora_customer_portal.field_nexora_customer_ticket__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده، فإن الرسائل الجديدة تتطلب انتباهك."
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,help:nexora_customer_portal.field_nexora_customer_ticket__message_has_error
+#: model:ir.model.fields,help:nexora_customer_portal.field_nexora_customer_ticket__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده، فهناك بعض الرسائل التي حدث خطأ في تسليمها."
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_customer_ticket__state__in_progress
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_customer_ticket__ticket_type__inquiry
+msgid "Inquiry"
+msgstr "استفسار"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_customer_ticket__source__internal
+msgid "Internal"
+msgstr "داخلي"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "Invoice"
+msgstr "الفاتورة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__write_uid
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment_document__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__write_date
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment_document__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.res_config_settings_view_form_nexora_portal
+msgid "Let logistics customers submit transport requests from the portal."
+msgstr "السماح لعملاء الخدمات اللوجستية بتقديم طلبات النقل من البوابة."
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_customer_ticket__priority__low
+msgid "Low"
+msgstr "منخفضة"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "Main address"
+msgstr "العنوان الرئيسي"
+
+#. module: nexora_customer_portal
+#: model:res.groups,name:nexora_customer_portal.group_nexora_portal_manager
+msgid "Manager"
+msgstr "مدير"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__message_ids
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_page
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_search
+msgid "My Tickets"
+msgstr "تذاكري"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment_document__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_customer_ticket__state__new
+msgid "New"
+msgstr "جديد"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_tickets
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_new
+msgid "New Ticket"
+msgstr "تذكرة جديدة"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_orders
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "New Transport Request"
+msgstr "طلب نقل جديد"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/models/ticket.py:0
+msgid "New customer ticket"
+msgstr "تذكرة عميل جديدة"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "Newest"
+msgstr "الأحدث"
+
+#. module: nexora_customer_portal
+#: model:res.groups.privilege,name:nexora_customer_portal.res_groups_privilege_nexora_portal
+msgid "Nexora Customer Service"
+msgstr "خدمة عملاء Nexora"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "حدث تقويم النشاط التالي"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "No tracking events yet."
+msgstr "لا توجد أحداث تتبع حتى الآن."
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_customer_ticket__priority__normal
+msgid "Normal"
+msgstr "عادية"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Notes for our team"
+msgstr "ملاحظات لفريقنا"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,help:nexora_customer_portal.field_nexora_customer_ticket__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراءً"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,help:nexora_customer_portal.field_nexora_customer_ticket__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي حدث خطأ في تسليمها"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_search
+msgid "Open"
+msgstr "مفتوح"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Or deliver to a new address:"
+msgstr "أو التسليم إلى عنوان جديد:"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_orders
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_shipments
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+msgid "Order"
+msgstr "الطلب"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_shipment_document__doc_type__other
+msgid "Other"
+msgstr "أخرى"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Phone"
+msgstr "الهاتف"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Pickup address"
+msgstr "عنوان الاستلام"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_shipments
+msgid "Planned Delivery"
+msgstr "التسليم المخطط"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__access_url
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment__access_url
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_transport_order__access_url
+msgid "Portal Access URL"
+msgstr "رابط الوصول إلى البوابة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_transport_order__portal_request
+msgid "Portal Request"
+msgstr "طلب البوابة"
+
+#. module: nexora_customer_portal
+#: model:ir.actions.act_window,name:nexora_customer_portal.action_nexora_portal_requests
+#: model:ir.ui.menu,name:nexora_customer_portal.menu_nexora_portal_requests
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_transport_order_search_portal
+msgid "Portal Requests"
+msgstr "طلبات البوابة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__priority
+msgid "Priority"
+msgstr "الأولوية"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "Proof of Delivery"
+msgstr "إثبات التسليم"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Qty"
+msgstr "الكمية"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.res_config_settings_view_form_nexora_portal
+msgid ""
+"Receives the activity for new portal requests and tickets. Defaults to the "
+"administrator."
+msgstr ""
+"يتلقى النشاط الخاص بطلبات البوابة والتذاكر الجديدة. القيمة الافتراضية هي "
+"مدير النظام."
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__name
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_new
+msgid "Related shipment (optional)"
+msgstr "الشحنة المرتبطة (اختياري)"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_form
+msgid "Reopen"
+msgstr "إعادة فتح"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "Report a problem with this shipment"
+msgstr "الإبلاغ عن مشكلة في هذه الشحنة"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_orders
+msgid "Requested Delivery"
+msgstr "التسليم المطلوب"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Requested delivery"
+msgstr "التسليم المطلوب"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Requested pickup"
+msgstr "الاستلام المطلوب"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__resolution
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_form
+msgid "Resolution"
+msgstr "الحل"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_form
+msgid "Resolve"
+msgstr "حل"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_customer_ticket__state__resolved
+msgid "Resolved"
+msgstr "تم الحل"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__responsible_id
+msgid "Responsible"
+msgstr "المسؤول"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "Review portal transport request"
+msgstr "مراجعة طلب النقل من البوابة"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Route"
+msgstr "المسار"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Schedule"
+msgstr "الجدولة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__access_token
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment__access_token
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_transport_order__access_token
+msgid "Security Token"
+msgstr "رمز الأمان"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_form
+msgid "Sent to the customer when you click Resolve…"
+msgstr "يُرسل إلى العميل عند النقر على حل…"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields.selection,name:nexora_customer_portal.selection__nexora_customer_ticket__ticket_type__service
+msgid "Service Request"
+msgstr "طلب خدمة"
+
+#. module: nexora_customer_portal
+#: model:ir.model,name:nexora_customer_portal.model_nexora_shipment
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__shipment_id
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment_document__shipment_id
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_shipments
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_tickets
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "Shipment"
+msgstr "الشحنة"
+
+#. module: nexora_customer_portal
+#: model:ir.model,name:nexora_customer_portal.model_nexora_shipment_document
+msgid "Shipment Document"
+msgstr "مستند الشحنة"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_home_nexora
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_shipments
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+msgid "Shipments"
+msgstr "الشحنات"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "Signature"
+msgstr "التوقيع"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__source
+msgid "Source"
+msgstr "المصدر"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_form
+msgid "Start"
+msgstr "بدء"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_orders
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_shipments
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_tickets
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,help:nexora_customer_portal.field_nexora_customer_ticket__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناءً على الأنشطة\n"
+"متأخر: تم تجاوز تاريخ الاستحقاق\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"مخطط: أنشطة مستقبلية."
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Street"
+msgstr "الشارع"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__subject
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_tickets
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_new
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_form
+msgid "Subject"
+msgstr "الموضوع"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_new
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Submit Request"
+msgstr "إرسال الطلب"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,help:nexora_customer_portal.field_nexora_transport_order__portal_request
+msgid "Submitted by the customer from the portal."
+msgstr "تم تقديمه بواسطة العميل من البوابة."
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "Submitted from the customer portal by %s."
+msgstr "تم تقديمه من بوابة العملاء بواسطة %s."
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_home_nexora
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_tickets
+msgid "Support Tickets"
+msgstr "تذاكر الدعم"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Temperature"
+msgstr "درجة الحرارة"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "The delivery attempt failed"
+msgstr "فشلت محاولة التسليم"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "The delivery cannot be requested before the pickup."
+msgstr "لا يمكن طلب التسليم قبل موعد الاستلام."
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/models/ticket.py:0
+msgid "The shipment does not belong to this customer."
+msgstr "هذه الشحنة لا تخص هذا العميل."
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "This shipment was cancelled."
+msgstr "تم إلغاء هذه الشحنة."
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment__ticket_ids
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_tickets
+msgid "Ticket"
+msgstr "التذكرة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment__ticket_count
+msgid "Ticket Count"
+msgstr "عدد التذاكر"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__ticket_type
+msgid "Ticket Type"
+msgstr "نوع التذكرة"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/models/shipment.py:0
+#: model:ir.ui.menu,name:nexora_customer_portal.menu_nexora_customer_tickets
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_shipment_form_portal
+msgid "Tickets"
+msgstr "التذاكر"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_home_nexora
+msgid "Track your shipments and download documents"
+msgstr "تتبع شحناتك وتنزيل المستندات"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "Tracking"
+msgstr "التتبع"
+
+#. module: nexora_customer_portal
+#: model:ir.model,name:nexora_customer_portal.model_nexora_transport_order
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__order_id
+msgid "Transport Order"
+msgstr "طلب نقل"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_home_nexora
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_orders
+msgid "Transport Orders"
+msgstr "طلبات النقل"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.res_config_settings_view_form_nexora_portal
+msgid "Transport Requests"
+msgstr "طلبات النقل"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_tickets
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_new
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.view_nexora_customer_ticket_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,help:nexora_customer_portal.field_nexora_customer_ticket__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع استثناء النشاط في السجل."
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment_document__uploaded_by
+msgid "Uploaded By"
+msgstr "تم الرفع بواسطة"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Urgent request"
+msgstr "طلب عاجل"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "View Invoice"
+msgstr "عرض الفاتورة"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_shipment_document__visible_to_customer
+msgid "Visible To Customer"
+msgstr "مرئي للعميل"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Volume (m³)"
+msgstr "الحجم (م³)"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,field_description:nexora_customer_portal.field_nexora_customer_ticket__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: nexora_customer_portal
+#: model:ir.model.fields,help:nexora_customer_portal.field_nexora_customer_ticket__website_message_ids
+msgid "Website communication history"
+msgstr "سجل التواصل عبر الموقع"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Weight (kg)"
+msgstr "الوزن (كغ)"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/models/ticket.py:0
+msgid "Write the resolution first: it is sent to the customer."
+msgstr "اكتب الحل أولاً، حيث سيتم إرساله إلى العميل."
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_shipments
+msgid "You have no shipments yet."
+msgstr "ليس لديك أي شحنات حتى الآن."
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_tickets
+msgid "You have no tickets."
+msgstr "ليس لديك أي تذاكر."
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_orders
+msgid "You have no transport orders yet."
+msgstr "ليس لديك أي طلبات نقل حتى الآن."
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_my_home_nexora
+msgid "Your orders and transport requests"
+msgstr "طلباتك وطلبات النقل الخاصة بك"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "Your reference"
+msgstr "مرجعك"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+msgid ""
+"Your request was received. Our team will review and confirm it shortly."
+msgstr ""
+"تم استلام طلبك. سيقوم فريقنا بمراجعته وتأكيده قريبًا."
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_page
+msgid "Your ticket was created. We will get back to you shortly."
+msgstr "تم إنشاء تذكرتك. سنتواصل معك قريبًا."
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "confirmed"
+msgstr "مؤكد"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "draft"
+msgstr "مسودة"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "kg"
+msgstr "كغ"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "new"
+msgstr "جديد"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "resolved"
+msgstr "تم الحل"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/models/shipment.py:0
+msgid "shipment_id"
+msgstr "معرّف الشحنة"
+
+#. module: nexora_customer_portal
+#. odoo-python
+#: code:addons/nexora_customer_portal/controllers/main.py:0
+msgid "state"
+msgstr "الحالة"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "· <strong>Driver:</strong>"
+msgstr "· <strong>السائق:</strong>"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_order_page
+msgid "← All orders"
+msgstr "← جميع الطلبات"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_shipment_page
+msgid "← All shipments"
+msgstr "← جميع الشحنات"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_page
+msgid "← All tickets"
+msgstr "← جميع التذاكر"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_transport_request_new
+msgid "← Back to orders"
+msgstr "← العودة إلى الطلبات"
+
+#. module: nexora_customer_portal
+#: model_terms:ir.ui.view,arch_db:nexora_customer_portal.portal_ticket_new
+msgid "← Back to tickets"
+msgstr "← العودة إلى التذاكر"

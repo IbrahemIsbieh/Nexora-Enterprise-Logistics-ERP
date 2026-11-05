@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_transport_trip_list" model="ir.ui.view">
+        <field name="name">nexora.transport.trip.list</field>
+        <field name="model">nexora.transport.trip</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state == 'cancelled'" decoration-info="state == 'in_progress'">
+                <field name="name"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <field name="route" optional="show"/>
+                <field name="planned_start"/>
+                <field name="planned_end" optional="show"/>
+                <field name="shipment_count"/>
+                <field name="total_weight" optional="show"/>
+                <field name="payload_usage" widget="progressbar" optional="show"/>
+                <field name="distance" optional="hide"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'done'"
+                       decoration-info="state in ('planned', 'in_progress')"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_transport_trip_form" model="ir.ui.view">
+        <field name="name">nexora.transport.trip.form</field>
+        <field name="model">nexora.transport.trip</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="%(action_nexora_trip_add_shipment)d" type="action"
+                            string="Add Shipments" context="{'default_trip_id': id}"
+                            invisible="state not in ('draft', 'planned')"/>
+                    <button name="action_plan" type="object" string="Plan Trip"
+                            class="btn-primary" invisible="state != 'draft'"/>
+                    <button name="action_start" type="object" string="Start Trip"
+                            class="btn-primary" invisible="state != 'planned'"/>
+                    <button name="action_done" type="object" string="Complete Trip"
+                            class="btn-primary" invisible="state != 'in_progress'"/>
+                    <button name="action_cancel" type="object" string="Cancel"
+                            invisible="state not in ('draft', 'planned')"/>
+                    <button name="action_draft" type="object" string="Reset to Draft"
+                            invisible="state != 'cancelled'"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,planned,in_progress,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_shipments" type="object" class="oe_stat_button"
+                                icon="fa-truck" invisible="shipment_count == 0">
+                            <field name="shipment_count" widget="statinfo" string="Shipments"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="available_vehicle_ids" invisible="1"/>
+                            <field name="available_driver_ids" invisible="1"/>
+                            <field name="planned_start" readonly="state not in ('draft', 'planned')"/>
+                            <field name="planned_end" readonly="state not in ('draft', 'planned')"/>
+                            <field name="vehicle_id" readonly="state != 'draft'"/>
+                            <field name="driver_id" readonly="state != 'draft'"/>
+                        </group>
+                        <group>
+                            <field name="origin_warehouse_id"/>
+                            <field name="route"/>
+                            <field name="responsible_id"/>
+                            <field name="assignment_id" invisible="not assignment_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group string="Load">
+                        <group>
+                            <field name="total_weight"/>
+                            <field name="payload_usage" widget="progressbar"/>
+                            <field name="temperature_class"/>
+                        </group>
+                        <group>
+                            <field name="total_volume"/>
+                            <field name="volume_usage" widget="progressbar"/>
+                            <field name="has_hazardous"/>
+                        </group>
+                    </group>
+                    <group string="Execution" invisible="state in ('draft', 'planned', 'cancelled')">
+                        <group>
+                            <field name="actual_start"/>
+                            <field name="actual_end"/>
+                        </group>
+                        <group>
+                            <field name="odometer_start"/>
+                            <field name="odometer_end" readonly="state != 'in_progress'"/>
+                            <field name="distance"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Shipments" name="shipments">
+                            <field name="shipment_ids" readonly="1">
+                                <list decoration-danger="state == 'failed'">
+                                    <field name="name"/>
+                                    <field name="partner_id"/>
+                                    <field name="delivery_partner_id"/>
+                                    <field name="planned_delivery_date"/>
+                                    <field name="total_weight" sum="Weight"/>
+                                    <field name="total_volume" sum="Volume"/>
+                                    <field name="state" widget="badge"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Notes" name="notes">
+                            <field name="note"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_transport_trip_calendar" model="ir.ui.view">
+        <field name="name">nexora.transport.trip.calendar</field>
+        <field name="model">nexora.transport.trip</field>
+        <field name="arch" type="xml">
+            <calendar string="Trips" date_start="planned_start" date_stop="planned_end"
+                      color="vehicle_id" mode="week">
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_nexora_transport_trip_search" model="ir.ui.view">
+        <field name="name">nexora.transport.trip.search</field>
+        <field name="model">nexora.transport.trip</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <field name="route"/>
+                <filter name="open" string="Open"
+                        domain="[('state', 'in', ('draft', 'planned', 'in_progress'))]"/>
+                <filter name="in_progress" string="In Progress" domain="[('state', '=', 'in_progress')]"/>
+                <filter name="done" string="Done" domain="[('state', '=', 'done')]"/>
+                <group>
+                    <filter name="group_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_driver" string="Driver" context="{'group_by': 'driver_id'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'planned_start:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_nexora_transport_trip_pivot" model="ir.ui.view">
+        <field name="name">nexora.transport.trip.pivot</field>
+        <field name="model">nexora.transport.trip</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="vehicle_id" type="row"/>
+                <field name="planned_start" interval="month" type="col"/>
+                <field name="distance" type="measure"/>
+                <field name="total_weight" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="action_nexora_transport_trip" model="ir.actions.act_window">
+        <field name="name">Trips</field>
+        <field name="res_model">nexora.transport.trip</field>
+        <field name="view_mode">list,form,calendar,pivot</field>
+        <field name="context">{'search_default_open': 1}</field>
+    </record>
+</odoo>

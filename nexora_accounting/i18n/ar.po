@@ -1,0 +1,738 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* nexora_accounting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 06:54+0000\n"
+"PO-Revision-Date: 2026-11-05 06:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nexora_accounting
+#. odoo-python
+#: code:addons/nexora_accounting/models/shipment.py:0
+msgid "%(product)s - %(shipment)s (%(order)s) to %(dest)s"
+msgstr "%(product)s - %(shipment)s (%(order)s) إلى %(dest)s"
+
+#. module: nexora_accounting
+#: model:ir.ui.menu,name:nexora_accounting.menu_nexora_accounting
+msgid "Accounting"
+msgstr "المحاسبة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.res_config_settings_view_form_nexora_accounting
+msgid "Added on top of the direct trip costs."
+msgstr "تُضاف إلى تكاليف الرحلة المباشرة."
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_shipment__allocated_cost
+msgid "Allocated Cost"
+msgstr "التكلفة الموزعة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_cost_center_report__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: nexora_accounting
+#. odoo-python
+#: code:addons/nexora_accounting/models/expense.py:0
+msgid "An expense linked to a vendor bill cannot be cancelled."
+msgstr "لا يمكن إلغاء مصروف مرتبط بفاتورة مورد."
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.res_config_settings_view_form_nexora_accounting
+msgid "Applied to the longer of the planned and the actual trip duration."
+msgstr "يُطبق على المدة الأطول بين مدة الرحلة المخططة والفعلية."
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_freight_rate_form
+msgid "Applies To"
+msgstr "ينطبق على"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_freight_rate_form
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__basis
+msgid "Basis"
+msgstr "أساس الاحتساب"
+
+#. module: nexora_accounting
+#: model:res.groups,name:nexora_accounting.group_nexora_accounting_user
+msgid "Billing"
+msgstr "الفوترة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__chilled_pct
+msgid "Chilled Surcharge (%)"
+msgstr "رسوم إضافية للبضائع المبردة (%)"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_cost_center_report__company_id
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_transport_trip_form_accounting
+msgid "Compute Costs"
+msgstr "احتساب التكاليف"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_shipment_form_accounting
+msgid "Compute Freight"
+msgstr "احتساب أجرة الشحن"
+
+#. module: nexora_accounting
+#: model:ir.model,name:nexora_accounting.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات"
+
+#. module: nexora_accounting
+#: model:ir.model.fields.selection,name:nexora_accounting.selection__nexora_cost_center_report__kind__cost
+msgid "Cost"
+msgstr "التكلفة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_res_config_settings__nexora_acc_allocation_basis
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.res_config_settings_view_form_nexora_accounting
+msgid "Cost Allocation Basis"
+msgstr "أساس توزيع التكلفة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_account_bank_statement_line__nexora_cost_center_id
+#: model:ir.model.fields,field_description:nexora_accounting.field_account_move__nexora_cost_center_id
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_cost_center_report__cost_center_id
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_cost_center_report_search
+msgid "Cost Center"
+msgstr "مركز التكلفة"
+
+#. module: nexora_accounting
+#: model:ir.actions.act_window,name:nexora_accounting.action_nexora_cost_center_report
+#: model:ir.model,name:nexora_accounting.model_nexora_cost_center_report
+#: model:ir.ui.menu,name:nexora_accounting.menu_nexora_cost_center_analysis
+msgid "Cost Center Analysis"
+msgstr "تحليل مراكز التكلفة"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_cost_center_report_search
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_transport_trip_form_accounting
+msgid "Costs"
+msgstr "التكاليف"
+
+#. module: nexora_accounting
+#. odoo-python
+#: code:addons/nexora_accounting/models/trip.py:0
+msgid "Costs can only be computed for completed trips."
+msgstr "يمكن احتساب التكاليف للرحلات المكتملة فقط."
+
+#. module: nexora_accounting
+#: model:ir.actions.server,name:nexora_accounting.action_server_nexora_create_invoices
+msgid "Create Customer Invoice"
+msgstr "إنشاء فاتورة عميل"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_shipment_form_accounting
+msgid "Create Invoice"
+msgstr "إنشاء فاتورة"
+
+#. module: nexora_accounting
+#: model:ir.actions.server,name:nexora_accounting.action_server_nexora_create_vendor_bills
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_vehicle_expense_form_accounting
+msgid "Create Vendor Bill"
+msgstr "إنشاء فاتورة مورد"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__currency_id
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_shipment__currency_id
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_transport_trip__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__partner_id
+msgid "Customer"
+msgstr "العميل"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_shipment__invoice_id
+#: model:ir.model.fields.selection,name:nexora_accounting.selection__nexora_cost_center_report__source__customer_invoice
+msgid "Customer Invoice"
+msgstr "فاتورة العميل"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_cost_center_report__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__date_from
+msgid "Date From"
+msgstr "التاريخ من"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__date_to
+msgid "Date To"
+msgstr "التاريخ إلى"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_account_move__display_name
+#: model:ir.model.fields,field_description:nexora_accounting.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_cost_center_report__display_name
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__display_name
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_shipment__display_name
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_transport_trip__display_name
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_vehicle_expense__display_name
+#: model:ir.model.fields,field_description:nexora_accounting.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:nexora_accounting.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_shipment__distance_km
+msgid "Distance (km)"
+msgstr "المسافة (كم)"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_transport_trip__driver_cost
+msgid "Driver Cost"
+msgstr "تكلفة السائق"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_res_config_settings__nexora_acc_driver_cost_per_hour
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.res_config_settings_view_form_nexora_accounting
+msgid "Driver Cost per Hour"
+msgstr "تكلفة السائق لكل ساعة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields.selection,name:nexora_accounting.selection__res_config_settings__nexora_acc_allocation_basis__equal
+msgid "Equal Split"
+msgstr "توزيع بالتساوي"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_account_bank_statement_line__nexora_expense_ids
+#: model:ir.model.fields,field_description:nexora_accounting.field_account_move__nexora_expense_ids
+msgid "Expenses"
+msgstr "المصروفات"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_res_config_settings__nexora_acc_fuel_fallback_per_km
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.res_config_settings_view_form_nexora_accounting
+msgid "Fallback Fuel Cost per km"
+msgstr "تكلفة الوقود البديلة لكل كم"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_shipment_form_accounting
+msgid "Financial"
+msgstr "البيانات المالية"
+
+#. module: nexora_accounting
+#: model:ir.model.fields.selection,name:nexora_accounting.selection__nexora_freight_rate__basis__fixed
+msgid "Fixed per Shipment"
+msgstr "مبلغ ثابت لكل شحنة"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.res_config_settings_view_form_nexora_accounting
+msgid "Flat maintenance cost charged to each trip kilometer."
+msgstr "تكلفة صيانة ثابتة تُحتسب لكل كيلومتر من الرحلة."
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_shipment__freight_amount
+msgid "Freight Amount"
+msgstr "مبلغ الشحن"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_shipment__freight_base
+msgid "Freight Base"
+msgstr "أساس أجرة الشحن"
+
+#. module: nexora_accounting
+#. odoo-python
+#: code:addons/nexora_accounting/models/shipment.py:0
+#: model:ir.actions.act_window,name:nexora_accounting.action_nexora_freight_invoices
+#: model:ir.ui.menu,name:nexora_accounting.menu_nexora_freight_invoices
+msgid "Freight Invoices"
+msgstr "فواتير الشحن"
+
+#. module: nexora_accounting
+#: model:ir.model,name:nexora_accounting.model_nexora_freight_rate
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_shipment__freight_rate_id
+msgid "Freight Rate"
+msgstr "تعرفة الشحن"
+
+#. module: nexora_accounting
+#: model:ir.actions.act_window,name:nexora_accounting.action_nexora_freight_rate
+#: model:ir.ui.menu,name:nexora_accounting.menu_nexora_freight_rates
+msgid "Freight Rates"
+msgstr "تعرفات الشحن"
+
+#. module: nexora_accounting
+#: model:product.template,name:nexora_accounting.product_freight_service
+msgid "Freight Service"
+msgstr "خدمة الشحن"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_shipment__freight_surcharge
+msgid "Freight Surcharge"
+msgstr "الرسوم الإضافية للشحن"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__frozen_pct
+msgid "Frozen Surcharge (%)"
+msgstr "رسوم إضافية للبضائع المجمدة (%)"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_transport_trip__fuel_cost
+msgid "Fuel Cost"
+msgstr "تكلفة الوقود"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__hazmat_pct
+msgid "Hazmat Surcharge (%)"
+msgstr "رسوم إضافية للمواد الخطرة (%)"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.res_config_settings_view_form_nexora_accounting
+msgid "How the trip cost is split among its delivered or failed shipments."
+msgstr "كيفية توزيع تكلفة الرحلة على الشحنات التي تم تسليمها أو تعذر تسليمها."
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_account_move__id
+#: model:ir.model.fields,field_description:nexora_accounting.field_account_move_line__id
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_cost_center_report__id
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__id
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_shipment__id
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_transport_trip__id
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_vehicle_expense__id
+#: model:ir.model.fields,field_description:nexora_accounting.field_purchase_order__id
+#: model:ir.model.fields,field_description:nexora_accounting.field_res_config_settings__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_shipment__invoice_status
+msgid "Invoice Status"
+msgstr "حالة الفاتورة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields.selection,name:nexora_accounting.selection__nexora_shipment__invoice_status__invoiced
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_shipment_search_accounting
+msgid "Invoiced"
+msgstr "تمت الفوترة"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_shipment_form_accounting
+msgid "Invoicing"
+msgstr "الفوترة"
+
+#. module: nexora_accounting
+#: model:ir.model,name:nexora_accounting.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: nexora_accounting
+#: model:ir.model,name:nexora_accounting.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر اليومية"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_cost_center_report__kind
+msgid "Kind"
+msgstr "النوع"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,help:nexora_accounting.field_nexora_freight_rate__partner_id
+msgid "Leave empty for a generic rate. Customer rates win over generic ones."
+msgstr "اتركه فارغاً لاستخدام تعرفة عامة. تُعطى الأولوية لتعرفة العميل على التعرفة العامة."
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_shipment_search_accounting
+msgid "Loss-making"
+msgstr "خاسرة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_transport_trip__maintenance_cost
+msgid "Maintenance Cost"
+msgstr "تكلفة الصيانة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_res_config_settings__nexora_acc_maintenance_per_km
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.res_config_settings_view_form_nexora_accounting
+msgid "Maintenance Cost per km"
+msgstr "تكلفة الصيانة لكل كم"
+
+#. module: nexora_accounting
+#: model:res.groups,name:nexora_accounting.group_nexora_accounting_manager
+msgid "Manager"
+msgstr "مدير"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_shipment__margin_pct
+msgid "Margin (%)"
+msgstr "هامش الربح (%)"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__minimum_charge
+msgid "Minimum Charge"
+msgstr "الحد الأدنى للرسوم"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_cost_center_report_search
+msgid "Month"
+msgstr "الشهر"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_cost_center_report_list
+msgid "Net"
+msgstr "الصافي"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_cost_center_report__signed_amount
+msgid "Net (Revenue - Cost)"
+msgstr "الصافي (الإيرادات - التكلفة)"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_move_form_nexora
+msgid "Nexora"
+msgstr "نيكسورا"
+
+#. module: nexora_accounting
+#: model:res.groups.privilege,name:nexora_accounting.res_groups_privilege_nexora_accounting
+msgid "Nexora Accounting"
+msgstr "محاسبة نيكسورا"
+
+#. module: nexora_accounting
+#. odoo-python
+#: code:addons/nexora_accounting/models/shipment.py:0
+msgid "No freight amount for: %s. Define a freight rate or enter the amount."
+msgstr "لا يوجد مبلغ شحن لـ %s. حدد تعرفة شحن أو أدخل المبلغ."
+
+#. module: nexora_accounting
+#. odoo-python
+#: code:addons/nexora_accounting/models/shipment.py:0
+msgid ""
+"No freight rate matches shipment %s. Define one in Accounting > Freight "
+"Rates."
+msgstr ""
+"لا توجد تعرفة شحن مطابقة للشحنة %s. قم بتحديد تعرفة ضمن المحاسبة > تعرفات "
+"الشحن."
+
+#. module: nexora_accounting
+#: model:ir.model.fields.selection,name:nexora_accounting.selection__nexora_shipment__invoice_status__no
+msgid "Nothing to Invoice"
+msgstr "لا توجد فاتورة مطلوبة"
+
+#. module: nexora_accounting
+#: model:ir.ui.menu,name:nexora_accounting.menu_nexora_operating_expenses
+msgid "Operating Expenses"
+msgstr "المصروفات التشغيلية"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_res_config_settings__nexora_acc_overhead_pct
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.res_config_settings_view_form_nexora_accounting
+msgid "Overhead (%)"
+msgstr "التكاليف العامة (%)"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_transport_trip__overhead_cost
+msgid "Overhead Cost"
+msgstr "التكاليف العامة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_cost_center_report__partner_id
+msgid "Partner"
+msgstr "جهة الاتصال"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_shipment__payment_state
+msgid "Payment"
+msgstr "الدفع"
+
+#. module: nexora_accounting
+#: model:ir.model.fields.selection,name:nexora_accounting.selection__nexora_freight_rate__basis__per_kg
+msgid "Per kg"
+msgstr "لكل كغ"
+
+#. module: nexora_accounting
+#: model:ir.model.fields.selection,name:nexora_accounting.selection__nexora_freight_rate__basis__per_km
+msgid "Per km"
+msgstr "لكل كم"
+
+#. module: nexora_accounting
+#: model:ir.model.fields.selection,name:nexora_accounting.selection__nexora_freight_rate__basis__per_m3
+msgid "Per m³"
+msgstr "لكل م³"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_freight_rate_form
+msgid "Price"
+msgstr "السعر"
+
+#. module: nexora_accounting
+#. odoo-python
+#: code:addons/nexora_accounting/models/freight_rate.py:0
+msgid "Prices and surcharges cannot be negative."
+msgstr "لا يمكن أن تكون الأسعار والرسوم الإضافية سالبة."
+
+#. module: nexora_accounting
+#: model:ir.model.fields,help:nexora_accounting.field_nexora_freight_rate__product_id
+msgid ""
+"Product invoiced for this rate. A contract line with the same product "
+"overrides the unit price."
+msgstr ""
+"المنتج الذي تتم فوترته وفق هذه التعرفة. يتجاوز بند العقد الذي يحتوي على المنتج "
+"نفسه سعر الوحدة المحدد هنا."
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_shipment__profit
+msgid "Profit"
+msgstr "الربح"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_shipment_form_accounting
+msgid "Profitability"
+msgstr "الربحية"
+
+#. module: nexora_accounting
+#: model:ir.model,name:nexora_accounting.model_purchase_order
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: nexora_accounting
+#: model:ir.model.fields.selection,name:nexora_accounting.selection__nexora_cost_center_report__kind__revenue
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_cost_center_report_search
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_shipment_form_accounting
+msgid "Revenue"
+msgstr "الإيرادات"
+
+#. module: nexora_accounting
+#. odoo-python
+#: code:addons/nexora_accounting/models/expense.py:0
+msgid ""
+"Select confirmed expenses that have a vendor, an amount and no bill yet."
+msgstr ""
+"حدد المصروفات المؤكدة التي تحتوي على مورد ومبلغ ولم يتم إنشاء فاتورة لها بعد."
+
+#. module: nexora_accounting
+#. odoo-python
+#: code:addons/nexora_accounting/models/shipment.py:0
+msgid "Select delivered shipments that are not invoiced yet."
+msgstr "حدد الشحنات التي تم تسليمها ولم تتم فوترتها بعد."
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__product_id
+msgid "Service Product"
+msgstr "منتج الخدمة"
+
+#. module: nexora_accounting
+#: model:ir.model,name:nexora_accounting.model_nexora_shipment
+#: model:ir.model.fields,field_description:nexora_accounting.field_account_move_line__nexora_shipment_id
+msgid "Shipment"
+msgstr "الشحنة"
+
+#. module: nexora_accounting
+#. odoo-python
+#: code:addons/nexora_accounting/models/shipment.py:0
+msgid "Shipment %s is already invoiced."
+msgstr "الشحنة %s تمت فوترتها بالفعل."
+
+#. module: nexora_accounting
+#: model:ir.actions.act_window,name:nexora_accounting.action_nexora_shipment_profitability
+#: model:ir.ui.menu,name:nexora_accounting.menu_nexora_shipment_profitability
+msgid "Shipment Profitability"
+msgstr "ربحية الشحنات"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_account_bank_statement_line__nexora_shipment_ids
+#: model:ir.model.fields,field_description:nexora_accounting.field_account_move__nexora_shipment_ids
+msgid "Shipments"
+msgstr "الشحنات"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_cost_center_report__source
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_cost_center_report_search
+msgid "Source"
+msgstr "المصدر"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_freight_rate_form
+msgid "Surcharges (% of the base charge)"
+msgstr "الرسوم الإضافية (% من الرسوم الأساسية)"
+
+#. module: nexora_accounting
+#. odoo-python
+#: code:addons/nexora_accounting/models/freight_rate.py:0
+msgid "The end date cannot be before the start date."
+msgstr "لا يمكن أن يكون تاريخ النهاية قبل تاريخ البداية."
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_cost_center_report_search
+msgid "This Year"
+msgstr "هذا العام"
+
+#. module: nexora_accounting
+#: model:ir.model.fields.selection,name:nexora_accounting.selection__nexora_shipment__invoice_status__to_invoice
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_shipment_search_accounting
+msgid "To Invoice"
+msgstr "جاهزة للفوترة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_transport_trip__other_cost
+msgid "Tolls & Other"
+msgstr "رسوم الطرق ومصاريف أخرى"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_cost_center_report_list
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_transport_trip__total_cost
+msgid "Total Cost"
+msgstr "إجمالي التكلفة"
+
+#. module: nexora_accounting
+#: model:ir.model,name:nexora_accounting.model_nexora_transport_trip
+msgid "Transport Trip"
+msgstr "رحلة نقل"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_transport_trip_form_accounting
+msgid "Trip Cost Breakdown"
+msgstr "تفصيل تكاليف الرحلة"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.res_config_settings_view_form_nexora_accounting
+msgid "Trip Costing"
+msgstr "احتساب تكلفة الرحلة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__price
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_freight_rate__urgent_pct
+msgid "Urgent Surcharge (%)"
+msgstr "رسوم إضافية للشحن العاجل (%)"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,help:nexora_accounting.field_nexora_shipment__distance_km
+msgid ""
+"Used by per-km rates. Filled from the trip distance when the trip is "
+"completed."
+msgstr ""
+"يُستخدم في التعرفات المحسوبة لكل كيلومتر. يتم تعبئته من مسافة الرحلة عند "
+"اكتمالها."
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.res_config_settings_view_form_nexora_accounting
+msgid ""
+"Used when the vehicle has no confirmed fuel logs yet. Otherwise the "
+"vehicle's own average cost per km is used."
+msgstr ""
+"يُستخدم عندما لا تكون للمركبة سجلات وقود مؤكدة بعد. وإلا فسيتم استخدام "
+"متوسط تكلفة المركبة لكل كيلومتر."
+
+#. module: nexora_accounting
+#: model:ir.model,name:nexora_accounting.model_nexora_vehicle_expense
+#: model:ir.model.fields.selection,name:nexora_accounting.selection__nexora_cost_center_report__source__expense
+msgid "Vehicle Expense"
+msgstr "مصروف المركبة"
+
+#. module: nexora_accounting
+#: model:product.template,name:nexora_accounting.product_vehicle_expense
+msgid "Vehicle Operating Expense"
+msgstr "مصروف تشغيل المركبة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,field_description:nexora_accounting.field_nexora_vehicle_expense__bill_id
+#: model:ir.model.fields.selection,name:nexora_accounting.selection__nexora_cost_center_report__source__vendor_bill
+msgid "Vendor Bill"
+msgstr "فاتورة المورد"
+
+#. module: nexora_accounting
+#. odoo-python
+#: code:addons/nexora_accounting/models/expense.py:0
+#: model:ir.actions.act_window,name:nexora_accounting.action_nexora_vendor_bills
+#: model:ir.ui.menu,name:nexora_accounting.menu_nexora_vendor_bills
+msgid "Vendor Bills"
+msgstr "فواتير الموردين"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_vehicle_expense_form_accounting
+msgid "View Bill"
+msgstr "عرض الفاتورة"
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_shipment_form_accounting
+msgid "View Invoice"
+msgstr "عرض الفاتورة"
+
+#. module: nexora_accounting
+#: model:ir.model.fields.selection,name:nexora_accounting.selection__res_config_settings__nexora_acc_allocation_basis__volume
+msgid "Volume"
+msgstr "الحجم"
+
+#. module: nexora_accounting
+#: model:ir.model.fields,selection_description:nexora_accounting.selection__res_config_settings__nexora_acc_allocation_basis__weight
+msgid "Weight"
+msgstr "الوزن"
+
+#. module: nexora_accounting
+#. odoo-python
+#: code:addons/nexora_accounting/models/expense.py:0
+#: code:addons/nexora_accounting/models/shipment.py:0
+#: code:addons/nexora_accounting/models/trip.py:0
+msgid "You need Nexora Accounting access rights for this operation."
+msgstr "تحتاج إلى صلاحيات الوصول إلى محاسبة نيكسورا لتنفيذ هذه العملية."
+
+#. module: nexora_accounting
+#: model_terms:ir.ui.view,arch_db:nexora_accounting.view_nexora_freight_rate_form
+msgid "e.g. Local transport - standard"
+msgstr "مثال: نقل محلي - قياسي"

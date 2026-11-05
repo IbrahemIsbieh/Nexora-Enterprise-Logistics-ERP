@@ -1,0 +1,20 @@
+{
+    'name': 'Nexora Warehouse',
+    'version': '19.0.1.0.0',
+    'category': 'Nexora',
+     'author': 'Ibrahem Issa',
+    'summary': 'Smart warehouse management: capacity, storage rules and barcode scan sessions',
+    'author': 'Nexora',
+    'license': 'LGPL-3',
+    'depends': ['nexora_core', 'stock'],
+    'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'data/sequence_data.xml',
+        'views/stock_location_views.xml',
+        'views/stock_warehouse_views.xml',
+        'views/scan_session_views.xml',
+        'views/menus.xml',
+    ],
+    'installable': True,
+}

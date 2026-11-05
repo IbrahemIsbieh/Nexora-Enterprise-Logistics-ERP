@@ -1,0 +1,716 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* nexora_warehouse
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-04 14:20+0000\n"
+"PO-Revision-Date: 2026-11-04 14:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "%s is tracked: scan its lot / serial number now."
+msgstr "%s خاضع للتتبع: امسح رقم الدفعة / الرقم التسلسلي الآن."
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,help:nexora_warehouse.field_stock_location__nexora_max_volume
+#: model:ir.model.fields,help:nexora_warehouse.field_stock_location__nexora_max_weight
+msgid "0 = unlimited"
+msgstr "0 = غير محدود"
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_scan_session_form
+msgid "<span class=\"o_stat_text\">Transfer</span>"
+msgstr "<span class=\"o_stat_text\">تحويل</span>"
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_location_capacity_search
+msgid "Accepts Hazardous"
+msgstr "يقبل المواد الخطرة"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__message_needaction
+msgid "Action Needed"
+msgstr "يتطلب إجراءً"
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "Added: %s"
+msgstr "تمت الإضافة: %s"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_location__nexora_allow_hazardous
+msgid "Allow Hazardous Goods"
+msgstr "السماح بالمواد الخطرة"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_location__nexora_temperature_class__ambient
+msgid "Ambient"
+msgstr "درجة حرارة الغرفة"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: nexora_warehouse
+#: model:ir.model,name:nexora_warehouse.model_nexora_scan_session
+msgid "Barcode Scan Session"
+msgstr "جلسة مسح الباركود"
+
+#. module: nexora_warehouse
+#: model:ir.model,name:nexora_warehouse.model_nexora_scan_session_line
+msgid "Barcode Scan Session Line"
+msgstr "بند جلسة مسح الباركود"
+
+#. module: nexora_warehouse
+#: model:ir.actions.act_window,name:nexora_warehouse.action_nexora_scan_session
+#: model:ir.ui.menu,name:nexora_warehouse.menu_nexora_scan_sessions
+msgid "Barcode Scan Sessions"
+msgstr "جلسات مسح الباركود"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_warehouse__nexora_warehouse_type__bonded
+msgid "Bonded Warehouse"
+msgstr "مستودع جمركي"
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_scan_session_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__nexora_scan_session__state__cancelled
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_warehouse__nexora_warehouse_type__central
+msgid "Central Warehouse"
+msgstr "المستودع المركزي"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_location__nexora_temperature_class__chilled
+msgid "Chilled"
+msgstr "مبرد"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_warehouse__nexora_warehouse_type__cold
+msgid "Cold Storage"
+msgstr "مستودع التخزين البارد"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_warehouse__nexora_cost_center_id
+msgid "Cost Center"
+msgstr "مركز التكلفة"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__create_uid
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__create_date
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session_line__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_warehouse__nexora_warehouse_type__crossdock
+msgid "Cross-Dock"
+msgstr "مستودع العبور المباشر"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,help:nexora_warehouse.field_nexora_scan_session_line__uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr "وحدة القياس الافتراضية المستخدمة في جميع عمليات المخزون."
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "Destination: %s"
+msgstr "الوجهة: %s"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__display_name
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session_line__display_name
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_location__display_name
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_quant__display_name
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_warehouse__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__nexora_scan_session__state__done
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_scan_session_search
+msgid "Done"
+msgstr "منجز"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__nexora_scan_session__state__draft
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_scan_session_search
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_location__nexora_enforce_rules
+msgid "Enforce Capacity & Storage Rules"
+msgstr "تطبيق قواعد السعة والتخزين"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,help:nexora_warehouse.field_nexora_scan_session_line__tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr "ضمان إمكانية تتبع المنتج القابل للتخزين داخل المستودع."
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (جهات الاتصال)"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__location_src_id
+msgid "From Location"
+msgstr "من الموقع"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_location__nexora_temperature_class__frozen
+msgid "Frozen"
+msgstr "مجمد"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_location__nexora_location_type
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_location_capacity_search
+msgid "Functional Type"
+msgstr "النوع الوظيفي"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسائل"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__id
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session_line__id
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_location__id
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_quant__id
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_warehouse__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,help:nexora_warehouse.field_nexora_scan_session__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديد هذا الخيار، فستتطلب الرسائل الجديدة انتباهك."
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,help:nexora_warehouse.field_nexora_scan_session__message_has_error
+#: model:ir.model.fields,help:nexora_warehouse.field_nexora_scan_session__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديد هذا الخيار، فهذا يعني وجود خطأ في تسليم بعض الرسائل."
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_scan_session_search
+msgid "Internal"
+msgstr "داخلي"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__nexora_scan_session__operation__internal
+msgid "Internal Transfer"
+msgstr "تحويل داخلي"
+
+#. module: nexora_warehouse
+#: model:ir.model,name:nexora_warehouse.model_stock_location
+msgid "Inventory Locations"
+msgstr "مواقع المخزون"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__write_uid
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__write_date
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session_line__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,help:nexora_warehouse.field_stock_location__nexora_temperature_class
+msgid "Leave empty to accept any product."
+msgstr "اترك هذا الحقل فارغاً لقبول أي منتج."
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_location_capacity_search
+msgid "Location"
+msgstr "الموقع"
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/stock_quant.py:0
+msgid "Location %(loc)s does not accept hazardous goods (%(product)s)."
+msgstr "الموقع %(loc)s لا يقبل المواد الخطرة (%(product)s)."
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/stock_quant.py:0
+msgid ""
+"Location %(loc)s exceeds its volume capacity: %(used).2f / %(max).2f m³."
+msgstr ""
+"تجاوز الموقع %(loc)s سعة التخزين الحجمية: %(used).2f / %(max).2f م³."
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/stock_quant.py:0
+msgid ""
+"Location %(loc)s exceeds its weight capacity: %(used).1f / %(max).1f kg."
+msgstr ""
+"تجاوز الموقع %(loc)s سعة الوزن المحددة له: %(used).1f / %(max).1f كغ."
+
+#. module: nexora_warehouse
+#: model:ir.actions.act_window,name:nexora_warehouse.action_nexora_location_capacity
+#: model:ir.ui.menu,name:nexora_warehouse.menu_nexora_locations
+msgid "Locations & Capacity"
+msgstr "المواقع والسعة التخزينية"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session_line__lot_name
+msgid "Lot / Serial"
+msgstr "رقم الدفعة / الرقم التسلسلي"
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "Lot/Serial %(lot)s does not exist for %(product)s."
+msgstr "رقم الدفعة / الرقم التسلسلي %(lot)s غير موجود للمنتج %(product)s."
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "Lot/Serial %(lot)s set for %(product)s"
+msgstr "تم تعيين رقم الدفعة / الرقم التسلسلي %(lot)s للمنتج %(product)s."
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "Lot/Serial number missing for %s."
+msgstr "رقم الدفعة / الرقم التسلسلي مفقود للمنتج %s."
+
+#. module: nexora_warehouse
+#: model:res.groups,name:nexora_warehouse.group_nexora_warehouse_manager
+msgid "Manager"
+msgstr "مدير المستودع"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_location__nexora_max_volume
+msgid "Max Volume (m³)"
+msgstr "الحد الأقصى للحجم (م³)"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_location__nexora_max_weight
+msgid "Max Weight (kg)"
+msgstr "الحد الأقصى للوزن (كغ)"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_warehouse_form_nexora
+msgid "Nexora"
+msgstr "Nexora"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_warehouse__nexora_location_count
+msgid "Nexora Location Count"
+msgstr "عدد مواقع Nexora"
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_location_form_nexora
+msgid "Nexora Storage & Capacity"
+msgstr "تخزين وسعة Nexora"
+
+#. module: nexora_warehouse
+#: model:res.groups.privilege,name:nexora_warehouse.res_groups_privilege_nexora_warehouse
+msgid "Nexora Warehouse"
+msgstr "مستودعات Nexora"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_scan_session_form
+msgid "Notes…"
+msgstr "ملاحظات…"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,help:nexora_warehouse.field_nexora_scan_session__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراءً"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,help:nexora_warehouse.field_nexora_scan_session__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي حدث خطأ أثناء تسليمها"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_location__nexora_occupancy
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_warehouse__nexora_occupancy
+msgid "Occupancy (%)"
+msgstr "نسبة الإشغال (%)"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__operation
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_scan_session_search
+msgid "Operation"
+msgstr "العملية"
+
+#. module: nexora_warehouse
+#: model:res.groups,name:nexora_warehouse.group_nexora_warehouse_operator
+msgid "Operator"
+msgstr "مشغل المستودع"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_location__nexora_location_type__other
+msgid "Other"
+msgstr "أخرى"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_location__nexora_location_type__packing
+msgid "Packing"
+msgstr "التعبئة والتغليف"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__partner_id
+msgid "Partner"
+msgstr "جهة الاتصال"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_location__nexora_location_type__picking
+msgid "Picking"
+msgstr "التجهيز والصرف"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session_line__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session_line__qty
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "Quantity must be greater than zero."
+msgstr "يجب أن تكون الكمية أكبر من صفر."
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "Quantity must be positive for %s."
+msgstr "يجب أن تكون الكمية موجبة للمنتج %s."
+
+#. module: nexora_warehouse
+#: model:ir.model,name:nexora_warehouse.model_stock_quant
+msgid "Quants"
+msgstr "سجلات الكميات"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_location__nexora_location_type__quarantine
+msgid "Quarantine"
+msgstr "الحجر"
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_scan_session_search
+msgid "Receipts"
+msgstr "الاستلامات"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__nexora_scan_session__operation__receive
+msgid "Receive Goods"
+msgstr "استلام البضائع"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_location__nexora_location_type__receiving
+msgid "Receiving"
+msgstr "منطقة الاستلام"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__name
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_warehouse__nexora_warehouse_type__regional
+msgid "Regional Warehouse"
+msgstr "المستودع الإقليمي"
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_scan_session_form
+msgid "Reset to Draft"
+msgstr "إعادة إلى المسودة"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_location__nexora_location_type__returns
+msgid "Returns"
+msgstr "المرتجعات"
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_location_capacity_search
+msgid "Rules Enforced"
+msgstr "القواعد مطبقة"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__scan_input
+msgid "Scan"
+msgstr "مسح"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__scan_message
+msgid "Scan Message"
+msgstr "رسالة المسح"
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_scan_session_form
+msgid "Scan a product, lot/serial or location barcode…"
+msgstr "امسح باركود المنتج أو رقم الدفعة / الرقم التسلسلي أو الموقع…"
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "Scan at least one product first."
+msgstr "امسح منتجاً واحداً على الأقل أولاً."
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__line_ids
+msgid "Scanned Items"
+msgstr "العناصر الممسوحة"
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "Select or scan both source and destination locations."
+msgstr "حدد أو امسح موقعي المصدر والوجهة."
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "Select or scan the destination location."
+msgstr "حدد أو امسح موقع الوجهة."
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "Serial-tracked product %s must have quantity 1 per line."
+msgstr "يجب أن تكون كمية المنتج %s المتتبع بالرقم التسلسلي 1 في كل بند."
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session_line__session_id
+msgid "Session"
+msgstr "الجلسة"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_location__nexora_location_type__shipping
+msgid "Shipping"
+msgstr "الشحن"
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "Source: %s"
+msgstr "المصدر: %s"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_scan_session_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields.selection,name:nexora_warehouse.selection__stock_location__nexora_location_type__storage
+msgid "Storage"
+msgstr "التخزين"
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_location_capacity_search
+msgid "Temperature"
+msgstr "درجة الحرارة"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_location__nexora_temperature_class
+msgid "Temperature Class"
+msgstr "فئة درجة الحرارة"
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/stock_quant.py:0
+msgid ""
+"Temperature mismatch: %(product)s is %(pc)s but location %(loc)s is %(lc)s."
+msgstr ""
+"عدم توافق في درجة الحرارة: المنتج %(product)s يتطلب %(pc)s، بينما الموقع %(loc)s مخصص لـ %(lc)s."
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,help:nexora_warehouse.field_nexora_scan_session__company_id
+msgid "The company is automatically set from your user preferences."
+msgstr "يتم تحديد الشركة تلقائياً وفقاً لتفضيلات المستخدم."
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "The transfer %s could not be validated."
+msgstr "تعذر اعتماد التحويل %s."
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__location_dest_id
+msgid "To Location"
+msgstr "إلى الموقع"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_warehouse__nexora_total_max_volume
+msgid "Total Capacity (m³)"
+msgstr "السعة الإجمالية (م³)"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session_line__tracking
+msgid "Tracking"
+msgstr "التتبع"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__picking_id
+msgid "Transfer"
+msgstr "التحويل"
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "Transfer %s validated."
+msgstr "تم اعتماد التحويل %s."
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session_line__uom_id
+msgid "Unit"
+msgstr "الوحدة"
+
+#. module: nexora_warehouse
+#. odoo-python
+#: code:addons/nexora_warehouse/models/scan_session.py:0
+msgid "Unknown barcode: %s"
+msgstr "باركود غير معروف: %s"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_location__nexora_used_volume
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_warehouse__nexora_total_used_volume
+msgid "Used Volume (m³)"
+msgstr "الحجم المستخدم (م³)"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_location__nexora_used_weight
+msgid "Used Weight (kg)"
+msgstr "الوزن المستخدم (كغ)"
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_scan_session_form
+msgid "Validate"
+msgstr "اعتماد"
+
+#. module: nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_warehouse_form_nexora
+msgid "View Locations & Capacity"
+msgstr "عرض المواقع والسعة التخزينية"
+
+#. module: nexora_warehouse
+#: model:ir.model,name:nexora_warehouse.model_stock_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__warehouse_id
+#: model:ir.ui.menu,name:nexora_warehouse.menu_nexora_warehouse
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_location_capacity_search
+#: model_terms:ir.ui.view,arch_db:nexora_warehouse.view_nexora_scan_session_search
+msgid "Warehouse"
+msgstr "المستودع"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_warehouse__nexora_manager_id
+msgid "Warehouse Manager"
+msgstr "مدير المستودع"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_stock_warehouse__nexora_warehouse_type
+msgid "Warehouse Type"
+msgstr "نوع المستودع"
+
+#. module: nexora_warehouse
+#: model:ir.ui.menu,name:nexora_warehouse.menu_nexora_warehouses
+msgid "Warehouses"
+msgstr "المستودعات"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,field_description:nexora_warehouse.field_nexora_scan_session__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,help:nexora_warehouse.field_nexora_scan_session__website_message_ids
+msgid "Website communication history"
+msgstr "سجل التواصل عبر الموقع الإلكتروني"
+
+#. module: nexora_warehouse
+#: model:ir.model.fields,help:nexora_warehouse.field_stock_location__nexora_enforce_rules
+msgid ""
+"When enabled, stock moves that exceed the capacity or violate temperature / "
+"hazardous rules are blocked."
+msgstr ""
+"عند التفعيل، يتم منع حركات المخزون التي تتجاوز السعة المحددة أو تخالف قواعد درجة الحرارة أو المواد الخطرة."

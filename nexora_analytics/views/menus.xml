@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_nexora_analytics" name="Analytics"
+              parent="nexora_core.menu_nexora_root" sequence="80"
+              groups="nexora_analytics.group_nexora_analytics_user"/>
+
+    <menuitem id="menu_nexora_dashboard" name="Control Tower"
+              parent="menu_nexora_analytics" action="action_nexora_dashboard" sequence="10"/>
+    <menuitem id="menu_nexora_alerts" name="Operational Alerts"
+              parent="menu_nexora_analytics" action="action_nexora_alert" sequence="20"/>
+    <menuitem id="menu_nexora_run_alert_check" name="Run Alert Check Now"
+              parent="menu_nexora_analytics" action="action_server_nexora_run_alert_check" sequence="25"
+              groups="nexora_analytics.group_nexora_analytics_manager"/>
+
+    <menuitem id="menu_nexora_reports" name="Reports" parent="menu_nexora_analytics" sequence="30"/>
+    <menuitem id="menu_nexora_delivery_report" name="Delivery Performance"
+              parent="menu_nexora_reports" action="action_nexora_delivery_report" sequence="10"/>
+    <menuitem id="menu_nexora_profitability_link" name="Shipment Profitability"
+              parent="menu_nexora_reports" action="nexora_accounting.action_nexora_shipment_profitability"
+              sequence="20"/>
+    <menuitem id="menu_nexora_fleet_report" name="Fleet Utilization"
+              parent="menu_nexora_reports" action="action_nexora_fleet_report" sequence="30"/>
+    <menuitem id="menu_nexora_demand_report" name="Demand History"
+              parent="menu_nexora_reports" action="action_nexora_demand_report" sequence="40"/>
+    <menuitem id="menu_nexora_inventory_risk_link" name="Inventory Risk &amp; Forecast"
+              parent="menu_nexora_reports" action="nexora_inventory.action_nexora_inventory_analysis"
+              sequence="50"/>
+    <menuitem id="menu_nexora_supplier_report" name="Supplier Analysis"
+              parent="menu_nexora_reports" action="action_nexora_supplier_report" sequence="60"/>
+    <menuitem id="menu_nexora_vendor_rating_link" name="Vendor Ratings"
+              parent="menu_nexora_reports" action="nexora_procurement.action_nexora_vendor_performance"
+              sequence="70"/>
+    <menuitem id="menu_nexora_cost_center_link" name="Cost Center Analysis"
+              parent="menu_nexora_reports" action="nexora_accounting.action_nexora_cost_center_report"
+              sequence="80"/>
+</odoo>

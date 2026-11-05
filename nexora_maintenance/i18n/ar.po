@@ -1,0 +1,974 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* nexora_maintenance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-04 14:06+0000\n"
+"PO-Revision-Date: 2026-11-04 14:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_form
+msgid "<span class=\"o_stat_text\">Expense</span>"
+msgstr "<span class=\"o_stat_text\">المصروف</span>"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.res_config_settings_view_form_nexora_maintenance
+msgid "A plan becomes 'Due Soon' when fewer days than this remain."
+msgstr "تصبح الخطة بحالة 'مستحقة قريباً' عندما يتبقى عدد أيام أقل من هذه القيمة."
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.res_config_settings_view_form_nexora_maintenance
+msgid "A plan becomes 'Due Soon' when fewer kilometers than this remain."
+msgstr "تصبح الخطة بحالة 'مستحقة قريباً' عندما تكون المسافة المتبقية أقل من هذه القيمة بالكيلومترات."
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__message_needaction
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__activity_ids
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__activity_exception_decoration
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "رمز استثناء النشاط"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__activity_state
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__activity_type_icon
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_plan_form
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_plan_search
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__message_attachment_count
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.res_config_settings_view_form_nexora_maintenance
+msgid "Auto-create Orders"
+msgstr "إنشاء أوامر تلقائياً"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_res_config_settings__nexora_maintenance_auto_create
+msgid "Auto-create Orders for Due Plans"
+msgstr "إنشاء أوامر تلقائياً للخطط المستحقة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_plan__trigger_type__km
+msgid "By Distance"
+msgstr "حسب المسافة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_plan__trigger_type__days
+msgid "By Time"
+msgstr "حسب الوقت"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__state__cancelled
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_plan_form
+msgid "Checklist"
+msgstr "قائمة التحقق"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__company_id
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_form
+msgid "Complete"
+msgstr "إكمال"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__date_done
+msgid "Completed"
+msgstr "مكتمل"
+
+#. module: nexora_maintenance
+#: model:ir.model,name:nexora_maintenance.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__order_type__corrective
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_search
+msgid "Corrective"
+msgstr "تصحيحية"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__cost_center_id
+msgid "Cost Center"
+msgstr "مركز التكلفة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__line_ids
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_form
+msgid "Cost Lines"
+msgstr "بنود التكلفة"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_plan_form
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_vehicle_incident_form_maintenance
+msgid "Create Maintenance Order"
+msgstr "إنشاء أمر صيانة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__create_uid
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order_line__create_uid
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__create_uid
+msgid "Created by"
+msgstr "أُنشئ بواسطة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__create_date
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order_line__create_date
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__currency_id
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order_line__currency_id
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_form
+msgid "Describe the problem or the service required…"
+msgstr "صف المشكلة أو الخدمة المطلوبة…"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order_line__name
+msgid "Description"
+msgstr "الوصف"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__display_name
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order_line__display_name
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__display_name
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_vehicle_incident__display_name
+#: model:ir.model.fields,field_description:nexora_maintenance.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_plan__trigger_type__both
+msgid "Distance or Time (first reached)"
+msgstr "المسافة أو الوقت (أيهما يتحقق أولاً)"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__state__done
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_search
+msgid "Done"
+msgstr "منجز"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__downtime_hours
+msgid "Downtime (h)"
+msgstr "مدة التوقف (ساعة)"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__fleet_vehicle__nexora_maintenance_status__due_soon
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_plan__due_state__due_soon
+msgid "Due Soon"
+msgstr "مستحق قريباً"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_res_config_settings__nexora_maintenance_warn_days
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.res_config_settings_view_form_nexora_maintenance
+msgid "Due Soon Warning (days)"
+msgstr "تنبيه الاستحقاق القريب (بالأيام)"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_res_config_settings__nexora_maintenance_warn_km
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.res_config_settings_view_form_nexora_maintenance
+msgid "Due Soon Warning (km)"
+msgstr "تنبيه الاستحقاق القريب (بالكيلومترات)"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__estimated_cost
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__estimated_cost
+msgid "Estimated Cost"
+msgstr "التكلفة التقديرية"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__interval_days
+msgid "Every (days)"
+msgstr "كل (أيام)"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__interval_km
+msgid "Every (km)"
+msgstr "كل (كم)"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__expense_id
+msgid "Expense"
+msgstr "المصروف"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__workshop_type__external
+msgid "External Vendor"
+msgstr "مورد خارجي"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__message_follower_ids
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__message_partner_ids
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (جهات الاتصال)"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_order__activity_type_icon
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_plan__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font Awesome، مثل fa-tasks"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__has_message
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسالة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__priority__1
+msgid "High"
+msgstr "مرتفع"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__id
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order_line__id
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__id
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_vehicle_incident__id
+#: model:ir.model.fields,field_description:nexora_maintenance.field_res_config_settings__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__activity_exception_icon
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_order__activity_exception_icon
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_plan__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى وجود استثناء في النشاط."
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_order__message_needaction
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_plan__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده، فستتطلب الرسائل الجديدة انتباهك."
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_order__message_has_error
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_order__message_has_sms_error
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_plan__message_has_error
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_plan__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده، فهذا يعني وجود خطأ في تسليم بعض الرسائل."
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__state__in_progress
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_search
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__incident_id
+msgid "Incident"
+msgstr "الحادث"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__order_type__inspection
+msgid "Inspection"
+msgstr "فحص"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__workshop_type__internal
+msgid "Internal Workshop"
+msgstr "ورشة داخلية"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__message_is_follower
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order_line__line_type__labor
+msgid "Labor"
+msgstr "أجور العمل"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__last_done_odometer
+msgid "Last Done at (km)"
+msgstr "آخر تنفيذ عند (كم)"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__last_done_date
+msgid "Last Done on"
+msgstr "تاريخ آخر تنفيذ"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__write_uid
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order_line__write_uid
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__write_date
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order_line__write_date
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order_line__line_type
+msgid "Line Type"
+msgstr "نوع البند"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.fleet_vehicle_view_form_nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.res_config_settings_view_form_nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_calendar
+msgid "Maintenance"
+msgstr "الصيانة"
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/order.py:0
+msgid "Maintenance %s"
+msgstr "صيانة %s"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_fleet_vehicle__nexora_maintenance_cost
+msgid "Maintenance Cost"
+msgstr "تكلفة الصيانة"
+
+#. module: nexora_maintenance
+#: model:ir.model,name:nexora_maintenance.model_nexora_maintenance_order
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_vehicle_incident__maintenance_order_ids
+msgid "Maintenance Order"
+msgstr "أمر صيانة"
+
+#. module: nexora_maintenance
+#: model:ir.model,name:nexora_maintenance.model_nexora_maintenance_order_line
+msgid "Maintenance Order Cost Line"
+msgstr "بند تكلفة أمر الصيانة"
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/fleet_vehicle.py:0
+#: code:addons/nexora_maintenance/models/plan.py:0
+#: model:ir.actions.act_window,name:nexora_maintenance.action_nexora_maintenance_order
+#: model:ir.ui.menu,name:nexora_maintenance.menu_nexora_maintenance_orders
+msgid "Maintenance Orders"
+msgstr "أوامر الصيانة"
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/fleet_vehicle.py:0
+#: model:ir.actions.act_window,name:nexora_maintenance.action_nexora_maintenance_plan
+#: model:ir.ui.menu,name:nexora_maintenance.menu_nexora_maintenance_plans
+msgid "Maintenance Plans"
+msgstr "خطط الصيانة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_fleet_vehicle__nexora_maintenance_status
+msgid "Maintenance Status"
+msgstr "حالة الصيانة"
+
+#. module: nexora_maintenance
+#: model:res.groups,name:nexora_maintenance.group_nexora_maintenance_manager
+msgid "Manager"
+msgstr "مدير"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__message_has_error
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__message_ids
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_search
+msgid "Month"
+msgstr "الشهر"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__my_activity_date_deadline
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: nexora_maintenance
+#: model:res.groups.privilege,name:nexora_maintenance.res_groups_privilege_nexora_maintenance
+msgid "Nexora Maintenance"
+msgstr "صيانة نكسورا"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_fleet_vehicle__nexora_maintenance_order_ids
+msgid "Nexora Maintenance Order"
+msgstr "أمر صيانة نكسورا"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_fleet_vehicle__nexora_maintenance_order_count
+msgid "Nexora Maintenance Order Count"
+msgstr "عدد أوامر صيانة نكسورا"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_fleet_vehicle__nexora_open_order_count
+msgid "Nexora Open Order Count"
+msgstr "عدد أوامر نكسورا المفتوحة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_fleet_vehicle__nexora_plan_ids
+msgid "Nexora Plan"
+msgstr "خطة نكسورا"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_fleet_vehicle__nexora_plan_count
+msgid "Nexora Plan Count"
+msgstr "عدد خطط نكسورا"
+
+#. module: nexora_maintenance
+#: model:ir.actions.server,name:nexora_maintenance.ir_cron_nexora_maintenance_check_ir_actions_server
+msgid "Nexora: Check Maintenance Plans"
+msgstr "نكسورا: التحقق من خطط الصيانة"
+
+#. module: nexora_maintenance
+#: model:ir.actions.server,name:nexora_maintenance.cron_nexora_maintenance_plan_check_ir_actions_server
+msgid "Nexora: Preventive maintenance due check"
+msgstr "نكسورا: التحقق من استحقاق الصيانة الوقائية"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__activity_calendar_event_id
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "حدث التقويم للنشاط التالي"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__activity_date_deadline
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__activity_summary
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__activity_type_id
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__next_due_odometer
+msgid "Next Due (km)"
+msgstr "الاستحقاق التالي (كم)"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__next_due_date
+msgid "Next Due Date"
+msgstr "تاريخ الاستحقاق التالي"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_plan_form
+msgid "Next Service"
+msgstr "الصيانة التالية"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__priority__0
+msgid "Normal"
+msgstr "عادي"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__message_needaction_counter
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__message_has_error_counter
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_order__message_needaction_counter
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_plan__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراءً"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_order__message_has_error_counter
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_plan__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي حدث خطأ في تسليمها"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__odometer
+msgid "Odometer (km)"
+msgstr "عداد المسافة (كم)"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_search
+msgid "Open"
+msgstr "مفتوح"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order_line__order_id
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__order_ids
+msgid "Order"
+msgstr "الأمر"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__order_count
+msgid "Order Count"
+msgstr "عدد الأوامر"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__order_type
+msgid "Order Type"
+msgstr "نوع الأمر"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_plan_form
+msgid "Orders"
+msgstr "الأوامر"
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/order.py:0
+msgid "Orders in progress or done cannot be deleted. Cancel them first."
+msgstr "لا يمكن حذف الأوامر قيد التنفيذ أو المنجزة. قم بإلغائها أولاً."
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__order_type__other
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order_line__line_type__other
+msgid "Other"
+msgstr "أخرى"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__fleet_vehicle__nexora_maintenance_status__overdue
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_plan__due_state__overdue
+msgid "Overdue"
+msgstr "متأخر"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__plan_id
+msgid "Plan"
+msgstr "الخطة"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.fleet_vehicle_view_form_nexora_maintenance
+msgid "Plans"
+msgstr "الخطط"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__order_type__preventive
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_search
+msgid "Preventive"
+msgstr "وقائية"
+
+#. module: nexora_maintenance
+#: model:ir.model,name:nexora_maintenance.model_nexora_maintenance_plan
+msgid "Preventive Maintenance Plan"
+msgstr "خطة الصيانة الوقائية"
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/plan.py:0
+msgid "Preventive maintenance due"
+msgstr "استحقاق الصيانة الوقائية"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__priority
+msgid "Priority"
+msgstr "الأولوية"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order_line__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order_line__quantity
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/order.py:0
+msgid "Quantity and price cannot be negative."
+msgstr "لا يمكن أن تكون الكمية والسعر قيمتين سالبتين."
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/order.py:0
+msgid "Record the work performed (cost lines or a note) before completing."
+msgstr "سجّل العمل المنفذ (بنود التكلفة أو ملاحظة) قبل إكمال الأمر."
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__name
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__remaining_days
+msgid "Remaining (days)"
+msgstr "المتبقي (بالأيام)"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__remaining_km
+msgid "Remaining (km)"
+msgstr "المتبقي (كم)"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_form
+msgid "Request"
+msgstr "الطلب"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_form
+msgid "Reset to Draft"
+msgstr "إعادة إلى المسودة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__responsible_id
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__responsible_id
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_plan_search
+msgid "Responsible"
+msgstr "المسؤول"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__activity_user_id
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__message_has_sms_error
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_form
+msgid "Schedule"
+msgstr "الجدولة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__state__scheduled
+msgid "Scheduled"
+msgstr "مجدول"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__scheduled_date
+msgid "Scheduled Date"
+msgstr "تاريخ الجدولة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__name
+msgid "Service"
+msgstr "الخدمة"
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/plan.py:0
+msgid "Set a distance interval greater than zero."
+msgstr "يجب تحديد فترة مسافة أكبر من صفر."
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/order.py:0
+msgid "Set a scheduled date first."
+msgstr "يجب تحديد تاريخ الجدولة أولاً."
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/plan.py:0
+msgid "Set a time interval greater than zero."
+msgstr "يجب تحديد فترة زمنية أكبر من صفر."
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order_line__line_type__part
+msgid "Spare Part"
+msgstr "قطعة غيار"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_form
+msgid "Start Work"
+msgstr "بدء العمل"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__date_start
+msgid "Started"
+msgstr "تاريخ البدء"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__due_state
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_order__activity_state
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_plan__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناءً على الأنشطة\n"
+"متأخر: تم تجاوز تاريخ الاستحقاق\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"مخطط: أنشطة مستقبلية."
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order_line__subtotal
+msgid "Subtotal"
+msgstr "المجموع الفرعي"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,help:nexora_maintenance.field_fleet_vehicle__nexora_maintenance_cost
+msgid "Sum of completed orders (no currency conversion)."
+msgstr "مجموع تكاليف أوامر الصيانة المكتملة (دون تحويل العملة)."
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__description
+msgid "Tasks / Checklist"
+msgstr "المهام / قائمة التحقق"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_plan_form
+msgid "Tasks to perform each time…"
+msgstr "المهام المطلوب تنفيذها في كل مرة…"
+
+#. module: nexora_maintenance
+#: model:res.groups,name:nexora_maintenance.group_nexora_maintenance_technician
+msgid "Technician"
+msgstr "فني"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.res_config_settings_view_form_nexora_maintenance
+msgid "The daily job creates a draft maintenance order for each due plan."
+msgstr "تنشئ المهمة اليومية أمر صيانة بحالة مسودة لكل خطة مستحقة."
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/order.py:0
+msgid "The incident belongs to a different vehicle."
+msgstr "الحادث مرتبط بمركبة مختلفة."
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/order.py:0
+msgid "The plan belongs to a different vehicle."
+msgstr "الخطة مرتبطة بمركبة مختلفة."
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_search
+msgid "This Month"
+msgstr "هذا الشهر"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__order_type__tires
+msgid "Tires"
+msgstr "الإطارات"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_list
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__total_cost
+msgid "Total Cost"
+msgstr "إجمالي التكلفة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__trigger_type
+msgid "Trigger Type"
+msgstr "نوع المحفّز"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_order__activity_exception_decoration
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_plan__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء المسجل."
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order_line__price_unit
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__fleet_vehicle__nexora_maintenance_status__ok
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_plan__due_state__ok
+msgid "Up to date"
+msgstr "محدّث"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields.selection,name:nexora_maintenance.selection__nexora_maintenance_order__priority__2
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_search
+msgid "Urgent"
+msgstr "عاجل"
+
+#. module: nexora_maintenance
+#: model:ir.model,name:nexora_maintenance.model_fleet_vehicle
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__vehicle_id
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__vehicle_id
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_search
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_plan_search
+msgid "Vehicle"
+msgstr "المركبة"
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/order.py:0
+msgid ""
+"Vehicle %s has an active assignment. Finish it before starting maintenance."
+msgstr ""
+"المركبة %s لديها مهمة تشغيل نشطة. يجب إنهاؤها قبل بدء الصيانة."
+
+#. module: nexora_maintenance
+#: model:ir.model,name:nexora_maintenance.model_nexora_vehicle_incident
+msgid "Vehicle Accident / Incident"
+msgstr "حادث / واقعة مركبة"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__website_message_ids
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_plan__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_order__website_message_ids
+#: model:ir.model.fields,help:nexora_maintenance.field_nexora_maintenance_plan__website_message_ids
+msgid "Website communication history"
+msgstr "سجل المراسلات عبر الموقع الإلكتروني"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_form
+msgid "What was done, parts replaced, findings…"
+msgstr "ما تم إنجازه، وقطع الغيار المستبدلة، والنتائج…"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__result_note
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_form
+msgid "Work Performed"
+msgstr "العمل المنفذ"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__description
+msgid "Work Requested"
+msgstr "العمل المطلوب"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__vendor_id
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_order_search
+msgid "Workshop / Vendor"
+msgstr "الورشة / المورد"
+
+#. module: nexora_maintenance
+#: model:ir.model.fields,field_description:nexora_maintenance.field_nexora_maintenance_order__workshop_type
+msgid "Workshop Type"
+msgstr "نوع الورشة"
+
+#. module: nexora_maintenance
+#: model_terms:ir.ui.view,arch_db:nexora_maintenance.view_nexora_maintenance_plan_form
+msgid "e.g. Oil change"
+msgstr "مثال: تغيير الزيت"
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/plan.py:0
+msgid "plan_id"
+msgstr "معرّف الخطة"
+
+#. module: nexora_maintenance
+#. odoo-python
+#: code:addons/nexora_maintenance/models/fleet_vehicle.py:0
+msgid "vehicle_id"
+msgstr "معرّف المركبة"

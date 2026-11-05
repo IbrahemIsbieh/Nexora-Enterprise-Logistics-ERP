@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_cost_center_report_list" model="ir.ui.view">
+        <field name="name">nexora.cost.center.report.list</field>
+        <field name="model">nexora.cost.center.report</field>
+        <field name="arch" type="xml">
+            <list create="0" edit="0" decoration-success="kind == 'revenue'">
+                <field name="date"/>
+                <field name="cost_center_id"/>
+                <field name="source"/>
+                <field name="kind"/>
+                <field name="partner_id" optional="show"/>
+                <field name="amount" sum="Total"/>
+                <field name="signed_amount" sum="Net"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_cost_center_report_pivot" model="ir.ui.view">
+        <field name="name">nexora.cost.center.report.pivot</field>
+        <field name="model">nexora.cost.center.report</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="cost_center_id" type="row"/>
+                <field name="kind" type="col"/>
+                <field name="amount" type="measure"/>
+                <field name="signed_amount" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_nexora_cost_center_report_graph" model="ir.ui.view">
+        <field name="name">nexora.cost.center.report.graph</field>
+        <field name="model">nexora.cost.center.report</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="cost_center_id"/>
+                <field name="kind"/>
+                <field name="amount" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_nexora_cost_center_report_search" model="ir.ui.view">
+        <field name="name">nexora.cost.center.report.search</field>
+        <field name="model">nexora.cost.center.report</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="cost_center_id"/>
+                <field name="partner_id"/>
+                <filter name="costs" string="Costs" domain="[('kind', '=', 'cost')]"/>
+                <filter name="revenue" string="Revenue" domain="[('kind', '=', 'revenue')]"/>
+                <separator/>
+                <filter name="this_year" string="This Year"
+                        domain="[('date', '&gt;=', context_today().strftime('%Y-01-01'))]"/>
+                <group>
+                    <filter name="group_cc" string="Cost Center" context="{'group_by': 'cost_center_id'}"/>
+                    <filter name="group_source" string="Source" context="{'group_by': 'source'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_cost_center_report" model="ir.actions.act_window">
+        <field name="name">Cost Center Analysis</field>
+        <field name="res_model">nexora.cost.center.report</field>
+        <field name="view_mode">pivot,graph,list</field>
+    </record>
+</odoo>

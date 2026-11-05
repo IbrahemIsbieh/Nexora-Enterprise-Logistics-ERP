@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_trip_add_shipment_wizard_form" model="ir.ui.view">
+        <field name="name">nexora.trip.add.shipment.wizard.form</field>
+        <field name="model">nexora.trip.add.shipment.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="trip_id" invisible="1"/>
+                    <field name="shipment_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                </group>
+                <footer>
+                    <button name="action_add" type="object" string="Add" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_nexora_trip_add_shipment" model="ir.actions.act_window">
+        <field name="name">Add Shipments</field>
+        <field name="res_model">nexora.trip.add.shipment.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

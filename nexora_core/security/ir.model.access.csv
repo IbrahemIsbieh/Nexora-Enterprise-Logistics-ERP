@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_nexora_cost_center_user,nexora.cost.center user,model_nexora_cost_center,nexora_core.group_nexora_user,1,0,0,0
+access_nexora_cost_center_manager,nexora.cost.center manager,model_nexora_cost_center,nexora_core.group_nexora_manager,1,1,1,1
+access_nexora_contract_user,nexora.contract user,model_nexora_contract,nexora_core.group_nexora_user,1,0,0,0
+access_nexora_contract_manager,nexora.contract manager,model_nexora_contract,nexora_core.group_nexora_manager,1,1,1,1
+access_nexora_contract_line_user,nexora.contract.line user,model_nexora_contract_line,nexora_core.group_nexora_user,1,0,0,0
+access_nexora_contract_line_manager,nexora.contract.line manager,model_nexora_contract_line,nexora_core.group_nexora_manager,1,1,1,1

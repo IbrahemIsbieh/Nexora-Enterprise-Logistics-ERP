@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_customer_ticket_list" model="ir.ui.view">
+        <field name="name">nexora.customer.ticket.list</field>
+        <field name="model">nexora.customer.ticket</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state == 'closed'"
+                  decoration-danger="priority == 'high' and state in ('new', 'in_progress')">
+                <field name="name"/>
+                <field name="create_date"/>
+                <field name="partner_id"/>
+                <field name="ticket_type"/>
+                <field name="subject"/>
+                <field name="shipment_id" optional="show"/>
+                <field name="priority" optional="show"/>
+                <field name="source" optional="hide"/>
+                <field name="responsible_id" widget="many2one_avatar_user"/>
+                <field name="state" widget="badge"
+                       decoration-info="state == 'new'"
+                       decoration-warning="state == 'in_progress'"
+                       decoration-success="state in ('resolved', 'closed')"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_customer_ticket_form" model="ir.ui.view">
+        <field name="name">nexora.customer.ticket.form</field>
+        <field name="model">nexora.customer.ticket</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_start" type="object" string="Start"
+                            class="btn-primary" invisible="state != 'new'"/>
+                    <button name="action_resolve" type="object" string="Resolve"
+                            class="btn-primary" invisible="state not in ('new', 'in_progress')"/>
+                    <button name="action_close" type="object" string="Close" invisible="state != 'resolved'"/>
+                    <button name="action_reopen" type="object" string="Reopen"
+                            invisible="state not in ('resolved', 'closed')"/>
+                    <field name="state" widget="statusbar" statusbar_visible="new,in_progress,resolved"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                        <h2><field name="subject" placeholder="Subject"/></h2>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="partner_id" readonly="state == 'closed'"/>
+                            <field name="shipment_id"/>
+                            <field name="order_id"/>
+                            <field name="ticket_type"/>
+                        </group>
+                        <group>
+                            <field name="priority"/>
+                            <field name="responsible_id"/>
+                            <field name="source"/>
+                            <field name="date_resolved" invisible="not date_resolved"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description" name="description">
+                            <field name="description"/>
+                        </page>
+                        <page string="Resolution" name="resolution">
+                            <field name="resolution"
+                                   placeholder="Sent to the customer when you click Resolve…"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_customer_ticket_search" model="ir.ui.view">
+        <field name="name">nexora.customer.ticket.search</field>
+        <field name="model">nexora.customer.ticket</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="subject"/>
+                <field name="partner_id"/>
+                <field name="shipment_id"/>
+                <filter name="open" string="Open" domain="[('state', 'in', ('new', 'in_progress'))]"/>
+                <filter name="mine" string="My Tickets" domain="[('responsible_id', '=', uid)]"/>
+                <filter name="high" string="High Priority" domain="[('priority', '=', 'high')]"/>
+                <filter name="portal" string="From Portal" domain="[('source', '=', 'portal')]"/>
+                <group>
+                    <filter name="group_partner" string="Customer" context="{'group_by': 'partner_id'}"/>
+                    <filter name="group_type" string="Type" context="{'group_by': 'ticket_type'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_customer_ticket" model="ir.actions.act_window">
+        <field name="name">Customer Tickets</field>
+        <field name="res_model">nexora.customer.ticket</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_open': 1}</field>
+    </record>
+</odoo>

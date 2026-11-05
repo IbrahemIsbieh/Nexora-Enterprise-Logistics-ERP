@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_transport_order_list" model="ir.ui.view">
+        <field name="name">nexora.transport.order.list</field>
+        <field name="model">nexora.transport.order</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state == 'cancelled'"
+                  decoration-danger="priority == 'urgent' and state not in ('done', 'cancelled')">
+                <field name="name"/>
+                <field name="order_date"/>
+                <field name="partner_id"/>
+                <field name="reference" optional="show"/>
+                <field name="delivery_partner_id" optional="hide"/>
+                <field name="requested_pickup_date" optional="show"/>
+                <field name="requested_delivery_date"/>
+                <field name="total_weight" optional="show"/>
+                <field name="unshipped_count" optional="hide"/>
+                <field name="priority" optional="show"/>
+                <field name="responsible_id" widget="many2one_avatar_user" optional="hide"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'done'"
+                       decoration-info="state in ('confirmed', 'in_progress')"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_transport_order_form" model="ir.ui.view">
+        <field name="name">nexora.transport.order.form</field>
+        <field name="model">nexora.transport.order</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_confirm" type="object" string="Confirm"
+                            class="btn-primary" invisible="state != 'draft'"/>
+                    <button name="action_create_shipment" type="object" string="Create Shipment"
+                            class="btn-primary"
+                            invisible="state not in ('confirmed', 'in_progress') or unshipped_count == 0"/>
+                    <button name="action_cancel" type="object" string="Cancel"
+                            invisible="state not in ('draft', 'confirmed', 'in_progress')"
+                            confirm="Cancel this order and its open shipments?"/>
+                    <button name="action_draft" type="object" string="Reset to Draft"
+                            invisible="state != 'cancelled'"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,confirmed,in_progress,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_shipments" type="object" class="oe_stat_button"
+                                icon="fa-truck" invisible="shipment_count == 0">
+                            <field name="shipment_count" widget="statinfo" string="Shipments"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="partner_id" readonly="state != 'draft'"/>
+                            <field name="contract_id" readonly="state not in ('draft', 'confirmed')"/>
+                            <field name="reference"/>
+                            <field name="pickup_partner_id" readonly="state not in ('draft', 'confirmed')"/>
+                            <field name="delivery_partner_id" readonly="state not in ('draft', 'confirmed')"/>
+                            <field name="origin_warehouse_id"/>
+                        </group>
+                        <group>
+                            <field name="order_date"/>
+                            <field name="requested_pickup_date"/>
+                            <field name="requested_delivery_date"/>
+                            <field name="priority"/>
+                            <field name="responsible_id"/>
+                            <field name="cost_center_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Cargo" name="cargo">
+                            <field name="line_ids" readonly="state in ('done', 'cancelled')">
+                                <list editable="bottom">
+                                    <field name="product_id" readonly="shipment_id"/>
+                                    <field name="name" readonly="shipment_id"/>
+                                    <field name="quantity" readonly="shipment_id"/>
+                                    <field name="uom_id" readonly="shipment_id"/>
+                                    <field name="weight" readonly="shipment_id" sum="Weight"/>
+                                    <field name="volume" readonly="shipment_id" sum="Volume"/>
+                                    <field name="temperature_class" readonly="shipment_id"/>
+                                    <field name="hazardous" readonly="shipment_id"/>
+                                    <field name="shipment_id" readonly="1"/>
+                                </list>
+                            </field>
+                            <group>
+                                <group>
+                                    <field name="total_weight"/>
+                                    <field name="total_volume"/>
+                                </group>
+                                <group>
+                                    <field name="temperature_class"/>
+                                    <field name="has_hazardous"/>
+                                    <field name="unshipped_count"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Notes" name="notes">
+                            <field name="notes"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_transport_order_search" model="ir.ui.view">
+        <field name="name">nexora.transport.order.search</field>
+        <field name="model">nexora.transport.order</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="reference"/>
+                <field name="partner_id"/>
+                <field name="delivery_partner_id"/>
+                <filter name="draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="open" string="Open"
+                        domain="[('state', 'in', ('confirmed', 'in_progress'))]"/>
+                <filter name="done" string="Done" domain="[('state', '=', 'done')]"/>
+                <separator/>
+                <filter name="urgent" string="Urgent" domain="[('priority', '=', 'urgent')]"/>
+                <filter name="hazardous" string="Hazardous" domain="[('has_hazardous', '=', True)]"/>
+                <group>
+                    <filter name="group_partner" string="Customer" context="{'group_by': 'partner_id'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'order_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_transport_order" model="ir.actions.act_window">
+        <field name="name">Transport Orders</field>
+        <field name="res_model">nexora.transport.order</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_open': 1}</field>
+    </record>
+</odoo>

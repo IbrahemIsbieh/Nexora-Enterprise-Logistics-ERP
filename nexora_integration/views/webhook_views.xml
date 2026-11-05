@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_webhook_list" model="ir.ui.view">
+        <field name="name">nexora.webhook.list</field>
+        <field name="model">nexora.webhook</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="url"/>
+                <field name="event_ids" widget="many2many_tags"/>
+                <field name="partner_id" optional="show"/>
+                <field name="pending_count"/>
+                <field name="failed_count" decoration-danger="failed_count &gt; 0"/>
+                <field name="active" column_invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_webhook_form" model="ir.ui.view">
+        <field name="name">nexora.webhook.form</field>
+        <field name="model">nexora.webhook</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_test" type="object" string="Send Test" class="btn-primary"
+                            invisible="not id"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Disabled" bg_color="text-bg-danger" invisible="active"/>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_deliveries" type="object" class="oe_stat_button"
+                                icon="fa-paper-plane" invisible="not id">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Deliveries</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="e.g. Customer ERP - shipments"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="active" invisible="1"/>
+                            <field name="url" placeholder="https://example.com/hooks/nexora"/>
+                            <field name="secret" widget="CopyClipboardChar"/>
+                        </group>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="pending_count"/>
+                            <field name="failed_count"/>
+                        </group>
+                    </group>
+                    <group string="Events">
+                        <field name="event_ids" widget="many2many_tags" nolabel="1"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_nexora_webhook" model="ir.actions.act_window">
+        <field name="name">Webhooks</field>
+        <field name="res_model">nexora.webhook</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Deliveries -->
+    <record id="view_nexora_webhook_delivery_list" model="ir.ui.view">
+        <field name="name">nexora.webhook.delivery.list</field>
+        <field name="model">nexora.webhook.delivery</field>
+        <field name="arch" type="xml">
+            <list create="0" decoration-danger="state == 'failed'" decoration-warning="state == 'retry'">
+                <field name="create_date"/>
+                <field name="webhook_id"/>
+                <field name="event_code"/>
+                <field name="attempts"/>
+                <field name="response_code"/>
+                <field name="error" optional="show"/>
+                <field name="next_attempt" optional="hide"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'done'"
+                       decoration-warning="state in ('pending', 'retry')"
+                       decoration-danger="state == 'failed'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_webhook_delivery_form" model="ir.ui.view">
+        <field name="name">nexora.webhook.delivery.form</field>
+        <field name="model">nexora.webhook.delivery</field>
+        <field name="arch" type="xml">
+            <form create="0" edit="0">
+                <header>
+                    <button name="action_send_now" type="object" string="Send Now" class="btn-primary"
+                            invisible="state == 'done'"/>
+                    <button name="action_retry" type="object" string="Retry" invisible="state != 'failed'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="pending,retry,done"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="webhook_id"/>
+                            <field name="event_code"/>
+                            <field name="event_uid"/>
+                            <field name="res_model"/>
+                            <field name="res_id"/>
+                        </group>
+                        <group>
+                            <field name="attempts"/>
+                            <field name="next_attempt"/>
+                            <field name="sent_date"/>
+                            <field name="response_code"/>
+                            <field name="error"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Payload" name="payload">
+                            <field name="payload"/>
+                        </page>
+                        <page string="Response" name="response">
+                            <field name="response_body"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_webhook_delivery_search" model="ir.ui.view">
+        <field name="name">nexora.webhook.delivery.search</field>
+        <field name="model">nexora.webhook.delivery</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="webhook_id"/>
+                <field name="event_code"/>
+                <field name="event_uid"/>
+                <filter name="queue" string="Pending / Retrying" domain="[('state', 'in', ('pending', 'retry'))]"/>
+                <filter name="failed" string="Failed" domain="[('state', '=', 'failed')]"/>
+                <filter name="done" string="Delivered" domain="[('state', '=', 'done')]"/>
+                <group>
+                    <filter name="group_webhook" string="Webhook" context="{'group_by': 'webhook_id'}"/>
+                    <filter name="group_event" string="Event" context="{'group_by': 'event_code'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_webhook_delivery" model="ir.actions.act_window">
+        <field name="name">Webhook Deliveries</field>
+        <field name="res_model">nexora.webhook.delivery</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_server_nexora_delivery_send" model="ir.actions.server">
+        <field name="name">Send Now</field>
+        <field name="model_id" ref="model_nexora_webhook_delivery"/>
+        <field name="binding_model_id" ref="model_nexora_webhook_delivery"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.action_send_now()</field>
+    </record>
+
+    <record id="action_server_nexora_delivery_retry" model="ir.actions.server">
+        <field name="name">Retry Failed</field>
+        <field name="model_id" ref="model_nexora_webhook_delivery"/>
+        <field name="binding_model_id" ref="model_nexora_webhook_delivery"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.action_retry()</field>
+    </record>
+</odoo>

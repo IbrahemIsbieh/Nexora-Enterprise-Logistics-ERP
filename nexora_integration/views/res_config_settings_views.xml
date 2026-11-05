@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_nexora_integration" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.nexora.integration</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="nexora_core.res_config_settings_view_form_nexora"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='nexora_core']" position="inside">
+                <block title="Integration" name="nexora_integration_block">
+                    <setting string="Enable the REST API"
+                             help="Master switch. When off, every API request is refused with 503.">
+                        <field name="nexora_api_enabled"/>
+                    </setting>
+                    <setting string="Keep Logs (days)"
+                             help="API request logs and delivered webhooks older than this are purged daily.">
+                        <field name="nexora_api_log_days"/>
+                    </setting>
+                    <setting string="Allow Private Webhook URLs"
+                             help="Permit webhook endpoints on localhost or private networks. Keep this off in production: it protects the server from being used to reach internal services.">
+                        <field name="nexora_api_allow_private_urls"/>
+                    </setting>
+                    <setting string="Webhook Max Attempts"
+                             help="After this many failed attempts a delivery is marked as failed.">
+                        <field name="nexora_webhook_max_attempts"/>
+                    </setting>
+                    <setting string="Webhook Timeout (seconds)">
+                        <field name="nexora_webhook_timeout"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

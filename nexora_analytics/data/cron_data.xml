@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="cron_nexora_generate_alerts" model="ir.cron">
+        <field name="name">Nexora: Generate operational alerts</field>
+        <field name="model_id" ref="model_nexora_alert"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_generate_alerts()</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">6</field>
+        <field name="interval_type">hours</field>
+    </record>
+</odoo>

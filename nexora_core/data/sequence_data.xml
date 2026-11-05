@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="seq_nexora_contract" model="ir.sequence">
+        <field name="name">Nexora Contract</field>
+        <field name="code">nexora.contract</field>
+        <field name="prefix">NXC/%(year)s/</field>
+        <field name="padding">4</field>
+    </record>
+
+    <record id="seq_nexora_partner" model="ir.sequence">
+        <field name="name">Nexora Partner Code</field>
+        <field name="code">nexora.partner</field>
+        <field name="prefix">NXP-</field>
+        <field name="padding">5</field>
+    </record>
+</odoo>

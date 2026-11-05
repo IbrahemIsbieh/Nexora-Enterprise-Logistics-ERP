@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_nexora_root" name="Nexora"
+              groups="nexora_core.group_nexora_user" sequence="10"/>
+
+    <!-- Operations -->
+    <menuitem id="menu_nexora_operations" name="Operations"
+              parent="menu_nexora_root" sequence="10"/>
+    <menuitem id="menu_nexora_contracts" name="Contracts"
+              parent="menu_nexora_operations" action="action_nexora_contract" sequence="10"/>
+
+    <!-- Master Data -->
+    <menuitem id="menu_nexora_master" name="Master Data"
+              parent="menu_nexora_root" sequence="20"/>
+    <menuitem id="menu_nexora_drivers" name="Drivers"
+              parent="menu_nexora_master" action="action_nexora_drivers" sequence="10"/>
+    <menuitem id="menu_nexora_branches" name="Branches &amp; Companies"
+              parent="menu_nexora_master" action="base.action_res_company_form"
+              groups="nexora_core.group_nexora_manager" sequence="20"/>
+    <menuitem id="menu_nexora_cost_centers" name="Cost Centers"
+              parent="menu_nexora_master" action="action_nexora_cost_center" sequence="30"/>
+
+    <!-- Configuration -->
+    <menuitem id="menu_nexora_config" name="Configuration"
+              parent="menu_nexora_root" sequence="90"
+              groups="nexora_core.group_nexora_admin"/>
+    <menuitem id="menu_nexora_settings" name="Settings"
+              parent="menu_nexora_config" action="action_nexora_settings" sequence="10"/>
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_nexora_scan_session_operator,nexora.scan.session operator,model_nexora_scan_session,nexora_warehouse.group_nexora_warehouse_operator,1,1,1,0
+access_nexora_scan_session_manager,nexora.scan.session manager,model_nexora_scan_session,nexora_warehouse.group_nexora_warehouse_manager,1,1,1,1
+access_nexora_scan_session_line_operator,nexora.scan.session.line operator,model_nexora_scan_session_line,nexora_warehouse.group_nexora_warehouse_operator,1,1,1,1
+access_nexora_scan_session_line_manager,nexora.scan.session.line manager,model_nexora_scan_session_line,nexora_warehouse.group_nexora_warehouse_manager,1,1,1,1

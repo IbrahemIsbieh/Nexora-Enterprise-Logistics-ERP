@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_nexora_accounting" name="Accounting"
+              parent="nexora_core.menu_nexora_root" sequence="60"
+              groups="nexora_accounting.group_nexora_accounting_user"/>
+
+    <menuitem id="menu_nexora_freight_invoices" name="Freight Invoices"
+              parent="menu_nexora_accounting" action="action_nexora_freight_invoices" sequence="10"/>
+    <menuitem id="menu_nexora_vendor_bills" name="Vendor Bills"
+              parent="menu_nexora_accounting" action="action_nexora_vendor_bills" sequence="20"/>
+    <menuitem id="menu_nexora_operating_expenses" name="Operating Expenses"
+              parent="menu_nexora_accounting" action="nexora_fuel.action_nexora_vehicle_expense" sequence="30"/>
+    <menuitem id="menu_nexora_shipment_profitability" name="Shipment Profitability"
+              parent="menu_nexora_accounting" action="action_nexora_shipment_profitability" sequence="40"/>
+    <menuitem id="menu_nexora_cost_center_analysis" name="Cost Center Analysis"
+              parent="menu_nexora_accounting" action="action_nexora_cost_center_report" sequence="50"/>
+    <menuitem id="menu_nexora_freight_rates" name="Freight Rates"
+              parent="menu_nexora_accounting" action="action_nexora_freight_rate" sequence="60"
+              groups="nexora_accounting.group_nexora_accounting_manager"/>
+</odoo>

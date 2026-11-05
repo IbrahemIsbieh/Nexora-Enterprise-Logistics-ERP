@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ===================== Portal home entries ===================== -->
+    <template id="portal_my_home_nexora" name="Nexora portal entries"
+              inherit_id="portal.portal_my_home" priority="45">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Shipments</t>
+                <t t-set="url" t-value="'/my/shipments'"/>
+                <t t-set="text">Track your shipments and download documents</t>
+                <t t-set="placeholder_count" t-value="'nx_shipment_count'"/>
+            </t>
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Transport Orders</t>
+                <t t-set="url" t-value="'/my/transport-orders'"/>
+                <t t-set="text">Your orders and transport requests</t>
+                <t t-set="placeholder_count" t-value="'nx_order_count'"/>
+            </t>
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Support Tickets</t>
+                <t t-set="url" t-value="'/my/tickets'"/>
+                <t t-set="text">Complaints and service requests</t>
+                <t t-set="placeholder_count" t-value="'nx_ticket_count'"/>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- ===================== Shipments list ===================== -->
+    <template id="portal_my_shipments" name="My Shipments">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Shipments</t>
+            </t>
+            <t t-if="not shipments">
+                <div class="alert alert-warning" role="alert">You have no shipments yet.</div>
+            </t>
+            <t t-if="shipments" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Shipment</th>
+                        <th>Order</th>
+                        <th>Deliver To</th>
+                        <th>Planned Delivery</th>
+                        <th class="text-end">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="shipments" t-as="shipment">
+                        <td><a t-att-href="shipment.get_portal_url()"><t t-out="shipment.name"/></a></td>
+                        <td><span t-field="shipment.order_id.name"/></td>
+                        <td><span t-out="shipment.sudo().delivery_partner_id.name"/></td>
+                        <td><span t-field="shipment.planned_delivery_date" t-options='{"widget": "datetime"}'/></td>
+                        <td class="text-end">
+                            <span t-attf-class="badge #{'text-bg-success' if shipment.state == 'delivered' else 'text-bg-danger' if shipment.state == 'failed' else 'text-bg-info' if shipment.state in ('planned', 'in_transit') else 'text-bg-secondary'}"
+                                  t-out="shipment_states.get(shipment.state)"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </t>
+        </t>
+    </template>
+
+    <!-- ===================== Shipment page ===================== -->
+    <template id="portal_shipment_page" name="Shipment Page">
+        <t t-call="portal.portal_layout">
+            <t t-set="additional_title" t-value="shipment.name"/>
+            <div class="container mb-5">
+                <div class="mb-3">
+                    <a href="/my/shipments" class="text-decoration-none">← All shipments</a>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                    <h3 class="mb-0">Shipment <span t-out="shipment.name"/></h3>
+                    <span t-attf-class="badge fs-6 #{'text-bg-success' if shipment.state == 'delivered' else 'text-bg-danger' if shipment.state == 'failed' else 'text-bg-info' if shipment.state in ('planned', 'in_transit') else 'text-bg-secondary'}"
+                          t-out="shipment_states.get(shipment.state)"/>
+                </div>
+
+                <div t-if="shipment.state == 'failed'" class="alert alert-danger" role="alert">
+                    The delivery attempt failed<t t-if="shipment.failure_reason">: <t t-out="shipment.failure_reason"/></t>.
+                    Our team will contact you to reschedule.
+                </div>
+                <div t-if="shipment.state == 'cancelled'" class="alert alert-secondary" role="alert">
+                    This shipment was cancelled.
+                </div>
+
+                <!-- Progress -->
+                <div t-if="shipment.state != 'cancelled'" class="d-flex justify-content-between text-center my-4">
+                    <t t-foreach="steps" t-as="step">
+                        <div class="flex-fill">
+                            <span t-attf-class="badge rounded-pill #{'text-bg-success' if step['done'] else 'text-bg-light border'}">
+                                <t t-out="step_index + 1"/>
+                            </span>
+                            <div t-attf-class="small #{'fw-bold' if step['current'] else 'text-muted'}"
+                                 t-out="step['label']"/>
+                        </div>
+                    </t>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-header fw-bold">Details</div>
+                            <div class="card-body">
+                                <div class="mb-2"><strong>Order:</strong>
+                                    <a t-att-href="shipment.order_id.get_portal_url()"><t t-out="shipment.order_id.name"/></a>
+                                    <span t-if="shipment.order_id.reference" class="text-muted">
+                                        (<t t-out="shipment.order_id.reference"/>)
+                                    </span>
+                                </div>
+                                <div class="mb-2"><strong>Planned pickup:</strong>
+                                    <span t-field="shipment.planned_pickup_date" t-options='{"widget": "datetime"}'/></div>
+                                <div class="mb-2"><strong>Planned delivery:</strong>
+                                    <span t-field="shipment.planned_delivery_date" t-options='{"widget": "datetime"}'/></div>
+                                <div t-if="shipment.actual_delivery_date" class="mb-2"><strong>Delivered on:</strong>
+                                    <span t-field="shipment.actual_delivery_date" t-options='{"widget": "datetime"}'/></div>
+                                <div t-if="shipment.state == 'in_transit' and shipment.vehicle_id" class="mb-2">
+                                    <strong>Vehicle:</strong> <t t-out="shipment.vehicle_id.license_plate"/>
+                                    <t t-if="shipment.driver_id"> · <strong>Driver:</strong> <t t-out="shipment.driver_id.name"/></t>
+                                </div>
+                                <div class="mb-2"><strong>Total weight:</strong>
+                                    <t t-out="'%.1f' % shipment.total_weight"/> kg</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-header fw-bold">Addresses</div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <strong>Pickup</strong>
+                                    <address t-if="shipment.pickup_partner_id" t-field="shipment.pickup_partner_id"
+                                             t-options='{"widget": "contact", "fields": ["name", "address", "phone"], "no_marker": True}'/>
+                                    <div t-else="" class="text-muted">Main address</div>
+                                </div>
+                                <div>
+                                    <strong>Delivery</strong>
+                                    <address t-field="shipment.delivery_partner_id"
+                                             t-options='{"widget": "contact", "fields": ["name", "address", "phone"], "no_marker": True}'/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tracking -->
+                <div class="card mb-3">
+                    <div class="card-header fw-bold">Tracking</div>
+                    <ul class="list-group list-group-flush">
+                        <li t-foreach="events" t-as="event" class="list-group-item d-flex justify-content-between">
+                            <div>
+                                <div class="fw-bold" t-out="event.note or dict(event._fields['event_type'].selection).get(event.event_type)"/>
+                                <small t-if="event.location" class="text-muted" t-out="event.location"/>
+                            </div>
+                            <small class="text-muted"><span t-field="event.date" t-options='{"widget": "datetime"}'/></small>
+                        </li>
+                        <li t-if="not events" class="list-group-item text-muted">No tracking events yet.</li>
+                    </ul>
+                </div>
+
+                <!-- Cargo -->
+                <div class="card mb-3">
+                    <div class="card-header fw-bold">Cargo</div>
+                    <div class="table-responsive">
+                        <table class="table table-sm mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th class="text-end">Qty</th>
+                                    <th class="text-end">Weight (kg)</th>
+                                    <th class="text-end">Volume (m³)</th>
+                                    <th>Temperature</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="shipment.line_ids" t-as="line">
+                                    <td>
+                                        <t t-out="line.name"/>
+                                        <span t-if="line.hazardous" class="badge text-bg-warning ms-1">Hazardous</span>
+                                    </td>
+                                    <td class="text-end"><t t-out="line.quantity"/></td>
+                                    <td class="text-end"><t t-out="'%.1f' % line.weight"/></td>
+                                    <td class="text-end"><t t-out="'%.2f' % line.volume"/></td>
+                                    <td><t t-out="dict(line._fields['temperature_class'].selection).get(line.temperature_class)"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Proof of delivery -->
+                <div t-if="shipment.state == 'delivered'" class="card mb-3">
+                    <div class="card-header fw-bold">Proof of Delivery</div>
+                    <div class="card-body">
+                        <div class="mb-2"><strong>Received by:</strong> <t t-out="shipment.pod_receiver_name"/></div>
+                        <div t-if="shipment.pod_note" class="mb-2"><t t-out="shipment.pod_note"/></div>
+                        <div class="d-flex flex-wrap gap-4">
+                            <div t-if="shipment.pod_signature">
+                                <div class="small text-muted">Signature</div>
+                                <img t-attf-src="/my/shipments/#{shipment.id}/pod/signature?access_token=#{token}"
+                                     class="border" style="max-height: 120px;" alt="Signature"/>
+                            </div>
+                            <div t-if="shipment.pod_photo">
+                                <div class="small text-muted">Delivery photo</div>
+                                <img t-attf-src="/my/shipments/#{shipment.id}/pod/photo?access_token=#{token}"
+                                     class="border" style="max-height: 160px;" alt="Delivery photo"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documents & invoice -->
+                <div class="card mb-3">
+                    <div class="card-header fw-bold">Documents</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Shipment waybill (PDF)</span>
+                            <a t-attf-href="/my/shipments/#{shipment.id}/waybill?access_token=#{token}"
+                               class="btn btn-sm btn-outline-primary">Download</a>
+                        </li>
+                        <li t-foreach="documents" t-as="doc"
+                            class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>
+                                <t t-out="doc.name"/>
+                                <small class="text-muted"> (<t t-out="dict(doc._fields['doc_type'].selection).get(doc.doc_type)"/>)</small>
+                            </span>
+                            <a t-attf-href="/my/shipments/#{shipment.id}/document/#{doc.id}?access_token=#{token}"
+                               class="btn btn-sm btn-outline-primary">Download</a>
+                        </li>
+                        <li t-if="invoice" class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>
+                                Invoice <t t-out="invoice.name"/>
+                                <span t-attf-class="badge ms-1 #{'text-bg-success' if invoice.payment_state in ('paid', 'in_payment') else 'text-bg-warning'}">
+                                    <t t-out="'Paid' if invoice.payment_state in ('paid', 'in_payment') else 'To pay'"/>
+                                </span>
+                            </span>
+                            <a t-att-href="invoice_url" class="btn btn-sm btn-primary">View Invoice</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <a t-attf-href="/my/tickets/new?shipment_id=#{shipment.id}" class="btn btn-outline-secondary">
+                    Report a problem with this shipment
+                </a>
+            </div>
+        </t>
+    </template>
+
+    <!-- ===================== Transport orders list ===================== -->
+    <template id="portal_my_orders" name="My Transport Orders">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Transport Orders</t>
+            </t>
+            <div t-if="can_request" class="mb-3">
+                <a href="/my/transport-requests/new" class="btn btn-primary">New Transport Request</a>
+            </div>
+            <t t-if="not orders">
+                <div class="alert alert-warning" role="alert">You have no transport orders yet.</div>
+            </t>
+            <t t-if="orders" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Order</th>
+                        <th>Date</th>
+                        <th>Customer Ref.</th>
+                        <th>Requested Delivery</th>
+                        <th class="text-end">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="orders" t-as="order">
+                        <td><a t-att-href="order.get_portal_url()"><t t-out="order.name"/></a></td>
+                        <td><span t-field="order.order_date" t-options='{"widget": "date"}'/></td>
+                        <td><t t-out="order.reference"/></td>
+                        <td><span t-field="order.requested_delivery_date" t-options='{"widget": "datetime"}'/></td>
+                        <td class="text-end">
+                            <span t-attf-class="badge #{'text-bg-success' if order.state == 'done' else 'text-bg-info' if order.state in ('confirmed', 'in_progress') else 'text-bg-danger' if order.state == 'cancelled' else 'text-bg-secondary'}"
+                                  t-out="'Awaiting confirmation' if order.state == 'draft' else order_states.get(order.state)"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </t>
+        </t>
+    </template>
+
+    <!-- ===================== Transport order page ===================== -->
+    <template id="portal_order_page" name="Transport Order Page">
+        <t t-call="portal.portal_layout">
+            <t t-set="additional_title" t-value="order.name"/>
+            <div class="container mb-5">
+                <div class="mb-3">
+                    <a href="/my/transport-orders" class="text-decoration-none">← All orders</a>
+                </div>
+                <div t-if="success" class="alert alert-success" role="alert">
+                    Your request was received. Our team will review and confirm it shortly.
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                    <h3 class="mb-0">Order <span t-out="order.name"/></h3>
+                    <span t-attf-class="badge fs-6 #{'text-bg-success' if order.state == 'done' else 'text-bg-info' if order.state in ('confirmed', 'in_progress') else 'text-bg-danger' if order.state == 'cancelled' else 'text-bg-secondary'}"
+                          t-out="'Awaiting confirmation' if order.state == 'draft' else order_states.get(order.state)"/>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-header fw-bold">Details</div>
+                            <div class="card-body">
+                                <div class="mb-2"><strong>Reference:</strong> <t t-out="order.reference or '-'"/></div>
+                                <div class="mb-2"><strong>Requested pickup:</strong>
+                                    <span t-field="order.requested_pickup_date" t-options='{"widget": "datetime"}'/></div>
+                                <div class="mb-2"><strong>Requested delivery:</strong>
+                                    <span t-field="order.requested_delivery_date" t-options='{"widget": "datetime"}'/></div>
+                                <div class="mb-2"><strong>Priority:</strong> <t t-out="'Urgent' if order.priority == 'urgent' else 'Normal'"/></div>
+                                <div class="mb-2"><strong>Total weight:</strong> <t t-out="'%.1f' % order.total_weight"/> kg</div>
+                                <div t-if="order.notes"><strong>Notes:</strong> <t t-out="order.notes"/></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-header fw-bold">Addresses</div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <strong>Pickup</strong>
+                                    <address t-if="order.pickup_partner_id" t-field="order.pickup_partner_id"
+                                             t-options='{"widget": "contact", "fields": ["name", "address", "phone"], "no_marker": True}'/>
+                                    <div t-else="" class="text-muted">Main address</div>
+                                </div>
+                                <div>
+                                    <strong>Delivery</strong>
+                                    <address t-field="order.delivery_partner_id"
+                                             t-options='{"widget": "contact", "fields": ["name", "address", "phone"], "no_marker": True}'/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-header fw-bold">Cargo</div>
+                    <div class="table-responsive">
+                        <table class="table table-sm mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th class="text-end">Qty</th>
+                                    <th class="text-end">Weight (kg)</th>
+                                    <th class="text-end">Volume (m³)</th>
+                                    <th>Temperature</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="order.line_ids" t-as="line">
+                                    <td>
+                                        <t t-out="line.name"/>
+                                        <span t-if="line.hazardous" class="badge text-bg-warning ms-1">Hazardous</span>
+                                    </td>
+                                    <td class="text-end"><t t-out="line.quantity"/></td>
+                                    <td class="text-end"><t t-out="'%.1f' % line.weight"/></td>
+                                    <td class="text-end"><t t-out="'%.2f' % line.volume"/></td>
+                                    <td><t t-out="dict(line._fields['temperature_class'].selection).get(line.temperature_class)"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div t-if="shipments" class="card mb-3">
+                    <div class="card-header fw-bold">Shipments</div>
+                    <ul class="list-group list-group-flush">
+                        <li t-foreach="shipments" t-as="shipment"
+                            class="list-group-item d-flex justify-content-between align-items-center">
+                            <a t-att-href="shipment.get_portal_url()"><t t-out="shipment.name"/></a>
+                            <span t-attf-class="badge #{'text-bg-success' if shipment.state == 'delivered' else 'text-bg-danger' if shipment.state == 'failed' else 'text-bg-info' if shipment.state in ('planned', 'in_transit') else 'text-bg-secondary'}"
+                                  t-out="shipment_states.get(shipment.state)"/>
+                        </li>
+                    </ul>
+                </div>
+
+                <form t-if="order.portal_request and order.state == 'draft'"
+                      action="#" t-attf-action="/my/transport-orders/#{order.id}/cancel" method="post">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <button type="submit" class="btn btn-outline-danger"
+                            onclick="return confirm('Cancel this request?');">Cancel this request</button>
+                </form>
+            </div>
+        </t>
+    </template>
+
+    <!-- ===================== New transport request ===================== -->
+    <template id="portal_transport_request_new" name="New Transport Request">
+        <t t-call="portal.portal_layout">
+            <t t-set="additional_title">New Transport Request</t>
+            <div class="container mb-5" style="max-width: 920px;">
+                <div class="mb-3">
+                    <a href="/my/transport-orders" class="text-decoration-none">← Back to orders</a>
+                </div>
+                <h3 class="mb-3">New Transport Request</h3>
+                <div t-if="errors" class="alert alert-danger" role="alert">
+                    <ul class="mb-0">
+                        <li t-foreach="errors.values()" t-as="error" t-out="error"/>
+                    </ul>
+                </div>
+
+                <form action="/my/transport-requests/submit" method="post">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                    <div class="card mb-3">
+                        <div class="card-header fw-bold">Route</div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="pickup_partner_id">Pickup address</label>
+                                    <select name="pickup_partner_id" id="pickup_partner_id" class="form-select">
+                                        <option value="">Default (my main address)</option>
+                                        <option t-foreach="addresses" t-as="addr" t-att-value="addr.id"
+                                                t-att-selected="str(addr.id) == post.get('pickup_partner_id')">
+                                            <t t-out="addr.display_name"/><t t-if="addr.city"> - <t t-out="addr.city"/></t>
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="delivery_partner_id">Delivery address</label>
+                                    <select name="delivery_partner_id" id="delivery_partner_id" class="form-select">
+                                        <option value="">Select…</option>
+                                        <option t-foreach="addresses" t-as="addr" t-att-value="addr.id"
+                                                t-att-selected="str(addr.id) == post.get('delivery_partner_id')">
+                                            <t t-out="addr.display_name"/><t t-if="addr.city"> - <t t-out="addr.city"/></t>
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mt-3 text-muted small">Or deliver to a new address:</div>
+                            <div class="row g-3 mt-0">
+                                <div class="col-md-3">
+                                    <input type="text" name="new_name" class="form-control" placeholder="Contact / place name"
+                                           t-att-value="post.get('new_name')"/>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" name="new_street" class="form-control" placeholder="Street"
+                                           t-att-value="post.get('new_street')"/>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" name="new_city" class="form-control" placeholder="City"
+                                           t-att-value="post.get('new_city')"/>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" name="new_phone" class="form-control" placeholder="Phone"
+                                           t-att-value="post.get('new_phone')"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-header fw-bold">Schedule</div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label class="form-label" for="requested_pickup">Requested pickup</label>
+                                    <input type="datetime-local" name="requested_pickup" id="requested_pickup"
+                                           class="form-control" t-att-value="post.get('requested_pickup')"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="requested_delivery">Requested delivery</label>
+                                    <input type="datetime-local" name="requested_delivery" id="requested_delivery"
+                                           class="form-control" t-att-value="post.get('requested_delivery')"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="reference">Your reference</label>
+                                    <input type="text" name="reference" id="reference" class="form-control"
+                                           t-att-value="post.get('reference')"/>
+                                </div>
+                            </div>
+                            <div class="form-check mt-3">
+                                <input type="checkbox" class="form-check-input" name="urgent" id="urgent" value="1"
+                                       t-att-checked="post.get('urgent')"/>
+                                <label class="form-check-label" for="urgent">Urgent request</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-header fw-bold">Cargo (up to 5 lines)</div>
+                        <div class="table-responsive">
+                            <table class="table table-sm mb-0 align-middle">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 34%">Description</th>
+                                        <th>Qty</th>
+                                        <th>Weight (kg)</th>
+                                        <th>Volume (m³)</th>
+                                        <th>Temperature</th>
+                                        <th>Hazardous</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr t-foreach="range(1, 6)" t-as="i">
+                                        <td><input type="text" t-att-name="'line_desc_%s' % i" class="form-control form-control-sm"
+                                                   t-att-value="post.get('line_desc_%s' % i, '')"/></td>
+                                        <td><input type="number" step="any" min="0" t-att-name="'line_qty_%s' % i"
+                                                   class="form-control form-control-sm" t-att-value="post.get('line_qty_%s' % i, '1')"/></td>
+                                        <td><input type="number" step="any" min="0" t-att-name="'line_weight_%s' % i"
+                                                   class="form-control form-control-sm" t-att-value="post.get('line_weight_%s' % i, '')"/></td>
+                                        <td><input type="number" step="any" min="0" t-att-name="'line_volume_%s' % i"
+                                                   class="form-control form-control-sm" t-att-value="post.get('line_volume_%s' % i, '')"/></td>
+                                        <td>
+                                            <select t-att-name="'line_temp_%s' % i" class="form-select form-select-sm">
+                                                <option t-foreach="temperatures" t-as="temp" t-att-value="temp[0]"
+                                                        t-att-selected="temp[0] == post.get('line_temp_%s' % i)">
+                                                    <t t-out="temp[1]"/>
+                                                </option>
+                                            </select>
+                                        </td>
+                                        <td class="text-center">
+                                            <input type="checkbox" class="form-check-input" t-att-name="'line_haz_%s' % i" value="1"
+                                                   t-att-checked="post.get('line_haz_%s' % i)"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="notes">Notes for our team</label>
+                        <textarea name="notes" id="notes" rows="3" class="form-control"><t t-out="post.get('notes', '')"/></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit Request</button>
+                    <a href="/my/transport-orders" class="btn btn-link">Cancel</a>
+                </form>
+            </div>
+        </t>
+    </template>
+
+    <!-- ===================== Tickets ===================== -->
+    <template id="portal_my_tickets" name="My Tickets">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Support Tickets</t>
+            </t>
+            <div class="mb-3">
+                <a href="/my/tickets/new" class="btn btn-primary">New Ticket</a>
+            </div>
+            <t t-if="not tickets">
+                <div class="alert alert-warning" role="alert">You have no tickets.</div>
+            </t>
+            <t t-if="tickets" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Ticket</th>
+                        <th>Subject</th>
+                        <th>Type</th>
+                        <th>Shipment</th>
+                        <th class="text-end">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="tickets" t-as="ticket">
+                        <td><a t-att-href="ticket.get_portal_url()"><t t-out="ticket.name"/></a></td>
+                        <td><t t-out="ticket.subject"/></td>
+                        <td><t t-out="ticket_types.get(ticket.ticket_type)"/></td>
+                        <td><t t-out="ticket.sudo().shipment_id.name"/></td>
+                        <td class="text-end">
+                            <span t-attf-class="badge #{'text-bg-success' if ticket.state in ('resolved', 'closed') else 'text-bg-warning' if ticket.state == 'in_progress' else 'text-bg-info'}"
+                                  t-out="ticket_states.get(ticket.state)"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_ticket_page" name="Ticket Page">
+        <t t-call="portal.portal_layout">
+            <t t-set="additional_title" t-value="ticket.name"/>
+            <div class="container mb-5">
+                <div class="mb-3">
+                    <a href="/my/tickets" class="text-decoration-none">← All tickets</a>
+                </div>
+                <div t-if="success" class="alert alert-success" role="alert">
+                    Your ticket was created. We will get back to you shortly.
+                </div>
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                    <h3 class="mb-0"><t t-out="ticket.name"/> · <t t-out="ticket.subject"/></h3>
+                    <span t-attf-class="badge fs-6 #{'text-bg-success' if ticket.state in ('resolved', 'closed') else 'text-bg-warning' if ticket.state == 'in_progress' else 'text-bg-info'}"
+                          t-out="ticket_states.get(ticket.state)"/>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="mb-2"><strong>Type:</strong> <t t-out="ticket_types.get(ticket.ticket_type)"/></div>
+                        <div t-if="ticket.shipment_id" class="mb-2"><strong>Shipment:</strong>
+                            <a t-att-href="ticket.shipment_id.get_portal_url()"><t t-out="ticket.shipment_id.name"/></a>
+                        </div>
+                        <div class="mb-2"><strong>Opened:</strong>
+                            <span t-field="ticket.create_date" t-options='{"widget": "datetime"}'/></div>
+                        <div class="mt-3" style="white-space: pre-wrap;"><t t-out="ticket.description"/></div>
+                    </div>
+                </div>
+                <div t-if="ticket.state in ('resolved', 'closed') and ticket.resolution" class="alert alert-success">
+                    <strong>Resolution</strong>
+                    <div style="white-space: pre-wrap;"><t t-out="ticket.resolution"/></div>
+                </div>
+
+                <div class="o_portal_messages_container mt-4">
+                    <h4>Messages</h4>
+                    <t t-call="portal.message_thread">
+                        <t t-set="token" t-value="token"/>
+                        <t t-set="object" t-value="ticket"/>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="portal_ticket_new" name="New Ticket">
+        <t t-call="portal.portal_layout">
+            <t t-set="additional_title">New Ticket</t>
+            <div class="container mb-5" style="max-width: 760px;">
+                <div class="mb-3">
+                    <a href="/my/tickets" class="text-decoration-none">← Back to tickets</a>
+                </div>
+                <h3 class="mb-3">New Ticket</h3>
+                <div t-if="errors" class="alert alert-danger" role="alert">
+                    <ul class="mb-0">
+                        <li t-foreach="errors.values()" t-as="error" t-out="error"/>
+                    </ul>
+                </div>
+                <form action="/my/tickets/submit" method="post">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label" for="ticket_type">Type</label>
+                            <select name="ticket_type" id="ticket_type" class="form-select">
+                                <option t-foreach="ticket_types" t-as="ttype" t-att-value="ttype[0]"
+                                        t-att-selected="ttype[0] == post.get('ticket_type')">
+                                    <t t-out="ttype[1]"/>
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="shipment_id">Related shipment (optional)</label>
+                            <select name="shipment_id" id="shipment_id" class="form-select">
+                                <option value="">None</option>
+                                <option t-foreach="shipments" t-as="shipment" t-att-value="shipment.id"
+                                        t-att-selected="str(shipment.id) == str(post.get('shipment_id'))">
+                                    <t t-out="shipment.name"/>
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="subject">Subject</label>
+                            <input type="text" name="subject" id="subject" class="form-control" required="required"
+                                   t-att-value="post.get('subject')"/>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="description">Description</label>
+                            <textarea name="description" id="description" rows="6" class="form-control"
+                                      required="required"><t t-out="post.get('description', '')"/></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <a href="/my/tickets" class="btn btn-link">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </t>
+    </template>
+</odoo>

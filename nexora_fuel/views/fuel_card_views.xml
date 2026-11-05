@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_fuel_card_list" model="ir.ui.view">
+        <field name="name">nexora.fuel.card.list</field>
+        <field name="model">nexora.fuel.card</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state != 'active'"
+                  decoration-danger="usage_pct >= 100">
+                <field name="name"/>
+                <field name="provider_id"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id" optional="show"/>
+                <field name="monthly_limit"/>
+                <field name="month_spend"/>
+                <field name="usage_pct" widget="progressbar"/>
+                <field name="expiry_date"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'active'"
+                       decoration-danger="state in ('blocked', 'expired')"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_fuel_card_form" model="ir.ui.view">
+        <field name="name">nexora.fuel.card.form</field>
+        <field name="model">nexora.fuel.card</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_block" type="object" string="Block"
+                            invisible="state != 'active'"
+                            groups="nexora_fuel.group_nexora_fuel_manager"/>
+                    <button name="action_activate" type="object" string="Activate"
+                            class="btn-primary" invisible="state == 'active'"
+                            groups="nexora_fuel.group_nexora_fuel_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="active,blocked,expired"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_logs" type="object" class="oe_stat_button"
+                                icon="fa-tint" invisible="log_count == 0">
+                            <field name="log_count" widget="statinfo" string="Fuel Logs"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Card number"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="provider_id"/>
+                            <field name="vehicle_id"/>
+                            <field name="driver_id"/>
+                            <field name="responsible_id"/>
+                        </group>
+                        <group>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="monthly_limit"/>
+                            <field name="month_spend"/>
+                            <field name="usage_pct" widget="progressbar"/>
+                            <field name="expiry_date"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_fuel_card_search" model="ir.ui.view">
+        <field name="name">nexora.fuel.card.search</field>
+        <field name="model">nexora.fuel.card</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="vehicle_id"/>
+                <field name="provider_id"/>
+                <filter name="active" string="Active" domain="[('state', '=', 'active')]"/>
+                <group>
+                    <filter name="group_provider" string="Provider" context="{'group_by': 'provider_id'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_fuel_card" model="ir.actions.act_window">
+        <field name="name">Fuel Cards</field>
+        <field name="res_model">nexora.fuel.card</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

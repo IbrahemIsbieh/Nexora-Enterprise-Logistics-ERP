@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="scope_shipments_read" model="nexora.api.scope">
+        <field name="code">shipments:read</field>
+        <field name="name">Read shipments and tracking</field>
+    </record>
+    <record id="scope_shipments_write" model="nexora.api.scope">
+        <field name="code">shipments:write</field>
+        <field name="name">Add tracking events to shipments</field>
+    </record>
+    <record id="scope_orders_read" model="nexora.api.scope">
+        <field name="code">orders:read</field>
+        <field name="name">Read transport orders</field>
+    </record>
+    <record id="scope_orders_write" model="nexora.api.scope">
+        <field name="code">orders:write</field>
+        <field name="name">Create transport orders</field>
+    </record>
+    <record id="scope_fleet_read" model="nexora.api.scope">
+        <field name="code">fleet:read</field>
+        <field name="name">Read vehicles and availability</field>
+    </record>
+    <record id="scope_fleet_write" model="nexora.api.scope">
+        <field name="code">fleet:write</field>
+        <field name="name">Push vehicle odometer readings</field>
+    </record>
+    <record id="scope_customers_read" model="nexora.api.scope">
+        <field name="code">customers:read</field>
+        <field name="name">Read logistics customers</field>
+    </record>
+
+    <record id="event_shipment_created" model="nexora.webhook.event">
+        <field name="code">shipment.created</field>
+        <field name="name">Shipment created</field>
+    </record>
+    <record id="event_shipment_status_changed" model="nexora.webhook.event">
+        <field name="code">shipment.status_changed</field>
+        <field name="name">Shipment status changed</field>
+    </record>
+    <record id="event_shipment_delivered" model="nexora.webhook.event">
+        <field name="code">shipment.delivered</field>
+        <field name="name">Shipment delivered</field>
+    </record>
+    <record id="event_shipment_failed" model="nexora.webhook.event">
+        <field name="code">shipment.failed</field>
+        <field name="name">Shipment delivery failed</field>
+    </record>
+    <record id="event_order_created" model="nexora.webhook.event">
+        <field name="code">order.created</field>
+        <field name="name">Transport order created</field>
+    </record>
+    <record id="event_order_status_changed" model="nexora.webhook.event">
+        <field name="code">order.status_changed</field>
+        <field name="name">Transport order status changed</field>
+    </record>
+    <record id="event_trip_started" model="nexora.webhook.event">
+        <field name="code">trip.started</field>
+        <field name="name">Trip started</field>
+    </record>
+    <record id="event_trip_completed" model="nexora.webhook.event">
+        <field name="code">trip.completed</field>
+        <field name="name">Trip completed</field>
+    </record>
+</odoo>

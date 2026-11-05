@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_freight_rate_list" model="ir.ui.view">
+        <field name="name">nexora.freight.rate.list</field>
+        <field name="model">nexora.freight.rate</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="product_id"/>
+                <field name="basis"/>
+                <field name="price"/>
+                <field name="minimum_charge"/>
+                <field name="chilled_pct" optional="show"/>
+                <field name="frozen_pct" optional="show"/>
+                <field name="hazmat_pct" optional="show"/>
+                <field name="urgent_pct" optional="show"/>
+                <field name="currency_id" column_invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_freight_rate_form" model="ir.ui.view">
+        <field name="name">nexora.freight.rate.form</field>
+        <field name="model">nexora.freight.rate</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="e.g. Local transport - standard"/></h1>
+                    </div>
+                    <group>
+                        <group string="Applies To">
+                            <field name="active" invisible="1"/>
+                            <field name="partner_id"/>
+                            <field name="product_id"/>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group string="Price">
+                            <field name="currency_id" invisible="1"/>
+                            <field name="basis"/>
+                            <field name="price"/>
+                            <field name="minimum_charge"/>
+                            <field name="sequence"/>
+                        </group>
+                    </group>
+                    <group string="Surcharges (% of the base charge)">
+                        <group>
+                            <field name="chilled_pct"/>
+                            <field name="frozen_pct"/>
+                        </group>
+                        <group>
+                            <field name="hazmat_pct"/>
+                            <field name="urgent_pct"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_nexora_freight_rate" model="ir.actions.act_window">
+        <field name="name">Freight Rates</field>
+        <field name="res_model">nexora.freight.rate</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

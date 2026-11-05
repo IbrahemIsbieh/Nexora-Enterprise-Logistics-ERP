@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_nexora_fuel" name="Fuel &amp; Expenses"
+              parent="nexora_core.menu_nexora_root" sequence="55"
+              groups="nexora_fuel.group_nexora_fuel_user"/>
+
+    <menuitem id="menu_nexora_fuel_logs" name="Fuel Logs"
+              parent="menu_nexora_fuel" action="action_nexora_fuel_log" sequence="10"/>
+    <menuitem id="menu_nexora_vehicle_expenses" name="Vehicle Expenses"
+              parent="menu_nexora_fuel" action="action_nexora_vehicle_expense" sequence="20"/>
+    <menuitem id="menu_nexora_fuel_cards" name="Fuel Cards"
+              parent="menu_nexora_fuel" action="action_nexora_fuel_card" sequence="30"/>
+</odoo>

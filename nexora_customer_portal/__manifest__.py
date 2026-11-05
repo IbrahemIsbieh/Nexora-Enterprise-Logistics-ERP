@@ -1,0 +1,21 @@
+{
+    'name': 'Nexora Customer Portal',
+    'version': '19.0.1.0.0',
+    'category': 'Nexora',
+    'summary': 'Customer portal: shipments, tracking, documents, invoices, transport requests and tickets',
+    'author': 'Ibrahem Issa',
+    'license': 'LGPL-3',
+    'depends': ['nexora_transport', 'nexora_accounting', 'portal', 'mail'],
+    'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'data/sequence_data.xml',
+        'views/ticket_views.xml',
+        'views/shipment_views.xml',
+        'views/transport_order_views.xml',
+        'views/res_config_settings_views.xml',
+        'views/portal_templates.xml',
+        'views/menus.xml',
+    ],
+    'installable': True,
+}

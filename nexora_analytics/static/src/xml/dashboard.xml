@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="nexora_analytics.Dashboard">
+        <div class="o_nexora_dashboard h-100 overflow-auto p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <h2 class="mb-0">Control Tower</h2>
+                    <small class="text-muted" t-if="state.data">
+                        Last <t t-out="state.data.days"/> days · updated <t t-out="state.data.generated"/> UTC
+                    </small>
+                </div>
+                <button class="btn btn-secondary" t-on-click="refresh">
+                    <i class="fa fa-refresh me-1"/>Refresh
+                </button>
+            </div>
+
+            <div t-if="state.loading" class="text-center text-muted p-5">
+                <i class="fa fa-spinner fa-spin fa-2x"/>
+            </div>
+            <div t-elif="state.error" class="alert alert-danger" t-out="state.error"/>
+
+            <t t-elif="state.data">
+                <t t-foreach="state.data.sections" t-as="section" t-key="section.title">
+                    <h5 class="mt-4 mb-2">
+                        <i t-attf-class="fa #{section.icon} me-2 text-muted"/><t t-out="section.title"/>
+                    </h5>
+                    <div class="row g-3">
+                        <div t-foreach="section.tiles" t-as="tile" t-key="tile.label"
+                             class="col-6 col-md-4 col-xl-2">
+                            <div t-attf-class="card h-100 o_nexora_tile border-start border-4 border-#{tile.color} #{tile.res_model ? 'o_nexora_clickable' : ''}"
+                                 t-on-click="() => this.openTile(tile)">
+                                <div class="card-body py-2 px-3">
+                                    <div class="text-muted small" t-out="tile.label"/>
+                                    <div t-attf-class="fs-3 fw-bold text-#{tile.color}" t-out="tile.display"/>
+                                    <div class="small text-muted" t-if="tile.sub" t-out="tile.sub"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div t-if="section.bars" class="mt-3">
+                        <div t-foreach="section.bars" t-as="bar" t-key="bar.label" class="d-flex align-items-center mb-1">
+                            <div class="small text-muted" style="width: 130px;" t-out="bar.label"/>
+                            <div class="progress flex-grow-1" style="height: 10px;">
+                                <div t-attf-class="progress-bar bg-#{bar.color}" role="progressbar"
+                                     t-attf-style="width: #{bar.pct}%;"/>
+                            </div>
+                            <div class="small ms-2" style="width: 30px;" t-out="bar.value"/>
+                        </div>
+                    </div>
+                </t>
+
+                <h5 class="mt-4 mb-2">
+                    <i class="fa fa-exclamation-triangle me-2 text-muted"/>Latest Alerts
+                    <span class="badge text-bg-secondary ms-1" t-out="state.data.alert_total"/>
+                    <a href="#" class="ms-3 small" t-on-click.prevent="openAllAlerts">View all</a>
+                </h5>
+                <div class="card">
+                    <ul class="list-group list-group-flush">
+                        <li t-if="!state.data.alerts.length" class="list-group-item text-muted">
+                            No open alerts.
+                        </li>
+                        <li t-foreach="state.data.alerts" t-as="alert" t-key="alert.id"
+                            class="list-group-item list-group-item-action o_nexora_clickable"
+                            t-on-click="() => this.openAlert(alert)">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <span t-attf-class="badge me-2 #{severityClass(alert.severity)}" t-out="alert.severity"/>
+                                    <strong t-out="alert.name"/>
+                                    <div class="small text-muted" t-out="alert.message"/>
+                                </div>
+                                <div class="small text-muted text-end">
+                                    <div t-out="alert.type"/>
+                                    <div t-out="alert.date"/>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </t>
+        </div>
+    </t>
+</templates>

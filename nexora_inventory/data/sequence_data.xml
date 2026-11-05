@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="seq_nexora_replenishment_plan" model="ir.sequence">
+        <field name="name">Nexora Replenishment Plan</field>
+        <field name="code">nexora.replenishment.plan</field>
+        <field name="prefix">NXR/%(year)s/</field>
+        <field name="padding">4</field>
+    </record>
+</odoo>

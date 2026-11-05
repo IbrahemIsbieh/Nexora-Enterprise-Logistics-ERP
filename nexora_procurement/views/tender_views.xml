@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_tender_list" model="ir.ui.view">
+        <field name="name">nexora.rfq.tender.list</field>
+        <field name="model">nexora.rfq.tender</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state == 'cancelled'">
+                <field name="name"/>
+                <field name="request_id"/>
+                <field name="deadline"/>
+                <field name="quote_count"/>
+                <field name="best_quote_id" optional="show"/>
+                <field name="winner_id" optional="show"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'awarded'"
+                       decoration-info="state == 'open'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_tender_form" model="ir.ui.view">
+        <field name="name">nexora.rfq.tender.form</field>
+        <field name="model">nexora.rfq.tender</field>
+        <field name="arch" type="xml">
+            <form create="0">
+                <header>
+                    <button name="action_view_quotes" type="object" string="Compare Quotations"
+                            class="btn-primary" invisible="quote_count == 0"/>
+                    <button name="action_view_matrix" type="object" string="Price Matrix"
+                            invisible="quote_count == 0"/>
+                    <button name="action_cancel" type="object" string="Cancel Tender"
+                            invisible="state != 'open'"
+                            confirm="Cancel this tender and all open RFQs?"/>
+                    <field name="state" widget="statusbar" statusbar_visible="open,awarded"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="request_id"/>
+                            <field name="deadline"/>
+                        </group>
+                        <group>
+                            <field name="best_quote_id"/>
+                            <field name="winner_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <field name="quote_count" invisible="1"/>
+                    <notebook>
+                        <page string="Quotations" name="quotes"
+                              groups="nexora_procurement.group_nexora_procurement_officer">
+                            <field name="quote_ids" readonly="1">
+                                <list decoration-success="nexora_is_best_price"
+                                      decoration-muted="state == 'cancel'">
+                                    <field name="name"/>
+                                    <field name="partner_id"/>
+                                    <field name="nexora_vendor_rating"/>
+                                    <field name="amount_total"/>
+                                    <field name="date_planned"/>
+                                    <field name="nexora_is_best_price" column_invisible="1"/>
+                                    <field name="state" widget="badge"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Notes" name="notes">
+                            <field name="notes"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_tender_search" model="ir.ui.view">
+        <field name="name">nexora.rfq.tender.search</field>
+        <field name="model">nexora.rfq.tender</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="request_id"/>
+                <filter name="open" string="Open" domain="[('state', '=', 'open')]"/>
+                <filter name="awarded" string="Awarded" domain="[('state', '=', 'awarded')]"/>
+                <group>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_nexora_tender" model="ir.actions.act_window">
+        <field name="name">Tenders</field>
+        <field name="res_model">nexora.rfq.tender</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_open': 1}</field>
+    </record>
+
+    <!-- Comparison views -->
+    <record id="view_nexora_quote_compare_list" model="ir.ui.view">
+        <field name="name">purchase.order.list.nexora.compare</field>
+        <field name="model">purchase.order</field>
+        <field name="arch" type="xml">
+            <list create="0" decoration-success="nexora_is_best_price"
+                  decoration-muted="state == 'cancel'">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="nexora_vendor_rating"/>
+                <field name="amount_total" sum="Total"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="date_planned"/>
+                <field name="payment_term_id"/>
+                <field name="nexora_is_best_price" widget="boolean" string="Best Price"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_quote_matrix_pivot" model="ir.ui.view">
+        <field name="name">purchase.order.line.pivot.nexora.matrix</field>
+        <field name="model">purchase.order.line</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="product_id" type="row"/>
+                <field name="partner_id" type="col"/>
+                <field name="price_unit" type="measure"/>
+                <field name="price_subtotal" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+</odoo>

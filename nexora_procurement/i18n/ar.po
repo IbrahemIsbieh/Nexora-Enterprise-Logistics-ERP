@@ -1,0 +1,1090 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* nexora_procurement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-04 14:09+0000\n"
+"PO-Revision-Date: 2026-11-04 14:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nexora_procurement
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_vendor_performance__rating__a
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__res_partner__nexora_vendor_rating__a
+msgid "A - Excellent"
+msgstr "A - ممتاز"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_vendor_performance_search
+msgid "A / B"
+msgstr "A / B"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__message_needaction
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__message_needaction
+msgid "Action Needed"
+msgstr "يتطلب إجراءً"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_approval_rule__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__activity_ids
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تمييز حالة استثناء النشاط"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__activity_state
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__activity_type_icon
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+msgid "Add at least one item to the request."
+msgstr "أضف بندًا واحدًا على الأقل إلى الطلب."
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_approval_rule__min_amount
+msgid "Applies From Amount"
+msgstr "يُطبق ابتداءً من مبلغ"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__approval_rule_id
+msgid "Approval Rule"
+msgstr "قاعدة الموافقة"
+
+#. module: nexora_procurement
+#: model:ir.actions.act_window,name:nexora_procurement.action_nexora_approval_rule
+#: model:ir.ui.menu,name:nexora_procurement.menu_nexora_approval_rules
+msgid "Approval Rules"
+msgstr "قواعد الموافقة"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_form
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/replenishment_plan.py:0
+msgid "Approve the plan first."
+msgstr "يجب الموافقة على الخطة أولاً."
+
+#. module: nexora_procurement
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_purchase_request__state__approved
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_search
+msgid "Approved"
+msgstr "تمت الموافقة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__approved_by
+msgid "Approved By"
+msgstr "تمت الموافقة بواسطة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__approved_date
+msgid "Approved Date"
+msgstr "تاريخ الموافقة"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+msgid "Approved automatically (below the approval threshold)."
+msgstr "تمت الموافقة تلقائيًا (لأن المبلغ أقل من حد الموافقة)."
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_approval_rule__approver_id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__approver_id
+msgid "Approver"
+msgstr "الشخص المخوّل بالموافقة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__message_attachment_count
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: nexora_procurement
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_rfq_tender__state__awarded
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_tender_search
+msgid "Awarded"
+msgstr "تمت الترسية"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__winner_id
+msgid "Awarded Order"
+msgstr "أمر الشراء الذي تمت ترسيته"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/tender.py:0
+msgid "Awarded to %(vendor)s (%(order)s)."
+msgstr "تمت الترسية على %(vendor)s (%(order)s)."
+
+#. module: nexora_procurement
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_vendor_performance__rating__b
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__res_partner__nexora_vendor_rating__b
+msgid "B - Good"
+msgstr "B - جيد"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_purchase_order__nexora_is_best_price
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_quote_compare_list
+msgid "Best Price"
+msgstr "أفضل سعر"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__best_quote_id
+msgid "Best Quote"
+msgstr "أفضل عرض سعر"
+
+#. module: nexora_procurement
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_vendor_performance__rating__c
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__res_partner__nexora_vendor_rating__c
+msgid "C - Fair"
+msgstr "C - مقبول"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__can_approve
+msgid "Can Approve"
+msgstr "يمكنه الموافقة"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_form
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_request_tender_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_tender_form
+msgid "Cancel Tender"
+msgstr "إلغاء المناقصة"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_tender_form
+msgid "Cancel this tender and all open RFQs?"
+msgstr "هل تريد إلغاء هذه المناقصة وجميع طلبات عروض الأسعار المفتوحة؟"
+
+#. module: nexora_procurement
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_purchase_request__state__cancelled
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_rfq_tender__state__cancelled
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_approval_rule__company_id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__company_id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__company_id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_tender_form
+msgid "Compare Quotations"
+msgstr "مقارنة عروض الأسعار"
+
+#. module: nexora_procurement
+#: model:ir.model,name:nexora_procurement.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات"
+
+#. module: nexora_procurement
+#: model:ir.model,name:nexora_procurement.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__cost_center_id
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_search
+msgid "Cost Center"
+msgstr "مركز التكلفة"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_replenishment_plan_form_procurement
+msgid "Create Purchase Request"
+msgstr "إنشاء طلب شراء"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_request_tender_wizard_form
+msgid "Create RFQs"
+msgstr "إنشاء طلبات عروض الأسعار"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_approval_rule__create_uid
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__create_uid
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__create_uid
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_request_tender_wizard__create_uid
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__create_uid
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_approval_rule__create_date
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__create_date
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__create_date
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_request_tender_wizard__create_date
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__create_date
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_approval_rule__currency_id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__currency_id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__currency_id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_vendor_performance__rating__d
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__res_partner__nexora_vendor_rating__d
+msgid "D - Poor"
+msgstr "D - ضعيف"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__date_to
+msgid "Date To"
+msgstr "إلى تاريخ"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.res_config_settings_view_form_nexora_procurement
+msgid "Days after the expected date during which a receipt is still on time."
+msgstr "عدد الأيام بعد التاريخ المتوقع التي يُعد خلالها الاستلام في الوقت المحدد."
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.res_config_settings_view_form_nexora_procurement
+msgid "Days of confirmed purchase orders considered when rating vendors."
+msgstr "عدد الأيام من أوامر الشراء المؤكدة التي تؤخذ في الاعتبار عند تقييم الموردين."
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_request_tender_wizard__deadline
+msgid "Deadline"
+msgstr "الموعد النهائي"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__warehouse_id
+msgid "Deliver To"
+msgstr "التسليم إلى"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__name
+msgid "Description"
+msgstr "الوصف"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_approval_rule__display_name
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__display_name
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__display_name
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_replenishment_plan__display_name
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_request_tender_wizard__display_name
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__display_name
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__display_name
+#: model:ir.model.fields,field_description:nexora_procurement.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:nexora_procurement.field_purchase_order_line__display_name
+#: model:ir.model.fields,field_description:nexora_procurement.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:nexora_procurement.field_res_partner__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: nexora_procurement
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_purchase_request__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+msgid "Enter the rejection reason first."
+msgstr "أدخل سبب الرفض أولاً."
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__estimated_price
+msgid "Est. Unit Price"
+msgstr "سعر الوحدة التقديري"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__fill_rate
+msgid "Fill Rate (%)"
+msgstr "نسبة تلبية الكميات (%)"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__message_follower_ids
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__message_partner_ids
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (جهات الاتصال)"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_purchase_request__activity_type_icon
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_rfq_tender__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font Awesome، مثال: fa-tasks"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+msgid "Handled"
+msgstr "تمت المعالجة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__has_message
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسائل"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_approval_rule__id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_replenishment_plan__id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_request_tender_wizard__id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__id
+#: model:ir.model.fields,field_description:nexora_procurement.field_purchase_order__id
+#: model:ir.model.fields,field_description:nexora_procurement.field_purchase_order_line__id
+#: model:ir.model.fields,field_description:nexora_procurement.field_res_config_settings__id
+#: model:ir.model.fields,field_description:nexora_procurement.field_res_partner__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__activity_exception_icon
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_purchase_request__activity_exception_icon
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_rfq_tender__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة تشير إلى وجود نشاط استثنائي."
+
+#. module: nexora_procurement
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_purchase_request__message_needaction
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_rfq_tender__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديد هذا الخيار، فستتطلب الرسائل الجديدة انتباهك."
+
+#. module: nexora_procurement
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_purchase_request__message_has_error
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_purchase_request__message_has_sms_error
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_rfq_tender__message_has_error
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_rfq_tender__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديد هذا الخيار، فهذا يعني وجود خطأ في تسليم بعض الرسائل."
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__message_is_follower
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__line_ids
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_form
+msgid "Items"
+msgstr "البنود"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__reason
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_form
+msgid "Justification"
+msgstr "المبرر"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_approval_rule__write_uid
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__write_uid
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__write_uid
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_request_tender_wizard__write_uid
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__write_uid
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_approval_rule__write_date
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__write_date
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__write_date
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_request_tender_wizard__write_date
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__write_date
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: nexora_procurement
+#: model:res.groups,name:nexora_procurement.group_nexora_procurement_manager
+msgid "Manager"
+msgstr "المدير"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__message_has_error
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__message_ids
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_search
+msgid "Month"
+msgstr "الشهر"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__my_activity_date_deadline
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_search
+msgid "My Requests"
+msgstr "طلباتي"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_approval_rule__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: nexora_procurement
+#: model:res.groups.privilege,name:nexora_procurement.res_groups_privilege_nexora_procurement
+msgid "Nexora Procurement"
+msgstr "مشتريات Nexora"
+
+#. module: nexora_procurement
+#: model:ir.actions.server,name:nexora_procurement.cron_nexora_vendor_performance_ir_actions_server
+msgid "Nexora: Vendor performance evaluation"
+msgstr "Nexora: تقييم أداء الموردين"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__activity_calendar_event_id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "حدث التقويم للنشاط التالي"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__activity_date_deadline
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__activity_summary
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__activity_type_id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: nexora_procurement
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_purchase_request__priority__normal
+msgid "Normal"
+msgstr "عادي"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__notes
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_tender_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__message_needaction_counter
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات المطلوبة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__message_has_error_counter
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_purchase_request__message_needaction_counter
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_rfq_tender__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراءً"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_purchase_request__message_has_error_counter
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_rfq_tender__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي حدث خطأ في تسليمها"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__on_time_orders
+msgid "On Time Orders"
+msgstr "الطلبات المسلّمة في الوقت المحدد"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__on_time_rate
+msgid "On-time Delivery (%)"
+msgstr "نسبة التسليم في الوقت المحدد (%)"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_res_config_settings__nexora_ontime_grace_days
+msgid "On-time Grace (days)"
+msgstr "هامش السماح للتسليم في الوقت المحدد (أيام)"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.res_config_settings_view_form_nexora_procurement
+msgid "On-time Grace Period"
+msgstr "فترة السماح للتسليم في الوقت المحدد"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+msgid "Only %s or a procurement manager can approve this request."
+msgstr "يمكن فقط لـ %s أو مدير المشتريات الموافقة على هذا الطلب."
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+msgid "Only draft or cancelled requests can be deleted."
+msgstr "يمكن حذف الطلبات التي تكون في حالة مسودة أو ملغاة فقط."
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+msgid "Only requests waiting for approval can be approved."
+msgstr "يمكن الموافقة فقط على الطلبات التي تنتظر الموافقة."
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+msgid "Only requests waiting for approval can be rejected."
+msgstr "يمكن رفض الطلبات التي تنتظر الموافقة فقط."
+
+#. module: nexora_procurement
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_rfq_tender__state__open
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_tender_search
+msgid "Open"
+msgstr "مفتوح"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__order_ids
+msgid "Order"
+msgstr "أمر الشراء"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__order_count
+msgid "Order Count"
+msgstr "عدد أوامر الشراء"
+
+#. module: nexora_procurement
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_purchase_request__state__ordered
+msgid "Ordered"
+msgstr "تم إصدار أمر الشراء"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__order_count
+msgid "Orders"
+msgstr "أوامر الشراء"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__evaluated_orders
+msgid "Orders Received"
+msgstr "الطلبات المستلمة"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.res_config_settings_view_form_nexora_procurement
+msgid "Performance Window"
+msgstr "الفترة الزمنية لتقييم الأداء"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_res_config_settings__nexora_performance_days
+msgid "Performance Window (days)"
+msgstr "فترة تقييم الأداء (أيام)"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_vendor_performance_search
+msgid "Poor (D)"
+msgstr "ضعيف (D)"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__vendor_id
+msgid "Preferred Vendor"
+msgstr "المورد المفضل"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/tender.py:0
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_tender_form
+msgid "Price Matrix"
+msgstr "مصفوفة الأسعار"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__priority
+msgid "Priority"
+msgstr "الأولوية"
+
+#. module: nexora_procurement
+#: model:ir.ui.menu,name:nexora_procurement.menu_nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.res_config_settings_view_form_nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_partner_form_nexora_procurement
+msgid "Procurement"
+msgstr "المشتريات والتوريد"
+
+#. module: nexora_procurement
+#: model:ir.actions.act_window,name:nexora_procurement.action_nexora_purchase_analysis
+#: model:ir.ui.menu,name:nexora_procurement.menu_nexora_procurement_analysis
+msgid "Procurement Analysis"
+msgstr "تحليل المشتريات"
+
+#. module: nexora_procurement
+#: model:res.groups,name:nexora_procurement.group_nexora_procurement_officer
+msgid "Procurement Officer"
+msgstr "مسؤول المشتريات"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: nexora_procurement
+#: model:ir.model,name:nexora_procurement.model_nexora_purchase_approval_rule
+msgid "Purchase Approval Rule"
+msgstr "قاعدة الموافقة على الشراء"
+
+#. module: nexora_procurement
+#: model:ir.model,name:nexora_procurement.model_purchase_order
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: nexora_procurement
+#: model:ir.model,name:nexora_procurement.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "بند أمر الشراء"
+
+#. module: nexora_procurement
+#: model:ir.model,name:nexora_procurement.model_nexora_purchase_request
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_replenishment_plan__purchase_request_id
+#: model:ir.model.fields,field_description:nexora_procurement.field_purchase_order__request_id
+msgid "Purchase Request"
+msgstr "طلب شراء"
+
+#. module: nexora_procurement
+#: model:ir.model,name:nexora_procurement.model_nexora_purchase_request_line
+msgid "Purchase Request Line"
+msgstr "بند طلب الشراء"
+
+#. module: nexora_procurement
+#: model:ir.actions.act_window,name:nexora_procurement.action_nexora_purchase_request
+#: model:ir.ui.menu,name:nexora_procurement.menu_nexora_purchase_requests
+msgid "Purchase Requests"
+msgstr "طلبات الشراء"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__quantity
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+msgid "Quantity must be greater than zero."
+msgstr "يجب أن تكون الكمية أكبر من صفر."
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/tender.py:0
+msgid "Quotation Comparison"
+msgstr "مقارنة عروض الأسعار"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__deadline
+msgid "Quotation Deadline"
+msgstr "الموعد النهائي لتقديم عروض الأسعار"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__quote_ids
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_purchase_request__state__rfq
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_tender_form
+msgid "Quotations"
+msgstr "عروض الأسعار"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/tender.py:0
+msgid "Quotations requested from: %s"
+msgstr "تم طلب عروض الأسعار من: %s"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__quote_count
+msgid "Quote Count"
+msgstr "عدد عروض الأسعار"
+
+#. module: nexora_procurement
+#: model:ir.model,name:nexora_procurement.model_nexora_rfq_tender
+msgid "RFQ Tender (Quotation Comparison)"
+msgstr "مناقصة طلب عروض الأسعار (مقارنة عروض الأسعار)"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+msgid "RFQs & Orders"
+msgstr "طلبات عروض الأسعار وأوامر الشراء"
+
+#. module: nexora_procurement
+#: model:ir.actions.act_window,name:nexora_procurement.action_nexora_rfq_orders
+#: model:ir.ui.menu,name:nexora_procurement.menu_nexora_rfq_orders
+msgid "RFQs & Purchase Orders"
+msgstr "طلبات عروض الأسعار وأوامر الشراء"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_form
+msgid "RFQs / POs"
+msgstr "طلبات عروض الأسعار / أوامر الشراء"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__rating
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_vendor_performance_search
+msgid "Rating"
+msgstr "التقييم"
+
+#. module: nexora_procurement
+#: model:ir.ui.menu,name:nexora_procurement.menu_nexora_vendor_performance_refresh
+msgid "Recompute Performance"
+msgstr "إعادة احتساب الأداء"
+
+#. module: nexora_procurement
+#: model:ir.actions.server,name:nexora_procurement.action_nexora_vendor_performance_refresh
+msgid "Recompute Vendor Performance"
+msgstr "إعادة احتساب أداء الموردين"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__name
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__name
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__reject_reason
+msgid "Reject Reason"
+msgstr "سبب الرفض"
+
+#. module: nexora_procurement
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_purchase_request__state__rejected
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: nexora_procurement
+#: model:ir.model,name:nexora_procurement.model_nexora_replenishment_plan
+msgid "Replenishment Plan"
+msgstr "خطة إعادة التوريد"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/replenishment_plan.py:0
+msgid "Replenishment plan %s"
+msgstr "خطة إعادة التوريد %s"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__request_id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_request_tender_wizard__request_id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__request_id
+msgid "Request"
+msgstr "الطلب"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+msgid "Request %s already has quotations or orders. Cancel them first."
+msgstr "الطلب %s يحتوي بالفعل على عروض أسعار أو أوامر شراء. ألغِها أولاً."
+
+#. module: nexora_procurement
+#: model:ir.actions.act_window,name:nexora_procurement.action_nexora_request_tender_wizard
+#: model:ir.model,name:nexora_procurement.model_nexora_request_tender_wizard
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_form
+msgid "Request Quotations"
+msgstr "طلب عروض أسعار"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__requester_id
+#: model:res.groups,name:nexora_procurement.group_nexora_procurement_user
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_search
+msgid "Requester"
+msgstr "مقدم الطلب"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_purchase_approval_rule__min_amount
+msgid ""
+"Requests whose estimated total reaches this amount need this approver. The "
+"rule with the highest matching amount wins."
+msgstr ""
+"الطلبات التي يصل إجماليها التقديري إلى هذا المبلغ تحتاج إلى موافقة هذا المسؤول. "
+"تُعتمد القاعدة ذات أعلى مبلغ مطابق."
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__date_required
+msgid "Required By"
+msgstr "مطلوب بحلول"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_form
+msgid "Required when rejecting the request…"
+msgstr "مطلوب عند رفض الطلب…"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_form
+msgid "Reset to Draft"
+msgstr "إعادة إلى مسودة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__activity_user_id
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__message_has_sms_error
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__score
+msgid "Score"
+msgstr "الدرجة"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/tender.py:0
+msgid "Select at least one vendor."
+msgstr "اختر موردًا واحدًا على الأقل."
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__state
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_search
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_tender_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_purchase_request__activity_state
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_rfq_tender__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناءً على الأنشطة\n"
+"متأخر: لقد تجاوزنا تاريخ الاستحقاق\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"مخطط: أنشطة مستقبلية."
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_form
+msgid "Submit for Approval"
+msgstr "إرسال للموافقة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__subtotal
+msgid "Subtotal"
+msgstr "المجموع الفرعي"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_vendor_performance__total_spend
+msgid "Sum of order totals, no currency conversion."
+msgstr "مجموع إجماليات الطلبات دون تحويل العملات."
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__tender_ids
+#: model:ir.model.fields,field_description:nexora_procurement.field_purchase_order__tender_id
+#: model:ir.model.fields,field_description:nexora_procurement.field_purchase_order_line__nexora_tender_id
+msgid "Tender"
+msgstr "المناقصة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__tender_count
+msgid "Tender Count"
+msgstr "عدد المناقصات"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+#: model:ir.actions.act_window,name:nexora_procurement.action_nexora_tender
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_form
+msgid "Tenders"
+msgstr "المناقصات"
+
+#. module: nexora_procurement
+#: model:ir.ui.menu,name:nexora_procurement.menu_nexora_tenders
+msgid "Tenders (RFQ Comparison)"
+msgstr "المناقصات (مقارنة طلبات عروض الأسعار)"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/approval_rule.py:0
+msgid "The amount cannot be negative."
+msgstr "لا يمكن أن يكون المبلغ سالبًا."
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/replenishment_plan.py:0
+msgid "The plan has no approved quantities."
+msgstr "لا تحتوي الخطة على كميات تمت الموافقة عليها."
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+msgid "The price cannot be negative."
+msgstr "لا يمكن أن يكون السعر سالبًا."
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/tender.py:0
+msgid "The purchase request must be approved first."
+msgstr "يجب الموافقة على طلب الشراء أولاً."
+
+#. module: nexora_procurement
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_purchase_request__state__to_approve
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_search
+msgid "To Approve"
+msgstr "بانتظار الموافقة"
+
+#. module: nexora_procurement
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_form
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_list
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_quote_compare_list
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_vendor_performance_list
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__total_estimated
+msgid "Total Estimated"
+msgstr "الإجمالي التقديري"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__total_spend
+msgid "Total Spend"
+msgstr "إجمالي الإنفاق"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_purchase_request__activity_exception_decoration
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_rfq_tender__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي في السجل."
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request_line__uom_id
+msgid "Unit"
+msgstr "الوحدة"
+
+#. module: nexora_procurement
+#: model:ir.model.fields.selection,name:nexora_procurement.selection__nexora_purchase_request__priority__urgent
+#: model_terms:ir.ui.view,arch_db:nexora_procurement.view_nexora_pr_search
+msgid "Urgent"
+msgstr "عاجل"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_vendor_performance__partner_id
+msgid "Vendor"
+msgstr "المورد"
+
+#. module: nexora_procurement
+#: model:ir.actions.act_window,name:nexora_procurement.action_nexora_vendor_performance
+#: model:ir.model,name:nexora_procurement.model_nexora_vendor_performance
+#: model:ir.ui.menu,name:nexora_procurement.menu_nexora_vendor_performance
+msgid "Vendor Performance"
+msgstr "أداء الموردين"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_purchase_order__nexora_vendor_rating
+#: model:ir.model.fields,field_description:nexora_procurement.field_res_partner__nexora_vendor_rating
+#: model:ir.model.fields,field_description:nexora_procurement.field_res_users__nexora_vendor_rating
+msgid "Vendor Rating"
+msgstr "تقييم المورد"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_res_partner__nexora_vendor_score
+#: model:ir.model.fields,field_description:nexora_procurement.field_res_users__nexora_vendor_score
+msgid "Vendor Score"
+msgstr "درجة تقييم المورد"
+
+#. module: nexora_procurement
+#: model:ir.actions.act_window,name:nexora_procurement.action_nexora_vendors
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_request_tender_wizard__vendor_ids
+#: model:ir.ui.menu,name:nexora_procurement.menu_nexora_vendors
+msgid "Vendors"
+msgstr "الموردون"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_purchase_request__website_message_ids
+#: model:ir.model.fields,field_description:nexora_procurement.field_nexora_rfq_tender__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: nexora_procurement
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_purchase_request__website_message_ids
+#: model:ir.model.fields,help:nexora_procurement.field_nexora_rfq_tender__website_message_ids
+msgid "Website communication history"
+msgstr "سجل التواصل عبر الموقع الإلكتروني"
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+msgid "You are not allowed to reject this request."
+msgstr "ليس لديك صلاحية رفض هذا الطلب."
+
+#. module: nexora_procurement
+#. odoo-python
+#: code:addons/nexora_procurement/models/purchase_request.py:0
+msgid "request_id"
+msgstr "request_id"

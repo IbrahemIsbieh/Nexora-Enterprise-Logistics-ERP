@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="seq_nexora_transport_order" model="ir.sequence">
+        <field name="name">Nexora Transport Order</field>
+        <field name="code">nexora.transport.order</field>
+        <field name="prefix">NXT/%(year)s/</field>
+        <field name="padding">5</field>
+    </record>
+
+    <record id="seq_nexora_shipment" model="ir.sequence">
+        <field name="name">Nexora Shipment</field>
+        <field name="code">nexora.shipment</field>
+        <field name="prefix">SH/%(year)s/</field>
+        <field name="padding">5</field>
+    </record>
+
+    <record id="seq_nexora_transport_trip" model="ir.sequence">
+        <field name="name">Nexora Transport Trip</field>
+        <field name="code">nexora.transport.trip</field>
+        <field name="prefix">TR/%(year)s/</field>
+        <field name="padding">5</field>
+    </record>
+</odoo>

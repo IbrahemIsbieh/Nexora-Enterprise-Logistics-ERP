@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nexora_maintenance_order_list" model="ir.ui.view">
+        <field name="name">nexora.maintenance.order.list</field>
+        <field name="model">nexora.maintenance.order</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state in ('done', 'cancelled')"
+                  decoration-danger="priority == '2' and state not in ('done', 'cancelled')"
+                  decoration-info="state == 'in_progress'">
+                <field name="name"/>
+                <field name="vehicle_id"/>
+                <field name="order_type"/>
+                <field name="priority" widget="priority" optional="show"/>
+                <field name="scheduled_date"/>
+                <field name="vendor_id" optional="hide"/>
+                <field name="responsible_id" widget="many2one_avatar_user" optional="show"/>
+                <field name="estimated_cost" optional="hide"/>
+                <field name="total_cost" sum="Total"/>
+                <field name="downtime_hours" optional="hide"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'done'"
+                       decoration-info="state in ('scheduled', 'in_progress')"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nexora_maintenance_order_form" model="ir.ui.view">
+        <field name="name">nexora.maintenance.order.form</field>
+        <field name="model">nexora.maintenance.order</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_schedule" type="object" string="Schedule"
+                            invisible="state != 'draft'"/>
+                    <button name="action_start" type="object" string="Start Work"
+                            class="btn-primary" invisible="state not in ('draft', 'scheduled')"/>
+                    <button name="action_done" type="object" string="Complete"
+                            class="btn-primary" invisible="state != 'in_progress'"/>
+                    <button name="action_cancel" type="object" string="Cancel"
+                            invisible="state not in ('draft', 'scheduled', 'in_progress')"/>
+                    <button name="action_draft" type="object" string="Reset to Draft"
+                            invisible="state != 'cancelled'"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,scheduled,in_progress,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="%(nexora_fuel.action_nexora_vehicle_expense)d" type="action"
+                                class="oe_stat_button" icon="fa-money" invisible="not expense_id"
+                                context="{'search_default_group_vehicle': 0}">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Expense</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="vehicle_id" readonly="state not in ('draft', 'scheduled')"/>
+                            <field name="order_type" readonly="state in ('done', 'cancelled')"/>
+                            <field name="priority" widget="priority"/>
+                            <field name="plan_id" readonly="state in ('done', 'cancelled')"/>
+                            <field name="incident_id" readonly="state in ('done', 'cancelled')"/>
+                        </group>
+                        <group>
+                            <field name="workshop_type" readonly="state in ('done', 'cancelled')"/>
+                            <field name="vendor_id" invisible="workshop_type == 'internal'"
+                                   readonly="state in ('done', 'cancelled')"/>
+                            <field name="responsible_id"/>
+                            <field name="scheduled_date" readonly="state in ('done', 'cancelled')"/>
+                            <field name="odometer" readonly="state in ('done', 'cancelled')"/>
+                            <field name="cost_center_id" readonly="state in ('done', 'cancelled')"/>
+                            <field name="expense_id" invisible="1"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group invisible="state not in ('in_progress', 'done')">
+                        <group>
+                            <field name="date_start"/>
+                            <field name="date_done"/>
+                        </group>
+                        <group>
+                            <field name="downtime_hours" invisible="state != 'done'"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Request" name="request">
+                            <field name="description" placeholder="Describe the problem or the service required…"
+                                   readonly="state in ('done', 'cancelled')"/>
+                        </page>
+                        <page string="Cost Lines" name="lines">
+                            <field name="line_ids" readonly="state in ('done', 'cancelled')">
+                                <list editable="bottom">
+                                    <field name="line_type"/>
+                                    <field name="product_id"/>
+                                    <field name="name"/>
+                                    <field name="quantity"/>
+                                    <field name="price_unit"/>
+                                    <field name="subtotal"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                </list>
+                            </field>
+                            <group class="oe_subtotal_footer">
+                                <field name="currency_id" invisible="1"/>
+                                <field name="estimated_cost"/>
+                                <field name="total_cost" class="oe_subtotal_footer_separator"/>
+                            </group>
+                        </page>
+                        <page string="Work Performed" name="result">
+                            <field name="result_note" placeholder="What was done, parts replaced, findings…"
+                                   readonly="state in ('done', 'cancelled')"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_nexora_maintenance_order_calendar" model="ir.ui.view">
+        <field name="name">nexora.maintenance.order.calendar</field>
+        <field name="model">nexora.maintenance.order</field>
+        <field name="arch" type="xml">
+            <calendar string="Maintenance" date_start="scheduled_date" color="vehicle_id" mode="month">
+                <field name="vehicle_id"/>
+                <field name="order_type"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_nexora_maintenance_order_search" model="ir.ui.view">
+        <field name="name">nexora.maintenance.order.search</field>
+        <field name="model">nexora.maintenance.order</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="vehicle_id"/>
+                <field name="vendor_id"/>
+                <field name="responsible_id"/>
+                <filter name="open" string="Open"
+                        domain="[('state', 'in', ('draft', 'scheduled', 'in_progress'))]"/>
+                <filter name="in_progress" string="In Progress" domain="[('state', '=', 'in_progress')]"/>
+                <filter name="done" string="Done" domain="[('state', '=', 'done')]"/>
+                <separator/>
+                <filter name="urgent" string="Urgent" domain="[('priority', '=', '2')]"/>
+                <filter name="preventive" string="Preventive" domain="[('order_type', '=', 'preventive')]"/>
+                <filter name="corrective" string="Corrective" domain="[('order_type', '=', 'corrective')]"/>
+                <separator/>
+                <filter name="this_month" string="This Month"
+                        domain="[('scheduled_date', '>=', context_today().strftime('%Y-%m-01'))]"/>
+                <group>
+                    <filter name="group_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_type" string="Type" context="{'group_by': 'order_type'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="group_vendor" string="Workshop / Vendor" context="{'group_by': 'vendor_id'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'scheduled_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_nexora_maintenance_order_pivot" model="ir.ui.view">
+        <field name="name">nexora.maintenance.order.pivot</field>
+        <field name="model">nexora.maintenance.order</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="vehicle_id" type="row"/>
+                <field name="order_type" type="col"/>
+                <field name="total_cost" type="measure"/>
+                <field name="downtime_hours" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_nexora_maintenance_order_graph" model="ir.ui.view">
+        <field name="name">nexora.maintenance.order.graph</field>
+        <field name="model">nexora.maintenance.order</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="order_type"/>
+                <field name="total_cost" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_nexora_maintenance_order" model="ir.actions.act_window">
+        <field name="name">Maintenance Orders</field>
+        <field name="res_model">nexora.maintenance.order</field>
+        <field name="view_mode">list,form,calendar,graph,pivot</field>
+        <field name="context">{'search_default_open': 1}</field>
+    </record>
+</odoo>
